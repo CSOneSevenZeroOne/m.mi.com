@@ -4,14 +4,17 @@
 
 ----
 
-### 组件
+### 用户
 
 |组件名|路径|
 |-|-|
 |公用头部组件|entry/compoents/module/header.vue|
 |底部Tab组件|entry/compoents/module/footer.vue|
 |订单切换|entry/compoents/module/order_tab.vue|
-|公用底部组件|entry/compoents/module/footer.vue|
+|空订单|entry/compoents/module/order/order_empty.vue|
+|会员中心|entry/compoents/module/vip/vipcenter.vue|
+|我的优惠|entry/compoents/module/coupon.vue|
+|售后|entry/compoents/module/aftersale/aftersale.vue|
 
 ### 购物车
 
