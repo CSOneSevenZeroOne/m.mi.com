@@ -1,29 +1,29 @@
 <template>
 	<!-- 头部 -->
-    <footer class="footer">
+    <footer class="footer" v-if="this.$store.state.index">
         <ul class="footer_con">
             <li>
                 <a href="javascript:void(0)" @click="tabcurr(1)">
-                    <img :src="tab.home_src" alt="">
-                    <p :style='{"color":tab.home_curr?"#f56c02":"#212121"}'>首页</p>
+                    <img :src="foottab.home_src" alt="">
+                    <p :style='{"color":foottab.home_curr?"#f56c02":"#212121"}'>首页</p>
                 </a>
             </li>
             <li>
                 <a href="javascript:void(0)" @click="tabcurr(2)">
-                    <img :src="tab.classify_src" alt="">
-                    <p :style='{"color":tab.classify_curr?"#f56c02":"#212121"}'>分类</p>
+                    <img :src="foottab.classify_src" alt="">
+                    <p :style='{"color":foottab.classify_curr?"#f56c02":"#212121"}'>分类</p>
                 </a>
             </li>
             <li>
                 <a href="javascript:void(0)" @click="tabcurr(3)">
-                    <img :src='tab.cart_src' alt="">
-                    <p :style='{"color":tab.cart_curr?"#f56c02":"#212121"}'>购物车</p>
+                    <img :src='foottab.cart_src' alt="">
+                    <p :style='{"color":foottab.cart_curr?"#f56c02":"#212121"}'>购物车</p>
                 </a>
             </li>
             <li>
                 <a href="javascript:void(0)" @click="tabcurr(4)">
-                    <img :src='tab.user_src' alt="">
-                    <p :style='{"color":tab.user_curr?"#f56c02":"#212121"}'>我的</p>
+                    <img :src='foottab.user_src' alt="">
+                    <p :style='{"color":foottab.user_curr?"#f56c02":"#212121"}'>我的</p>
                 </a>
             </li>
         </ul>
@@ -34,7 +34,7 @@
 export default {
   data() {
     return {
-      tab: {
+      foottab: {
         home_src: require("../../images/foottab/home_curr.jpg"),
         home_curr: true,
         classify_src: require("../../images/foottab/classify.jpg"),
@@ -49,7 +49,7 @@ export default {
   methods: {
     tabcurr: function(key) {
       if (key == 1) {
-        this.tab = {
+        this.foottab = {
         home_src: require("../../images/foottab/home_curr.jpg"),
         home_curr: true,
         classify_src: require("../../images/foottab/classify.jpg"),
@@ -60,7 +60,7 @@ export default {
         user_curr: false
       };
       } else if (key == 2) {
-        this.tab = {
+        this.foottab = {
           home_src: require("../../images/foottab/home.jpg"),
           home_curr: false,
           classify_src: require("../../images/foottab/classify_curr.jpg"),
@@ -71,7 +71,7 @@ export default {
           user_curr: false
         };
       } else if (key == 3) {
-        this.tab = {
+        this.foottab = {
           home_src: require("../../images/foottab/home.jpg"),
           home_curr: false,
           classify_src: require("../../images/foottab/classify.jpg"),
@@ -82,7 +82,7 @@ export default {
           user_curr: false
         };
       } else if (key == 4) {
-        this.tab = {
+        this.foottab = {
           home_src: require("../../images/foottab/home.jpg"),
           home_curr: false,
           classify_src: require("../../images/foottab/classify.jpg"),
@@ -98,7 +98,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .footer {
   position: fixed;
   bottom: 0;

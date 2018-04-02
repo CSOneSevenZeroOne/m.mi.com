@@ -1,8 +1,11 @@
 <template>
-<div>
-  <xheader />
-<xorder />
-<xpannel />
+<div style="height:100%; width:100%">
+  <div v-if="this.$store.state.discounts_active">
+    <xheader />
+    <xorder />
+    <xpannel />
+  </div>
+  <router-view></router-view>
 </div>
 </template>
 <script>

@@ -4,12 +4,12 @@
         <div class="user_item">
             <div class="item_list vip_center">
                 <div class="item_line bdb1">
-                    <a href="" class="flextag item_line_taga">会员中心</a>
+                    <a href="#/vipcenter" class="flextag item_line_taga" @click="vipcenter">会员中心</a>
                 </div>
             </div>
             <div class="item_list my_sale">
                 <div class="item_line">
-                    <a href="" class="flextag item_line_taga">我的优惠</a>
+                    <a href="#/user/coupon" @click="discounts()" class="flextag item_line_taga">我的优惠</a>
                 </div>
             </div>
         </div>
@@ -45,7 +45,23 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    vipcenter() {
+      this.$store.state.index = false;
+    },
+    discounts() {
+      this.$store.state.discounts_active = false;
+    }
+  },
+  mounted() {
+    var str = window.location.href;
+    if (str.split("#")[1] == "/user") {
+      this.$store.state.index = true;
+      this.$store.state.discounts_active = true;
+    }
+  }
+};
 </script>
 
 <style scoped>

@@ -1,20 +1,16 @@
 <template>
-<div style="width:100%; height:100%;">
+<div style="width:100%; height:100%; background:white">
     <xheader />
-  <div @click="show(1)">
-      11231
-  </div>
-  <div @click="show(2)" v-if="this.$store.state.order_tab==2">
-      213123
-  </div>
-  <div @click="show(3)" v-else-if="this.$store.state.order_tab==3">
-      123123
-  </div>
+    <xordertab />
+    <xempty />
+    <xlike />
 </div>
 </template>
 <script>
-import xheader from "./module/header.vue";
-import xorder_tab from "./module/order_tab.vue";
+import xheader from "./module/order/order_header.vue";
+import xempty from "./module/order/order_empty.vue";
+import xlike from "./module/order/order_empty_like.vue";
+import xordertab from "./module/order_tab.vue";
 export default {
   data() {
     return {
@@ -22,12 +18,10 @@ export default {
     };
   },
   components: {
-    xheader
+    xheader,
+    xordertab,
+    xempty,
+    xlike
   },
-  methods: {
-    show(num) {
-      this.$store.state.limit = num;
-    }
-  }
 };
 </script>

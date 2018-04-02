@@ -6,7 +6,7 @@ module.exports = {
 	//入口
 	entry: {
         user:'./entry/entry.js',
-        cart:'./entry/cart.entry.js'
+        //cart:'./entry/cart.entry.js'
     },
 	//出口
 	output: {
