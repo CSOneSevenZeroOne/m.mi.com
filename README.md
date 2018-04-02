@@ -17,5 +17,7 @@
 
 * 入口文件：cart.entry.js
 * 出口文件：cart.bundle.js
-* 未登录组件：cart_unlogin.vue
+* 未登录：cart_unlogin.vue
 * 空购物车：cart_empty.vue
+* 推荐列表：cart_recommend.vue
+* 购物车列表：cart_list.vue

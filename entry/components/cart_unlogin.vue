@@ -11,6 +11,7 @@
 
 <style lang="less">
     .nologin {
+        margin-top: 0.5rem;
         a {
             display: flex;
             height: 0.52rem;
