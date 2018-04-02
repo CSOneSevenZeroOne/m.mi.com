@@ -16,3 +16,4 @@
 * 入口文件：cart.entry.js
 * 出口文件：cart.bundle.js
 * 未登录组件：cart_unlogin.vue
+* 空购物车：cart_empty.vue
