@@ -28,6 +28,10 @@ export default {
   height: 0.5rem;
   font-size: 0.16rem;
   color: #666;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 .header_back {
   margin-left: 0.18rem;
