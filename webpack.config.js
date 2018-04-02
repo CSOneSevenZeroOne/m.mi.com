@@ -1,13 +1,17 @@
 var webpack = require("webpack");
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 module.exports = {
 	//入口
-	entry: './entry/entry.js',
+	entry: {
+        user:'./entry/entry.js',
+        cart:'./entry/cart.entry.js'
+    },
 	//出口
 	output: {
 		path: path.resolve(__dirname, 'output'),
-		filename: 'bundle.js'
+		filename: '[name].bundle.js'
 	},
 	//开发版本
 	mode: "development",
@@ -41,7 +45,7 @@ module.exports = {
 		}, {
 			test: /\.(vue)$/,
 			use: {
-				loader: 'vue-loader',
+                loader: 'vue-loader',
 			}
 		}, {
 			//把高版本的js代码转为ES5代码
@@ -61,7 +65,7 @@ module.exports = {
 	//插件
 	plugins: [
 		//new UglifyJsPlugin(),
-		//new HtmlWebpackPlugin({template: './src/index.html'})
+		// new HtmlWebpackPlugin()//自动生成html
 	],
 	//全局安装webpack配置好的服务器 webpack-dev-server
 	devServer: {
