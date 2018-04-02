@@ -4,7 +4,7 @@
         <div class="order_top">
             <div class="my_order">我的订单</div>
             <div class="all_order">
-                <a href="">全部订单</a>
+                <a href="#/order">全部订单</a>
             </div>
         </div>
         <div class="order_order">
@@ -38,7 +38,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 /*
 order
 */

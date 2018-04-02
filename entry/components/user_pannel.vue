@@ -48,7 +48,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 /*
     列表 list
 */

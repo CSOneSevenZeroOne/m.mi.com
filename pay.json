@@ -1,0 +1,301 @@
+{
+    "code": 0,
+    "data": {
+        "header": {
+            "view_type": "cells_auto_fill",
+            "body": {
+                "w": 720,
+                "h": 120,
+                "items": [{
+                    "w": 720,
+                    "h": 120,
+                    "img_url": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/e95ade2750a7fde92369b416c7d3176d.jpg",
+                    "path_type": "image"
+                }]
+            }
+        },
+        "recom_list": [{
+            "action": {
+                "type": "product",
+                "path": "6520",
+                "log_code": "recom_order-list_0-1#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=6520",
+                "recommend_code": "recom_order-list_0-1#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=6520"
+            },
+            "image_url": "//i8.mifile.cn/v1/a1/6b5bba6d-00e7-3b6d-9b8e-5ef5a4dd4fe0.webp",
+            "is_multi_price": false,
+            "market_price": "199",
+            "name": "米家运动鞋 男款",
+            "price": "199",
+            "product_desc": "一体式高弹针织鞋面 / 鱼骨足弓锁紧系统组合式鞋底\n / 扭力平衡片",
+            "product_tag": ""
+        }, {
+            "action": {
+                "type": "product",
+                "path": "6704",
+                "log_code": "recom_order-list_0-2#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=6704",
+                "recommend_code": "recom_order-list_0-2#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=6704"
+            },
+            "image_url": "//i8.mifile.cn/v1/a1/2daed8c9-5c8b-6565-72a4-16f467e6cdc6.webp",
+            "is_multi_price": true,
+            "market_price": "2599",
+            "name": "小米Note 3 128GB",
+            "price": "2599",
+            "product_desc": "1600万美颜自拍 / 2倍变焦双摄，四轴光学防抖 / 5.5\"护眼屏 / 超轻四曲面，7系铝金属边框。",
+            "product_tag": ""
+        }, {
+            "action": {
+                "type": "product",
+                "path": "7147",
+                "log_code": "recom_order-list_0-3#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=7147",
+                "recommend_code": "recom_order-list_0-3#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=7147"
+            },
+            "image_url": "//i8.mifile.cn/v1/a1/a09eac36-c1e1-e8b0-5ef7-b5c7e2c2009b.webp",
+            "is_multi_price": false,
+            "market_price": "2299",
+            "name": "小米6",
+            "price": "2299",
+            "product_desc": "骁龙835 旗舰处理器 / 变焦双摄，4 轴防抖 / 5.15\" 护眼屏 / 四曲面玻璃机身",
+            "product_tag": ""
+        }, {
+            "action": {
+                "type": "product",
+                "path": "6699",
+                "log_code": "recom_order-list_0-4#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=6699",
+                "recommend_code": "recom_order-list_0-4#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=6699"
+            },
+            "image_url": "//i8.mifile.cn/v1/a1/010cd93e-3d15-979b-ff69-14f6e29931ec.webp",
+            "is_multi_price": false,
+            "market_price": "3599",
+            "name": "小米MIX 2 128GB",
+            "price": "3299",
+            "product_desc": "\u003cfont color='#ff4a00'\u003e「直降300元」\u003c/font\u003e全面屏2.0，5.99\"大屏 / 骁龙835旗舰处理器 / 4轴光学防抖 / 6模43频，全球频段。",
+            "product_tag": ""
+        }, {
+            "action": {
+                "type": "product",
+                "path": "7689",
+                "log_code": "recom_order-list_0-5#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=7689",
+                "recommend_code": "recom_order-list_0-5#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=7689"
+            },
+            "image_url": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/6473d20b8c0f0ae9d1453de69eee4296.jpg",
+            "is_multi_price": false,
+            "market_price": "199",
+            "name": "70迈 智能记录仪",
+            "price": "199",
+            "product_desc": "智能语音控制 / 1080P全高清 / SONY图像传感器 / 130°大广角",
+            "product_tag": ""
+        }, {
+            "action": {
+                "type": "product",
+                "path": "4983",
+                "log_code": "recom_order-list_0-6#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=4983",
+                "recommend_code": "recom_order-list_0-6#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=4983"
+            },
+            "image_url": "//i8.mifile.cn/v1/a1/112b155e-7681-2419-ca34-cad1283a8939.webp",
+            "is_multi_price": false,
+            "market_price": "498",
+            "name": "小米影视会员卡",
+            "price": "498",
+            "product_desc": "",
+            "product_tag": ""
+        }, {
+            "action": {
+                "type": "product",
+                "path": "6334",
+                "log_code": "recom_order-list_0-7#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=6334",
+                "recommend_code": "recom_order-list_0-7#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=6334"
+            },
+            "image_url": "//i8.mifile.cn/v1/a1/0518c80c-a1a5-af45-0898-a4e07b3d5a9f.webp",
+            "is_multi_price": false,
+            "market_price": "299",
+            "name": "小米AI音箱",
+            "price": "299",
+            "product_desc": "\u003cfont color='#ff4a00'\u003e【3月31日-4月2日，早10点限量开售！】\u003c/font\u003e小米AI音箱 / 能播音乐 / 讲故事 / 听相声 / 查路况 / 设闹钟 / 还能控制智能设备【每个用户限购1台】",
+            "product_tag": ""
+        }, {
+            "action": {
+                "type": "product",
+                "path": "7244",
+                "log_code": "recom_order-list_0-8#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=7244",
+                "recommend_code": "recom_order-list_0-8#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=7244"
+            },
+            "image_url": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/806866db7cfac7efdb561e9d796b4a33.jpg",
+            "is_multi_price": false,
+            "market_price": "9.9",
+            "name": "米兔指尖积木",
+            "price": "9.9",
+            "product_desc": "无限翻转 / 简约外观 / 精致便携",
+            "product_tag": ""
+        }, {
+            "action": {
+                "type": "product",
+                "path": "7359",
+                "log_code": "recom_order-list_0-9#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=7359",
+                "recommend_code": "recom_order-list_0-9#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=7359"
+            },
+            "image_url": "//i8.mifile.cn/v1/a1/f7efa66b-555f-8900-0649-7c2acc99fc80.webp",
+            "is_multi_price": false,
+            "market_price": "1299",
+            "name": "红米5 Plus 64GB",
+            "price": "1299",
+            "product_desc": "全面屏 / 4000mAh大电量 / 前置柔光自拍 / 14nm骁龙八核处理器",
+            "product_tag": ""
+        }, {
+            "action": {
+                "type": "product",
+                "path": "6518",
+                "log_code": "recom_order-list_0-10#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=6518",
+                "recommend_code": "recom_order-list_0-10#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=6518"
+            },
+            "image_url": "//i8.mifile.cn/v1/a1/cad503c1-828b-6ffd-59f8-7f5850af43dc.webp",
+            "is_multi_price": false,
+            "market_price": "199",
+            "name": "Free Tie 真皮板鞋 男款",
+            "price": "199",
+            "product_desc": "进口头层牛皮 / 弹力 EVA 中底 / 更适合国人的特制楦头 / 130 多道手工工序打造",
+            "product_tag": ""
+        }, {
+            "action": {
+                "type": "product",
+                "path": "7403",
+                "log_code": "recom_order-list_0-11#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=7403",
+                "recommend_code": "recom_order-list_0-11#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=7403"
+            },
+            "image_url": "//i8.mifile.cn/v1/a1/07d8908a-7819-c734-0652-eb0f8e202333.webp",
+            "is_multi_price": false,
+            "market_price": "99",
+            "name": "保温杯",
+            "price": "99",
+            "product_desc": "进口316L不锈钢内胆 / 镜面内壁 / 12小时保温保冷 / 500ml大容量",
+            "product_tag": ""
+        }, {
+            "action": {
+                "type": "product",
+                "path": "6009",
+                "log_code": "recom_order-list_0-12#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=6009",
+                "recommend_code": "recom_order-list_0-12#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=6009"
+            },
+            "image_url": "//i8.mifile.cn/v1/a1/8ef6df34-51d2-a7ef-1dd7-1fcf049259f1.webp",
+            "is_multi_price": true,
+            "market_price": "50",
+            "name": "米粉卡日租卡",
+            "price": "50",
+            "product_desc": "\u003cfont color=\"#ff4a00\"\u003e【全新升级！付1得2，支付得等额现金券+等额话费。现金券及话费在米粉卡激活后即可使用，话费为赠费。每人每卡限购一单。】\u003c/font\u003e电信4G网络 / 省内1元800M / 全国2元800M / 3元不限量 / 不用不花钱 / 通话短信1毛 / 全国接听免费",
+            "product_tag": ""
+        }, {
+            "action": {
+                "type": "product",
+                "path": "7140",
+                "log_code": "recom_order-list_0-13#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=7140",
+                "recommend_code": "recom_order-list_0-13#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=7140"
+            },
+            "image_url": "//i8.mifile.cn/v1/a1/b71d2160-35e0-7feb-f465-54b921fe2bc7.webp",
+            "is_multi_price": false,
+            "market_price": "399",
+            "name": "90分轻商务登机箱 ",
+            "price": "399",
+            "product_desc": "前开盖快取设计 / 德国拜耳PC材质 / TSA双密码锁",
+            "product_tag": ""
+        }, {
+            "action": {
+                "type": "product",
+                "path": "6259",
+                "log_code": "recom_order-list_0-14#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=6259",
+                "recommend_code": "recom_order-list_0-14#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=6259"
+            },
+            "image_url": "//i8.mifile.cn/v1/a1/f0ea0c6b-96b5-c85b-d2b4-e4aeaabea277.webp",
+            "is_multi_price": false,
+            "market_price": "1499",
+            "name": "小米5X 4GB+64GB",
+            "price": "1499",
+            "product_desc": "光学变焦双摄，拍人更美 / 5.5''大屏轻薄全金属 / 骁龙八核处理器 / 4GB大内存",
+            "product_tag": ""
+        }, {
+            "action": {
+                "type": "product",
+                "path": "4795",
+                "log_code": "recom_order-list_0-15#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=4795",
+                "recommend_code": "recom_order-list_0-15#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=4795"
+            },
+            "image_url": "//i8.mifile.cn/v1/a1/5aafa8a4-5808-bd0d-85e5-9e7ab5de337c.webp",
+            "is_multi_price": false,
+            "market_price": "599",
+            "name": "红米4A ",
+            "price": "549",
+            "product_desc": "5英寸，舒适手感 / 3120mAh 大电池 / 1300万像素相机 /  最高可扩展至 128GB",
+            "product_tag": ""
+        }, {
+            "action": {
+                "type": "product",
+                "path": "6904",
+                "log_code": "recom_order-list_0-16#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=6904",
+                "recommend_code": "recom_order-list_0-16#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=6904"
+            },
+            "image_url": "//i8.mifile.cn/v1/a1/a0dc5c15-15dc-e184-7412-969bc0b2f9dd.webp",
+            "is_multi_price": false,
+            "market_price": "9.9",
+            "name": "贝医生巴氏牙刷",
+            "price": "9.9",
+            "product_desc": "德日进口毛刷 / 专利科学布局 / 全身食品级材质 / 23项专利",
+            "product_tag": ""
+        }, {
+            "action": {
+                "type": "product",
+                "path": "6124",
+                "log_code": "recom_order-list_0-17#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=6124",
+                "recommend_code": "recom_order-list_0-17#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=6124"
+            },
+            "image_url": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/00db10bf30e2328c8024be9be48b692f.jpg",
+            "is_multi_price": false,
+            "market_price": "99",
+            "name": "自动折叠伞",
+            "price": "99",
+            "product_desc": "防泼水伞布 / 高效遮阳防晒 / 一键自动开合 / 安全防反弹结构​",
+            "product_tag": ""
+        }, {
+            "action": {
+                "type": "product",
+                "path": "5483",
+                "log_code": "recom_order-list_0-18#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=5483",
+                "recommend_code": "recom_order-list_0-18#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=5483"
+            },
+            "image_url": "//i8.mifile.cn/v1/a1/f9fc5c06-e57f-c77d-17cd-3bcd73a8abe8.webp",
+            "is_multi_price": false,
+            "market_price": "24.9",
+            "name": "米家金属签字笔",
+            "price": "24.9",
+            "product_desc": "高精密金属组件 / PREMEC瑞士进口笔芯 / 180° 旋转出笔 / 轻触自动回弹收笔",
+            "product_tag": ""
+        }, {
+            "action": {
+                "type": "product",
+                "path": "7060",
+                "log_code": "recom_order-list_0-19#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=7060",
+                "recommend_code": "recom_order-list_0-19#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=7060"
+            },
+            "image_url": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/bb5b9e4caecb5699b1fba79dd601d8c3.jpg",
+            "is_multi_price": false,
+            "market_price": "249",
+            "name": "小米3L软壳风衣",
+            "price": "249",
+            "product_desc": "3层复合面料 / 保暖摇粒绒 / 防水透气",
+            "product_tag": ""
+        }, {
+            "action": {
+                "type": "product",
+                "path": "6874",
+                "log_code": "recom_order-list_0-20#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=6874",
+                "recommend_code": "recom_order-list_0-20#eid=15:16:0:0:0:0:0:0:55:0\u0026tid=BlankRec-EVetgBVoRfTbeQexGGXnMA==\u0026page=order-list\u0026pid=6874"
+            },
+            "image_url": "//i8.mifile.cn/v1/a1/06cb725b-0a15-e51a-a50d-a4f89da6dd22.webp",
+            "is_multi_price": false,
+            "market_price": "599",
+            "name": "红米5A 16GB",
+            "price": "599",
+            "product_desc": "8天超长待机 / 137g轻巧机身 / 高通骁龙处理器",
+            "product_tag": ""
+        }],
+        "title": "为你推荐"
+    },
+    "result": "ok"
+}

@@ -23,7 +23,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .header {
   background: url(../images/user/bg.63c8e19.png) center 0 #f37d0f;
   background-size: auto 100%;
