@@ -5,7 +5,7 @@ const path = require('path');
 module.exports = {
 	//入口
 	entry: {
-        user:'./entry/entry.js',
+        user:'./entry/entry.js'
     },
 	//出口
 	output: {

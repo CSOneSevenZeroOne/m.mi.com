@@ -31,7 +31,7 @@ export default {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 100;
 }
 .header_back {
   margin-left: 0.18rem;

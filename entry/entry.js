@@ -9,6 +9,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 require("./css/base.css");
 
+import cart from "./components/cart.vue";//导入购物车
 
 
 import xindex from "./components/index-all.vue";//导入主页
@@ -42,6 +43,9 @@ const router = new VueRouter({
 		path: "/userafter",//用户售后
 		component: aftersale
 	},{
+		path: "/cart",//购物车
+        component: cart
+    },{
 		path:"/",
 		component:xindex
 	}]
@@ -67,8 +71,8 @@ new Vue({
 	//容器内容
 	template: `
 		<div style="height:100%; width:100%" id="user_page">
-			<xfooter />
-			<router-view></router-view>
+            <router-view></router-view>
+            <xfooter />
 		</div>
 	`,
 	data: {
