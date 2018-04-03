@@ -11,9 +11,6 @@ require("./css/base.css");
 
 import xorder from "./components/order.vue";
 import xuser from "./components/user.vue";
-import xuser_pannel from "./components/user_pannel.vue";
-import xuser_header from "./components/user_header.vue";
-import xuser_order from "./components/user_order.vue";
 import xfooter from "./components/module/footer.vue";
 import xvipcenter from "./components/module/vip/vipcenter.vue"
 import aftersale from "./components/module/aftersale/aftersale.vue"
@@ -68,10 +65,6 @@ new Vue({
 	router,
 	methods: {},
 	components: {
-		xuser_pannel,
-		xuser_header,
-		xuser_order,
 		xfooter,
-		xuser
 	}
 })

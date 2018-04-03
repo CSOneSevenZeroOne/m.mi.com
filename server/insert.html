@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script src="./jquery.js"></script>
+<script>
+    $.ajax({
+        url: "../services.json",
+        type: "GET",
+    }).then(function (res) {
+        console.log(res.data.service_icon_list.data_json);
+        // $.ajax({
+        //     url: "http://localhost:9000/insertdata",
+        //     type: "post",
+        // }).then(function (res) {
+        // })
+    })
+</script>
