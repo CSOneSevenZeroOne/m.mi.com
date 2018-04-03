@@ -9,6 +9,12 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 require("./css/base.css");
 
+
+
+import xindex from "./index-all.vue";//导入主页
+
+
+
 import xorder from "./components/order.vue";
 import xuser from "./components/user.vue";
 import xuser_pannel from "./components/user_pannel.vue";
@@ -35,6 +41,9 @@ const router = new VueRouter({
 	}, {
 		path: "/userafter",//用户售后
 		component: aftersale
+	},{
+		path:"/index",
+		component:xindex
 	}]
 	// （缩写）相当于 routes: routes
 })
@@ -44,7 +53,8 @@ const store = new Vuex.Store({
 		order_tab_title: "商品订单",
 		index:true,
 		order_tab_active:{"all":true,"wait":false,"take":false},
-		discounts_active:true
+		discounts_active:true,
+		index_page: 0
 	},
 	//获取值得方法
 	getters: {
