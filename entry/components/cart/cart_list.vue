@@ -77,11 +77,11 @@
                     height: 0.9rem;
                 }
                 .checked {
-                    background: url(../images/cart/checked.png) 50% 50% no-repeat;
+                    background: url(../../images/cart/checked.png) 50% 50% no-repeat;
                     background-size: 0.2rem 0.2rem;
                 }
                 .unchecked {
-                    background: url("../images/cart/unchecked.png") 50% 50% no-repeat;
+                    background: url("../../images/cart/unchecked.png") 50% 50% no-repeat;
                     background-size: 0.2rem .2rem;
                 }
                 .imgProduct {
@@ -142,7 +142,7 @@
                                     }
                                 }
                                 i {
-                                    background-image: url("../images/cart/icon-sub.png");
+                                    background-image: url("../../images/cart/icon-sub.png");
                                 }
                             }
                             .input-num {
@@ -168,7 +168,7 @@
                                     }
                                 }
                                 i {
-                                    background-image: url("../images/cart/icon-add.png");
+                                    background-image: url("../../images/cart/icon-add.png");
                                 }
                             }
                         }
@@ -184,7 +184,7 @@
                                 background-repeat: no-repeat;
                                 background-position: 50%;
                                 background-size: cover;
-                                background-image: url("../images/cart/delete.png")
+                                background-image: url("../../images/cart/delete.png")
                             }
                         }
                     }
@@ -256,9 +256,9 @@
     export default {
         data() {
             return {
-                imgSrc: [require("../images/cart/insurance.png")],
+                imgSrc: [require("../../images/cart/insurance.png")],
                 product: [{
-                        src: require("../images/cart/pms.jpg"),
+                        src: require("../../images/cart/pms.jpg"),
                         name: "小米5X 全网通版 4GB内存 红色",
                         price: 1499,
                         num: 1,
@@ -267,7 +267,7 @@
                         isChecked: true
                     },
                     {
-                        src: require("../images/cart/pms2.jpg"),
+                        src: require("../../images/cart/pms2.jpg"),
                         name: "红米5 Plus 全网通版 3GB内存 黑色",
                         price: 999,
                         num: 1,

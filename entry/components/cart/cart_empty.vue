@@ -20,7 +20,7 @@
             background-size: auto 100%;
             padding: 0 .08rem 0 .48rem;
             color: rgba(0, 0, 0, .27);
-            background: url("../images/cart/cartbg.png") no-repeat 0;
+            background: url("../../images/cart/cartbg.png") no-repeat 0;
             background-size: auto 100%;
         }
         em {

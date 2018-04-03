@@ -111,7 +111,7 @@ const store = new Vuex.Store({
 
 new Vue({
 	//容器作用域
-	el: "#user",
+	el: "#app",
 	//容器内容
 	template: `
 		<div style="height:100%; width:100%" id="user_page">

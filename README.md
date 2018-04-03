@@ -4,6 +4,21 @@
 
 ----
 
+### 入口
+
+* 页面：'/entry/index.html'
+使用 html-webpack-plugin 插件生成
+
+### 出口
+
+* 文件夹 ：'./output'
+
+使用 clean-webpack-plugin 插件清理
+
+输入 `npm start` 命令运行 webpack-dev-server,自动打开路径为 http://localhost:8000/#/ 主页面
+
+输入 `npm run build` 命令进行构建
+
 ### 用户
 
 * 用户页:'/user'
@@ -29,13 +44,13 @@
 |组件名|路径|
 |-|-|
 |购物车|entry/compoents/cart.vue|
-|空车|entry/compoents/cart_empty.vue|
-|列表|entry/compoents/cart_list.vue|
-|推荐|entry/compoents/cart_recommend.vue|
-|未登录|entry/compoents/cart_unlogin.vue|
-|购买限制|entry/compoents/cart_max.vue|
-|结算栏|entry/compoents/cart_checkout.vue|
-|选购|entry/compoents/cart_selectshop.vue|
+|空车|entry/compoents/cart/cart_empty.vue|
+|列表|entry/compoents/cart/cart_list.vue|
+|推荐|entry/compoents/cart/cart_recommend.vue|
+|未登录|entry/compoents/cart/cart_unlogin.vue|
+|购买限制|entry/compoents/cart/cart_max.vue|
+|结算栏|entry/compoents/cart/cart_checkout.vue|
+|选购|entry/compoents/cart/cart_selectshop.vue|
 
 ### 分类页
 

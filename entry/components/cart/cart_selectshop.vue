@@ -10,7 +10,7 @@
                 <div class="service">
                     <span>保证服务</span>
                     <a href="https://cdn.cnbj0.fds.api.mi-img.com/b2c-data-mishop/4a15d767c1fe.html">
-                        <img :src="require('../images/cart/problem.png')">
+                        <img :src="require('../../images/cart/problem.png')">
                     </a>
                 </div>
                 <div class="service-price border">意外保障服务 41 元</div>
@@ -64,7 +64,7 @@
                 i {
                     width: 0.2rem;
                     height: 0.2rem;
-                    background-image: url("../images/cart/close.png");
+                    background-image: url("../../images/cart/close.png");
                     display: inline-block;
                     background-color: transparent;
                     background-repeat: no-repeat;
@@ -128,11 +128,11 @@
                     top: 0.05rem;
                 }
                 .unchecked {
-                    background: url("../images/cart/unchecked.png") 50% 50% no-repeat;
+                    background: url("../../images/cart/unchecked.png") 50% 50% no-repeat;
                     background-size: 0.2rem 0.2rem;
                 }
                 .checked {
-                    background: url("../images/cart/checked.png") 50% 50% no-repeat;
+                    background: url("../../images/cart/checked.png") 50% 50% no-repeat;
                     background-size: 0.2rem 0.2rem;
                 }
                 a {

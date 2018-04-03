@@ -1,6 +1,7 @@
 var webpack = require("webpack");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const path = require('path');
 module.exports = {
 	//入口
@@ -71,11 +72,16 @@ module.exports = {
 			}]
 		},
 			//开启监听模式
-			watch: true,
+			// watch: true,
 			//插件
 			plugins: [
 			//new UglifyJsPlugin(),
-			// new HtmlWebpackPlugin()//自动生成html
+			new HtmlWebpackPlugin({//自动生成html
+                template:"./entry/index.html"//模板文件
+            }),
+            new CleanWebpackPlugin(//清理output
+                ['./output']
+            )
 		],
 			//全局安装webpack配置好的服务器 webpack-dev-server
 			devServer: {

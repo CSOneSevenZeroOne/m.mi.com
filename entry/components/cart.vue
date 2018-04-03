@@ -16,13 +16,13 @@
 
 <script>
     import xheader from "./module/header.vue"; //公共头
-    import cart_unlogin from "./cart_unlogin.vue"; //未登录状态
-    import cart_empty from "./cart_empty.vue"; //空购物车
-    import cart_list from "./cart_list.vue"; //购物车列表
-    import cart_recommend from "./cart_recommend.vue"; //推荐列表
-    import cart_max from "./cart_max.vue"; //物品超出上限
-    import cart_checkout from "./cart_checkout.vue"; //物品总价
-    import cart_selectshop from "./cart_selectshop.vue"; //选购
+    import cart_unlogin from "./cart/cart_unlogin.vue"; //未登录状态
+    import cart_empty from "./cart/cart_empty.vue"; //空购物车
+    import cart_list from "./cart/cart_list.vue"; //购物车列表
+    import cart_recommend from "./cart/cart_recommend.vue"; //推荐列表
+    import cart_max from "./cart/cart_max.vue"; //物品超出上限
+    import cart_checkout from "./cart/cart_checkout.vue"; //物品总价
+    import cart_selectshop from "./cart/cart_selectshop.vue"; //选购
 
     export default {
 

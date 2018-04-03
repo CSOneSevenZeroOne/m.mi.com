@@ -2,7 +2,7 @@
 <template>
     <div class="recommend">
         <div class="recommend-top">
-            <img src="../images/cart/recommendtop.jpg">
+            <img src="../../images/cart/recommendtop.jpg">
         </div>
         <div class="recommend-content">
             <div v-for="item in goods" :key="item.id" class="goods-item">
@@ -83,22 +83,22 @@
             return {
                 goods:[
                     {
-                        img:require("../images/cart/test.webp"),
+                        img:require("../../images/cart/test.webp"),
                         name:"米家运动鞋 男款",
                         price:199
                     },
                     {
-                        img:require("../images/cart/test2.webp"),
+                        img:require("../../images/cart/test2.webp"),
                         name:"小米Note 3 128GB",
                         price:2599
                     },
                     {
-                        img:require("../images/cart/test3.webp"),
+                        img:require("../../images/cart/test3.webp"),
                         name:"小米6",
                         price:2299
                     },
                     {
-                        img:require("../images/cart/test4.webp"),
+                        img:require("../../images/cart/test4.webp"),
                         name:"小米MIX 2 128GB",
                         price:3299
                     }
