@@ -7,6 +7,7 @@
         <cart-list v-show="!this.$store.state.bEmpty"/>
         <cart-recommend/>
         <cart-checkout v-if="!this.$store.state.bEmpty"/>
+        <cart-selectshop/>
     </div>
 </template>
 
@@ -21,6 +22,7 @@
     import cart_recommend from "./cart_recommend.vue"; //推荐列表
     import cart_max from "./cart_max.vue"; //物品超出上限
     import cart_checkout from "./cart_checkout.vue"; //物品总价
+    import cart_selectshop from "./cart_selectshop.vue"; //选购
 
     export default {
 
@@ -32,7 +34,8 @@
             "cart-list": cart_list,
             "cart-recommend": cart_recommend,
             "cart-max":cart_max,
-            "cart-checkout":cart_checkout
+            "cart-checkout":cart_checkout,
+            "cart-selectshop":cart_selectshop
         },
         methods: {
 

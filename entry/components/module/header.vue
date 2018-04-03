@@ -1,6 +1,6 @@
 <template>
 	<!-- 头部 -->
-    <header class="header">
+    <header class="header"  @touchmove.prevent>
         <a href="" class="header_back"><img src="../../images/user/icon/icon_06.jpg" alt=""></a>
         <div class="header_title">
             <p v-text="this.$store.state.header_title"></p>
@@ -27,7 +27,7 @@ export default {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 500;
 }
 .header_back {
   margin-left: 0.18rem;

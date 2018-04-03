@@ -28,6 +28,10 @@ import services from "./components/module/services.vue";
 import mihome from "./components/module/mihome.vue";
 import fcodepipe from "./components/module/fcodepipe.vue";
 import setting from "./components/module/setting.vue";
+
+
+import classfiy from "./components/classfiy.vue"   // 导入分类页
+
 import search from "./components/public/search.vue";
 const router = new VueRouter({
 	routes: [{
@@ -65,6 +69,9 @@ const router = new VueRouter({
 		}, {
 			path: "/services", //服务
 			component: services
+		},{
+			path: "/classfiy", //分类
+			component: classfiy
 		},
 		{
 			path: "/search", //搜索
