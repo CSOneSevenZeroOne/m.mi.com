@@ -279,33 +279,62 @@
             }
         },
         methods: {
+            //判断购物车是否为空,底部是否为结算模块
+            isEmpty() {
+                if (this.product.length!=0) { //若有商品列表
+                    this.$store.state.bEmpty = false;
+                    this.$store.state.bFooter=false;
+                } else {
+                    this.$store.state.bEmpty = true;
+                    this.$store.state.bFooter=true;
+                }
+            },
             // 更改选中状态
             checked(item) {
                 item.isChecked = !item.isChecked;
+                item.num=0;
+                this.calc();
             },
             // 减少物品
             sub(item) {
                 if (item.num != 1) { //若物品数不为1
                     item.num--;
+                    this.calc();
                 }
             },
             // 增加物品
             add(item) {
                 if (item.num != item.max) { //若物品数不为1
                     item.num++;
-                } else {//弹出遮罩层
-                    this.$store.state.bMax=true;
-                    var timer=setTimeout(()=>{
-                        this.$store.state.bMax=false;
+                    this.calc();
+                } else { //弹出遮罩层
+                    this.$store.state.bMax = true;
+                    var timer = setTimeout(() => {
+                        this.$store.state.bMax = false;
                         clearTimeout(timer);
-                    },2000);
+                    }, 2000);
                 }
             },
             // 删除物品
             del(item) {
                 this.product.splice(item, 1);
+                this.isEmpty();
+                this.calc();
+            },
+            // 计算数量价格
+            calc(){
+                this.$store.state.total=0;
+                this.$store.state.prices=0;
+                for (const item of this.product) {
+                    this.$store.state.total+=item.num;
+                    this.$store.state.prices+=item.num*item.price;
+                }
 
             }
+        },
+        mounted() {
+            this.isEmpty();
+            this.calc();
         }
     }
 </script>
