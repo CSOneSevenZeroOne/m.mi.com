@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a847d130-249a-4ab8-a13b-e4f00641965c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/entry/components/module/coupon.vue" afterPath="$PROJECT_DIR$/entry/components/module/coupon.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/entry/components/module/header.vue" afterPath="$PROJECT_DIR$/entry/components/module/header.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/entry/components/module/mihome.vue" afterPath="$PROJECT_DIR$/entry/components/module/mihome.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/entry/components/module/order/order_empty.vue" afterPath="$PROJECT_DIR$/entry/components/module/order/order_empty.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/entry/components/module/order/order_empty_like.vue" afterPath="$PROJECT_DIR$/entry/components/module/order/order_empty_like.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/entry/components/module/search/search_header.vue" afterPath="$PROJECT_DIR$/entry/components/module/search/search_header.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/entry/components/module/services.vue" afterPath="$PROJECT_DIR$/entry/components/module/services.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/entry/components/module/setting.vue" afterPath="$PROJECT_DIR$/entry/components/module/setting.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/entry/components/order.vue" afterPath="$PROJECT_DIR$/entry/components/order.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/entry/entry.js" afterPath="$PROJECT_DIR$/entry/entry.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/createConnection.js" afterPath="$PROJECT_DIR$/server/createConnection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/insert.html" afterPath="$PROJECT_DIR$/server/insert.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/router/insertData.js" afterPath="$PROJECT_DIR$/server/router/insertData.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/server.js" afterPath="$PROJECT_DIR$/server/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -52,15 +39,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inserthome.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="inserthome.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/router/inserthome.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="484">
-              <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+              <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
               <folding>
                 <element signature="e#244#570#0" expanded="true" />
                 <element signature="e#531#566#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="57">
+              <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -81,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/server/router/services.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="174">
-              <caret line="10" column="64" lean-forward="true" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
+              <caret line="10" column="64" lean-forward="false" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
               <folding>
                 <element signature="e#448#475#0" expanded="true" />
               </folding>
@@ -128,6 +125,7 @@
         <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/server/insert.html" />
         <option value="$PROJECT_DIR$/server/router/inserthome.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -142,7 +140,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1053" />
@@ -220,15 +218,15 @@
       <option name="presentableId" value="Default" />
       <updated>1522761879681</updated>
       <workItem from="1522761885824" duration="1167000" />
-      <workItem from="1522764561521" duration="3305000" />
+      <workItem from="1522764561521" duration="3635000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4472000" />
+    <option name="totallyTimeSpent" value="4802000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1060" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -283,7 +281,7 @@
     <entry file="file://$PROJECT_DIR$/server/router/services.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
-          <caret line="10" column="64" lean-forward="true" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
+          <caret line="10" column="64" lean-forward="false" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
           <folding>
             <element signature="e#448#475#0" expanded="true" />
           </folding>
@@ -329,11 +327,19 @@
     <entry file="file://$PROJECT_DIR$/server/router/inserthome.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
-          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
             <element signature="e#244#570#0" expanded="true" />
             <element signature="e#531#566#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
