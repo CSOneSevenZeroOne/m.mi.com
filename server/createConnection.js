@@ -6,7 +6,7 @@ function createConnection(sql,callback) {
 		host: 'localhost',
 		user: 'root',
 		password: '',
-		database: 'administration'
+		database: 'xiaomi'
 	});
 	//执行连接
 	connection.connect();

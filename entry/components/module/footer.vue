@@ -107,6 +107,7 @@ export default {
   width: 100%;
   text-align: center;
   box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.04);
+  z-index: 100;
 }
 li:nth-child(1) img {
   width: 0.22rem;
