@@ -19,6 +19,7 @@
     "style-loader": "^0.20.3",
     "uglifyjs-webpack-plugin": "^1.2.4",
     "vue": "^2.5.16",
+    "vue-concise-slider": "^2.4.8",
     "vue-loader": "^14.2.2",
     "vue-router": "^3.0.1",
     "vue-template-compiler": "^2.5.16",
