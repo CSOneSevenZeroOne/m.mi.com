@@ -5,8 +5,8 @@ const path = require('path');
 module.exports = {
 	//入口
 	entry: {
-        user:'./entry/entry.js'
-    },
+		user: './entry/entry.js',
+	},
 	//出口
 	output: {
 		path: path.resolve(__dirname, 'output'),
@@ -44,18 +44,31 @@ module.exports = {
 		}, {
 			test: /\.(vue)$/,
 			use: {
-                loader: 'vue-loader',
+				loader: 'vue-loader',
 			}
-		}, {
-			//把高版本的js代码转为ES5代码
-			test: /\.js$/,
-			//不处理node_modules
-			exclude: /(node_modules|bower_components)/,
-			use: {
-				loader: 'babel-loader',
-				options: {
-					presets: ['@babel/preset-env']
+		},
+		{
+			test: /\.less$/,
+			use: [{
+				loader: "style-loader" // creates style nodes from JS strings
+			}, {
+				loader: "css-loader" // translates CSS into CommonJS
+			}, {
+				loader: "less-loader" // compiles Less to CSS
+			}]
+		},
+			{
+				//把高版本的js代码转为ES5代码
+				test: /\.js$/,
+				//不处理node_modules
+				exclude: /(node_modules|bower_components)/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['@babel/preset-env']
+					}
 				}
+<<<<<<< HEAD
 			}
 		}]
 	},
@@ -74,4 +87,23 @@ module.exports = {
 		//port 设置默认监听端口，如果省略，默认为”8080“
 		inline: true //实时刷新
 	}
+=======
+			}]
+		},
+			//开启监听模式
+			watch: true,
+			//插件
+			plugins: [
+			//new UglifyJsPlugin(),
+			// new HtmlWebpackPlugin()//自动生成html
+		],
+			//全局安装webpack配置好的服务器 webpack-dev-server
+			devServer: {
+			contentBase: "./output", //本地服务器所加载的页面所在的目录
+			historyApiFallback: true, //不跳转
+			port: 8000,
+			//port 设置默认监听端口，如果省略，默认为”8080“
+			inline: true //实时刷新
+		}
+>>>>>>> 8134ad21f8f501b92a07205eb0f171f2e656448d
 }

@@ -20,10 +20,12 @@
 
 * 路由：'/cart'
 * 组件：
-    |组件名|路径|
-    |-|-|
-    |购物车|entry/compoents/cart.vue|
-    |空车|entry/compoents/cart_empty.vue|
-    |列表|entry/compoents/cart_list.vue|
-    |推荐|entry/compoents/cart_recommend.vue|
-    |未登录|entry/compoents/cart_unlogin.vue|
+
+|组件名|路径|
+|-|-|
+|购物车|entry/compoents/cart.vue|
+|空车|entry/compoents/cart_empty.vue|
+|列表|entry/compoents/cart_list.vue|
+|推荐|entry/compoents/cart_recommend.vue|
+|未登录|entry/compoents/cart_unlogin.vue|
+|购买限制|entry/compoents/cart_max.vue|

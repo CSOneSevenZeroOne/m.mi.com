@@ -3,7 +3,7 @@
     <div class="empty-cart">
         <a href="javascript:void(0);">
             <span>购物车还是空的</span>
-            <em>去逛逛1</em>
+            <em>去逛逛</em>
         </a>
     </div>
 </template>
