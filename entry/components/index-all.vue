@@ -16,6 +16,9 @@
     <div v-show="this.$store.state.index_page==4">
       <page4 />
     </div>
+    <div v-show="this.$store.state.index_page==5">
+      <page5 />
+    </div>
   </div>
 </template>
 
@@ -28,6 +31,7 @@ import page1 from "./index-page1.vue";
 import page2 from "./index-page2.vue";
 import page3 from "./index-page3.vue";
 import page4 from "./index-page4.vue";
+import page5 from "./index-page5.vue";
 
 export default {
   data() {
@@ -39,7 +43,8 @@ export default {
     page1,
     page2,
     page3,
-    page4
+    page4,
+    page5
   }
 };
 </script>

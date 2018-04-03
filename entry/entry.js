@@ -28,14 +28,11 @@ import services from "./components/module/services.vue";
 import mihome from "./components/module/mihome.vue";
 import fcodepipe from "./components/module/fcodepipe.vue";
 import setting from "./components/module/setting.vue";
-<<<<<<< HEAD
 
 
 import classfiy from "./components/classfiy.vue"   // 导入分类页
 
-=======
 import search from "./components/public/search.vue";
->>>>>>> 5b86b607e220b2237102de34479e4d3e0ffa6d49
 const router = new VueRouter({
 	routes: [{
 			path: '/user', //用户
@@ -72,16 +69,13 @@ const router = new VueRouter({
 		}, {
 			path: "/services", //服务
 			component: services
-<<<<<<< HEAD
 		},{
 			path: "/classfiy", //分类
 			component: classfiy
-=======
 		},
 		{
 			path: "/search", //搜索
 			component: search
->>>>>>> 5b86b607e220b2237102de34479e4d3e0ffa6d49
 		}
 	]
 	// （缩写）相当于 routes: routes
