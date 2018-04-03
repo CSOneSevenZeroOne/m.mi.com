@@ -10,7 +10,7 @@
         <div class="services">
           <h4>自助服务</h4>
             <div class="items">
-              <a href="javascript:void(0)" v-for="key in services">
+              <a href="javascript:void(0)" v-for="(key,index) in services" :key="index" >
                 <img :src="key.img_url" alt="">
               </a>
             </div>
