@@ -10,7 +10,7 @@
   <div class="page-indexlist list">
     <div class="page-indexlist-wrapper">
       <mt-index-list>
-        <mt-index-section v-for="item in alphabet" :index="item.initial">
+        <mt-index-section v-for="(item,index1) in alphabet" :key="index1" :index="item.initial">
           <mt-cell v-for="(cell,index) in item.cells" :key="index" :title="cell"></mt-cell>
         </mt-index-section>
       </mt-index-list>
