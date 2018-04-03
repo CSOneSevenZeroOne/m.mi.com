@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+<button type="button">start</button>
+</body>
+
+</html>
+<script src="./jquery.js"></script>
+<script>
+    $("button").on("click",function(){
+        $.ajax({
+        url: "../pay.json",
+        type: "GET",
+    }).then(function (res) {
+        var arr = res.data.recom_list
+        
+        for (var i = 0; i < arr.length; i++) {
+            console.log(arr[i].image_url,arr[i].name,arr[i].product_desc,arr[i].action.path,arr[i].action.type)
+            $.ajax({
+                url: "http://localhost:9000/insertdata",
+                type: "post",
+                data:{
+                    image_url:arr[i].image_url,
+                    name:arr[i].name,
+                    product_desc:arr[i].product_desc,
+                    path:arr[i].action.path,
+                    type:arr[i].action.type
+                }
+            }).then(function (res) {
+                console.log(res);
+            })
+        }
+    })
+    })
+    
+</script>
