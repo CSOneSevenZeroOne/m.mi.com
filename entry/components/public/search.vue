@@ -5,8 +5,8 @@
     </div>
 </template>
 <script>
-import xheader from "./search/search_header.vue";
-import xsearchcon from "./search/search_con.vue";
+import xheader from "../module/search/search_header.vue";
+import xsearchcon from "../module/search/search_con.vue";
 export default {
   data() {
     return {
