@@ -7,6 +7,9 @@ Vue.use(Vuex)
 //路由管理
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
+import Mint from 'mint-ui';
+Vue.use(Mint);
+
 require("./css/base.css");
 
 import cart from "./components/cart.vue";//导入购物车
@@ -22,6 +25,7 @@ import xvipcenter from "./components/module/vip/vipcenter.vue";
 import aftersale from "./components/module/aftersale/aftersale.vue";
 import coupon from "./components/module/coupon.vue";
 import services from "./components/module/services.vue";
+import mihome from "./components/module/mihome.vue"
 const router = new VueRouter({
 	routes: [{
 		path: '/user',//用户
@@ -48,6 +52,9 @@ const router = new VueRouter({
     },{
 		path:"/",
 		component:xindex
+	},{
+		path:"/mihome",
+		component:mihome
 	}]
 	// （缩写）相当于 routes: routes
 })
@@ -55,7 +62,7 @@ const store = new Vuex.Store({
 	//消息
 	state: {
 		order_tab_title: "商品订单",
-		index:true,
+		index:true,//显示user页面
 		order_tab_active:{"all":true,"wait":false,"take":false},
 		discounts_active:true,
 		index_page: 0

@@ -17,12 +17,12 @@
         <div class="user_item">
             <div class="item_list serve_center">
                 <div class="item_line bdb1">
-                    <a href="#/user/services" class="flextag item_line_taga">服务中心</a>
+                    <a href="#/user/services" @click="discounts()" class="flextag item_line_taga">服务中心</a>
                 </div>
             </div>
             <div class="item_list mi_home">
                 <div class="item_line">
-                    <a href="#/user/mihome" class="flextag item_line_taga">小米之家</a>
+                    <a href="#/mihome" @click="vipcenter()" class="flextag item_line_taga">小米之家</a>
                 </div>
             </div>
         </div>
@@ -68,7 +68,6 @@ export default {
 /*
     列表 list
 */
-
 .user_list {
   color: #212121;
 }
