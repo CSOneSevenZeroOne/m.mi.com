@@ -18,8 +18,10 @@
     "less-loader": "^4.1.0",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.20.3",
+    "swiper": "^4.2.2",
     "uglifyjs-webpack-plugin": "^1.2.4",
     "vue": "^2.5.16",
+    "vue-concise-slider": "^2.4.8",
     "vue-loader": "^14.2.2",
     "vue-router": "^3.0.1",
     "vue-template-compiler": "^2.5.16",
@@ -30,7 +32,7 @@
     "weui": "^1.1.2"
   },
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --open",
     "test": "echo 123"
   },
   "author": "",

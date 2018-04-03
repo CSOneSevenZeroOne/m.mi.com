@@ -61,6 +61,7 @@
 
 <style lang="less">
     .cart-list {
+        background: #fff;
         .item {
             border-bottom: 1px solid #f6f6f6;
             line-height: 0;
@@ -292,8 +293,12 @@
             add(item) {
                 if (item.num != item.max) { //若物品数不为1
                     item.num++;
-                } else {
-                    alert("max");
+                } else {//弹出遮罩层
+                    this.$store.state.bMax=true;
+                    var timer=setTimeout(()=>{
+                        this.$store.state.bMax=false;
+                        clearTimeout(timer);
+                    },2000);
                 }
             },
             // 删除物品
