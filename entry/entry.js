@@ -28,7 +28,7 @@ import services from "./components/module/services.vue";
 import mihome from "./components/module/mihome.vue";
 import fcodepipe from "./components/module/fcodepipe.vue";
 import setting from "./components/module/setting.vue";
-import search from "./components/module/search.vue";
+import search from "./components/public/search.vue";
 const router = new VueRouter({
 	routes: [{
 			path: '/user', //用户
