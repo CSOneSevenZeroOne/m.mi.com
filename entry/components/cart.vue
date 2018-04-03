@@ -1,11 +1,12 @@
 <template>
     <div id="cart">
         <xheader/>
-        <cart-max v-show="this.$store.state.bMax"/>
+        <cart-max v-if="this.$store.state.bMax"/>
         <cart-unlogin/>
-        <!-- <cart-empty/> -->
-        <cart-list/>
+        <cart-empty v-if="this.$store.state.bEmpty"/>
+        <cart-list v-show="!this.$store.state.bEmpty"/>
         <cart-recommend/>
+        <cart-checkout v-if="!this.$store.state.bEmpty"/>
     </div>
 </template>
 
@@ -19,6 +20,7 @@
     import cart_list from "./cart_list.vue"; //购物车列表
     import cart_recommend from "./cart_recommend.vue"; //推荐列表
     import cart_max from "./cart_max.vue"; //物品超出上限
+    import cart_checkout from "./cart_checkout.vue"; //物品超出上限
 
     export default {
 
@@ -29,7 +31,8 @@
             "cart-empty": cart_empty,
             "cart-list": cart_list,
             "cart-recommend": cart_recommend,
-            "cart-max":cart_max
+            "cart-max":cart_max,
+            "cart-checkout":cart_checkout
         },
         methods: {
 

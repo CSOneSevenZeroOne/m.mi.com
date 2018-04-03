@@ -60,7 +60,11 @@ const store = new Vuex.Store({
 		discounts_active:true,
         index_page: 0,
         header_title:"购物车",
-        bMax:false//默认隐藏遮罩层
+        bMax:false,//默认隐藏遮罩层
+        bEmpty:true,//默认空购物车
+        bFooter:true,//默认底部为导航
+        total:0,//购入商品总数，默认为0
+        prices:0,//所购商品总价，默认为0
 	},
 	//获取值得方法
 	getters: {
@@ -74,7 +78,7 @@ new Vue({
 	template: `
 		<div style="height:100%; width:100%" id="user_page">
             <router-view></router-view>
-            <xfooter />
+            <xfooter v-show='this.$store.state.bFooter'/>
 		</div>
 	`,
 	data: {
