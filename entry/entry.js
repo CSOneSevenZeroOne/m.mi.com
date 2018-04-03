@@ -28,6 +28,11 @@ import services from "./components/module/services.vue";
 import mihome from "./components/module/mihome.vue";
 import fcodepipe from "./components/module/fcodepipe.vue";
 import setting from "./components/module/setting.vue";
+
+
+import classfiy from "./components/classfiy.vue"   // 导入分类页
+
+import search from "./components/public/search.vue";
 const router = new VueRouter({
 	routes: [{
 			path: '/user', //用户
@@ -64,6 +69,13 @@ const router = new VueRouter({
 		}, {
 			path: "/services", //服务
 			component: services
+		},{
+			path: "/classfiy", //分类
+			component: classfiy
+		},
+		{
+			path: "/search", //搜索
+			component: search
 		}
 	]
 	// （缩写）相当于 routes: routes
@@ -91,7 +103,7 @@ const store = new Vuex.Store({
 			cart_curr: false,
 			user_src: require("./images/foottab/user.jpg"),
 			user_curr: false
-		},//footer组件图片请求和切换
+		}, //footer组件图片请求和切换
 	},
 	//获取值得方法
 	getters: {}
@@ -112,8 +124,58 @@ new Vue({
 	},
 	store,
 	router,
-	methods: {},
+	methods: {
+
+	},
+	mounted() {
+		var str = window.location.href;
+		if (str.split("#")[1] == "/index") {
+			this.$store.state.foottab = {
+				home_src: require("./images/foottab/home_curr.jpg"),
+				home_curr: true,
+				classify_src: require("./images/foottab/classify.jpg"),
+				classify_curr: false,
+				cart_src: require("./images/foottab/cart.jpg"),
+				cart_curr: false,
+				user_src: require("./images/foottab/user.jpg"),
+				user_curr: false
+			}
+		} else if (str.split("#")[1] == "/cart") {
+			this.$store.state.foottab = {
+				home_src: require("./images/foottab/home.jpg"),
+				home_curr: false,
+				classify_src: require("./images/foottab/classify.jpg"),
+				classify_curr: false,
+				cart_src: require("./images/foottab/cart_curr.jpg"),
+				cart_curr: true,
+				user_src: require("./images/foottab/user.jpg"),
+				user_curr: false
+			}
+		} else if (str.split("#")[1] == "/classify") {
+			this.$store.state.foottab = {
+				home_src: require("./images/foottab/home.jpg"),
+				home_curr: false,
+				classify_src: require("./images/foottab/classify_curr.jpg"),
+				classify_curr: true,
+				cart_src: require("./images/foottab/cart_curr.jpg"),
+				cart_curr: false,
+				user_src: require("./images/foottab/user.jpg"),
+				user_curr: false
+			}
+		} else {
+			this.$store.state.foottab = {
+				home_src: require("./images/foottab/home.jpg"),
+				home_curr: false,
+				classify_src: require("./images/foottab/classify.jpg"),
+				classify_curr: false,
+				cart_src: require("./images/foottab/cart.jpg"),
+				cart_curr: false,
+				user_src: require("./images/foottab/user_curr.jpg"),
+				user_curr: true
+			}
+		}
+	},
 	components: {
-		xfooter,
+		xfooter
 	}
 })
