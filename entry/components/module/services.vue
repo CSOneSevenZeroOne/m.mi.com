@@ -8,23 +8,33 @@
         <a href="" class="header_search"><img src="../../images/user/icon/icon_03.jpg" alt=""></a>
     </header>
         <div>
-            <a href="">
+            <a href="javascript:void(0)">
                 <img src="http://i8.mifile.cn/v1/a1/30bc2339-742e-bb1d-e502-0ae28daeed25.png" alt="">
             </a>
         </div>
     </div>
 </template>
 <script>
+import $ from "jquery";
 export default {
   data() {
     return {
-      status: false
+      services: []
     };
   },
   methods: {
     vipcenterback() {
       this.$store.state.index = true;
     }
+  },
+  mounted() {
+    $.ajax({
+      url: "http://localhost:9000/insertdata",
+      type: "get",
+      dataType:"json"
+    }).then(function(res){
+      console.log(res)
+    });
   }
 };
 </script>

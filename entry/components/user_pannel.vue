@@ -17,12 +17,12 @@
         <div class="user_item">
             <div class="item_list serve_center">
                 <div class="item_line bdb1">
-                    <a href="" class="flextag item_line_taga">服务中心</a>
+                    <a href="#/user/services" class="flextag item_line_taga">服务中心</a>
                 </div>
             </div>
             <div class="item_list mi_home">
                 <div class="item_line">
-                    <a href="" class="flextag item_line_taga">小米之家</a>
+                    <a href="#/user/mihome" class="flextag item_line_taga">小米之家</a>
                 </div>
             </div>
         </div>
@@ -30,14 +30,14 @@
         <div class="user_item">
             <div class="item_list u_fcode">
                 <div class="item_line">
-                    <a href="" class="flextag item_line_taga">F码通道</a>
+                    <a href="#/user/fcode" class="flextag item_line_taga">F码通道</a>
                 </div>
             </div>
         </div>
         <div class="user_item">
             <div class="item_list u_setting">
                 <div class="item_line">
-                    <a href="" class="flextag item_line_taga">设置</a>
+                    <a href="#/user/setting" class="flextag item_line_taga">设置</a>
                 </div>
             </div>
         </div>

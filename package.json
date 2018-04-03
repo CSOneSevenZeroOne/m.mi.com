@@ -29,7 +29,7 @@
     "weui": "^1.1.2"
   },
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --open",
     "test": "echo 123"
   },
   "author": "",

@@ -15,13 +15,13 @@ import cart from "./components/cart.vue";//导入购物车
 import xindex from "./components/index-all.vue";//导入主页
 
 
-
 import xorder from "./components/order.vue";
 import xuser from "./components/user.vue";
 import xfooter from "./components/module/footer.vue";
-import xvipcenter from "./components/module/vip/vipcenter.vue"
-import aftersale from "./components/module/aftersale/aftersale.vue"
-import coupon from "./components/module/coupon.vue"
+import xvipcenter from "./components/module/vip/vipcenter.vue";
+import aftersale from "./components/module/aftersale/aftersale.vue";
+import coupon from "./components/module/coupon.vue";
+import services from "./components/module/services.vue";
 const router = new VueRouter({
 	routes: [{
 		path: '/user',//用户
@@ -29,6 +29,9 @@ const router = new VueRouter({
 		children:[{
 			path:"coupon",
 			component: coupon
+		},{
+			path:"services",
+			component: services
 		}]
 	}, {
 		path: "/order",//订单
