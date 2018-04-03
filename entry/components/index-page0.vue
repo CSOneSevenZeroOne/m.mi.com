@@ -179,7 +179,7 @@
 
 
 <script>
-import newOrder from "./modules/index-newOrder.vue"
+import newOrder from "./module/index-newOrder.vue"
 export default {
   data() {
     return {

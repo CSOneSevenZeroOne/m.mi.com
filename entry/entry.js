@@ -11,7 +11,7 @@ require("./css/base.css");
 
 
 
-import xindex from "./index-all.vue";//导入主页
+import xindex from "./components/index-all.vue";//导入主页
 
 
 

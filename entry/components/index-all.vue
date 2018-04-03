@@ -1,11 +1,11 @@
 <template>
-  <div id="app">
+  <div>
 
   </div>
 </template>
 
 <script>
-import "./inconfont/iconfont.css"; //导入iconfont样式
+import "../inconfont/iconfont.css"; //导入iconfont样式
 
 import hhl_header from "./index-header.vue"; //导入主页头部组件
 import page0 from "./index-page0.vue"; //导入主页导航组件

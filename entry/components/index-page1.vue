@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import newOrder from "./modules/index-newOrder.vue"
+import newOrder from "./components/module/index-newOrder.vue"
 export default {
   components:{
       newOrder
