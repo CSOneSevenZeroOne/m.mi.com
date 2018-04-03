@@ -1,5 +1,6 @@
 <template>
     <div>
+        <autoplay />
         <ul class="nav-list">
             <li v-for="(item,index) in navArr" :key="index"><a href="javascript:void(0)"><img :src="item.imgSrc" /></a></li>
         </ul>
@@ -180,6 +181,7 @@
 
 <script>
 import newOrder from "./module/index-newOrder.vue"
+import autoplay from "./index-autoplay.vue"
 export default {
   data() {
     return {
@@ -240,7 +242,8 @@ export default {
     };
   },
   components:{
-      newOrder
+      newOrder,
+      autoplay
   }
 };
 </script>
@@ -251,7 +254,6 @@ export default {
   height: 0.8rem;
   align-items: center;
   justify-content: space-around;
-  margin-top: 0.84rem;
   border-top: 0.01rem solid #d8d6d2;
 }
 .nav-list li a img {

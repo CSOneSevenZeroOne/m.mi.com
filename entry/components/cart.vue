@@ -20,7 +20,7 @@
     import cart_list from "./cart_list.vue"; //购物车列表
     import cart_recommend from "./cart_recommend.vue"; //推荐列表
     import cart_max from "./cart_max.vue"; //物品超出上限
-    import cart_checkout from "./cart_checkout.vue"; //物品超出上限
+    import cart_checkout from "./cart_checkout.vue"; //物品总价
 
     export default {
 

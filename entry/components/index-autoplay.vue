@@ -9,6 +9,7 @@
 <style lang="less" scoped>
 .autoplay{
     height: 1.8rem;
+    margin-top: .87rem;
 }
 </style>
 
@@ -20,25 +21,25 @@
             return {
                 //图片列表[arr]
                 pages: [{
-                        title: 'slide1',
+                        // title: 'slide1',
                         style: {
                             background: 'url('+require('../images/indeximages/auto1.jpg')+')'
                         }
                     },
                     {
-                        title: 'slide2',
+                        // title: 'slide2',
                         style: {
                             background: 'url('+require('../images/indeximages/auto2.jpg')+')'
                         }
                     },
                     {
-                        title: 'slide3',
+                        // title: 'slide3',
                         style: {
                             background: 'url('+require('../images/indeximages/auto3.jpg')+')',
                         },
                     },
                     {
-                        title: 'slide4',
+                        // title: 'slide4',
                         style: {
                             background: 'url('+require('../images/indeximages/auto4.jpg')+')',
                         },

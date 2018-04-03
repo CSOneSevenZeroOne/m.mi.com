@@ -1,5 +1,6 @@
 <template>
   <div class="page1_box">
+      <autoplay />
       <newOrder />
       <div class="divider_line" index="13" style="height:.09rem;background-color:#f5f5f5"></div>
       <div class="mifen">
@@ -161,10 +162,12 @@
 <script>
 import newOrder from "../components/module/index-newOrder.vue";
 import shops from "../components/module/shopInfo.vue";
+import autoplay from "./index-autoplay.vue"
 export default {
   components: {
     newOrder,
-    shops
+    shops,
+    autoplay
   }
 };
 </script>

@@ -39,7 +39,7 @@ export default {
   },
   mounted() {
     var str = window.location.href;
-    if (str.split("#")[1] == "/user/coupon") {
+    if (str.split("#")[1] == "/coupon") {
       this.$store.state.discounts_active = false;
     }
   }
