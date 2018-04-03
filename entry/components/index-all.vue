@@ -1,6 +1,12 @@
 <template>
   <div>
-
+    <hhl_header />
+                <div v-show="this.$store.state.index_page==0">
+                    <page0 />
+                </div>
+                <div v-show="this.$store.state.index_page==1">
+                    <page1 />
+                </div>
   </div>
 </template>
 
@@ -18,17 +24,7 @@ export default {
     hhl_header,
     page0,
     page1
-  },
-  store,
-  template: `<div>
-                <hhl_header />
-                <div v-show="this.$store.state.index_page==0">
-                    <page0 />
-                </div>
-                <div v-show="this.$store.state.index_page==1">
-                    <page1 />
-                </div>
-            </div>`
+  }
 };
 </script>
 

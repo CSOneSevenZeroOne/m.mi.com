@@ -42,7 +42,7 @@ const router = new VueRouter({
 		path: "/userafter",//用户售后
 		component: aftersale
 	},{
-		path:"/index",
+		path:"/",
 		component:xindex
 	}]
 	// （缩写）相当于 routes: routes

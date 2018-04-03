@@ -4,13 +4,13 @@
             <li v-for="(item,index) in navArr" :key="index"><a href="javascript:void(0)"><img :src="item.imgSrc" /></a></li>
         </ul>
         <div class="newShop">
-            <div class="newShop-left"><a href="javascript:void(0)"><img src="./indeximages/shop001.jpg" /></a></div>
+            <div class="newShop-left"><a href="javascript:void(0)"><img src="../images/indeximages/shop001.jpg" /></a></div>
             <div class="newShop-right">
-                <div><a href="javascript:void(0)"><img src="./indeximages/shop002.jpg" /></a></div>
-                <div><a href="javascript:void(0)"><img src="./indeximages/shop003.jpg" /></a></div>
+                <div><a href="javascript:void(0)"><img src="../images/indeximages/shop002.jpg" /></a></div>
+                <div><a href="javascript:void(0)"><img src="../images/indeximages/shop003.jpg" /></a></div>
             </div>
         </div>
-        <div class="maxwidthShop"><a href="javascript:void(0)"><img src="./indeximages/shop004.jpg" /></a></div>
+        <div class="maxwidthShop"><a href="javascript:void(0)"><img src="../images/indeximages/shop004.jpg" /></a></div>
 
         <div class="mishangou">
             <div class="mshangou-title">
@@ -29,7 +29,7 @@
             </ul>
         </div>
 
-        <div class="maxwidthShop"><a href="javascript:void(0)"><img src="./indeximages/youxiben.jpg" /></a></div>
+        <div class="maxwidthShop"><a href="javascript:void(0)"><img src="../images/indeximages/youxiben.jpg" /></a></div>
 
 
         <newOrder />
@@ -39,11 +39,11 @@
 
         <div class="superVal">
             <div class="superVal-title">
-                <img src="./indeximages/chaozhitujian.jpg" />
+                <img src="../images/indeximages/chaozhitujian.jpg" />
             </div>
             <div class="newOrder-shop-list">
                 <div class="newOrder-shop">
-                    <img src="./indeximages/newsshop001.jpg" />
+                    <img src="../images/indeximages/newsshop001.jpg" />
                     <div class="newshopInfo">
                         <div class="shop-name">小米MIX 2S</div>
                         <div class="shop-introduce">骁龙845旗舰处理器，AI双摄</div>
@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div class="newOrder-shop">
-                    <img src="./indeximages/newsshop002.jpg" />
+                    <img src="../images/indeximages/newsshop002.jpg" />
                     <div class="newshopInfo">
                         <div class="shop-name">红米Note 5</div>
                         <div class="shop-introduce">1.4μm大像素 AI 双摄</div>
@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="newOrder-shop">
-                    <img src="./indeximages/newsshop002.jpg" />
+                    <img src="../images/indeximages/newsshop002.jpg" />
                     <div class="newshopInfo">
                         <div class="shop-name">红米Note 5</div>
                         <div class="shop-introduce">1.4μm大像素 AI 双摄</div>
@@ -67,7 +67,7 @@
                     </div>
                 </div>
                 <div class="newOrder-shop">
-                    <img src="./indeximages/newsshop002.jpg" />
+                    <img src="../images/indeximages/newsshop002.jpg" />
                     <div class="newshopInfo">
                         <div class="shop-name">红米Note 5</div>
                         <div class="shop-introduce">1.4μm大像素 AI 双摄</div>
@@ -81,11 +81,11 @@
 
         <div class="superVal">
             <div class="superVal-title">
-                <img src="./indeximages/chaozhituijian1.jpg" />
+                <img src="../images/indeximages/chaozhituijian1.jpg" />
             </div>
             <div class="newOrder-shop-list">
                 <div class="newOrder-shop">
-                    <img src="./indeximages/newsshop001.jpg" />
+                    <img src="../images/indeximages/newsshop001.jpg" />
                     <div class="newshopInfo">
                         <div class="shop-name">小米MIX 2S</div>
                         <div class="shop-introduce">骁龙845旗舰处理器，AI双摄</div>
@@ -93,7 +93,7 @@
                     </div>
                 </div>
                 <div class="newOrder-shop">
-                    <img src="./indeximages/newsshop002.jpg" />
+                    <img src="../images/indeximages/newsshop002.jpg" />
                     <div class="newshopInfo">
                         <div class="shop-name">红米Note 5</div>
                         <div class="shop-introduce">1.4μm大像素 AI 双摄</div>
@@ -101,7 +101,7 @@
                     </div>
                 </div>
                 <div class="newOrder-shop">
-                    <img src="./indeximages/newsshop002.jpg" />
+                    <img src="../images/indeximages/newsshop002.jpg" />
                     <div class="newshopInfo">
                         <div class="shop-name">红米Note 5</div>
                         <div class="shop-introduce">1.4μm大像素 AI 双摄</div>
@@ -109,7 +109,7 @@
                     </div>
                 </div>
                 <div class="newOrder-shop">
-                    <img src="./indeximages/newsshop002.jpg" />
+                    <img src="../images/indeximages/newsshop002.jpg" />
                     <div class="newshopInfo">
                         <div class="shop-name">红米Note 5</div>
                         <div class="shop-introduce">1.4μm大像素 AI 双摄</div>
@@ -121,11 +121,11 @@
         <div class="divider_line" index="13" style="height:.09rem;background-color:#f5f5f5"></div>
         <div class="superVal">
             <div class="superVal-title">
-                <img src="./indeximages/mingxindanping.jpg" />
+                <img src="../images/indeximages/mingxindanping.jpg" />
             </div>
             <div class="newOrder-shop-list">
                 <div class="newOrder-shop">
-                    <img src="./indeximages/newsshop001.jpg" />
+                    <img src="../images/indeximages/newsshop001.jpg" />
                     <div class="newshopInfo">
                         <div class="shop-name">小米MIX 2S</div>
                         <div class="shop-introduce">骁龙845旗舰处理器，AI双摄</div>
@@ -133,7 +133,7 @@
                     </div>
                 </div>
                 <div class="newOrder-shop">
-                    <img src="./indeximages/newsshop002.jpg" />
+                    <img src="../images/indeximages/newsshop002.jpg" />
                     <div class="newshopInfo">
                         <div class="shop-name">红米Note 5</div>
                         <div class="shop-introduce">1.4μm大像素 AI 双摄</div>
@@ -141,7 +141,7 @@
                     </div>
                 </div>
                 <div class="newOrder-shop">
-                    <img src="./indeximages/newsshop002.jpg" />
+                    <img src="../images/indeximages/newsshop002.jpg" />
                     <div class="newshopInfo">
                         <div class="shop-name">红米Note 5</div>
                         <div class="shop-introduce">1.4μm大像素 AI 双摄</div>
@@ -149,7 +149,7 @@
                     </div>
                 </div>
                 <div class="newOrder-shop">
-                    <img src="./indeximages/newsshop002.jpg" />
+                    <img src="../images/indeximages/newsshop002.jpg" />
                     <div class="newshopInfo">
                         <div class="shop-name">红米Note 5</div>
                         <div class="shop-introduce">1.4μm大像素 AI 双摄</div>
@@ -157,7 +157,7 @@
                     </div>
                 </div>
                 <div class="newOrder-shop">
-                    <img src="./indeximages/newsshop002.jpg" />
+                    <img src="../images/indeximages/newsshop002.jpg" />
                     <div class="newshopInfo">
                         <div class="shop-name">红米Note 5</div>
                         <div class="shop-introduce">1.4μm大像素 AI 双摄</div>
@@ -165,7 +165,7 @@
                     </div>
                 </div>
                 <div class="newOrder-shop">
-                    <img src="./indeximages/newsshop002.jpg" />
+                    <img src="../images/indeximages/newsshop002.jpg" />
                     <div class="newshopInfo">
                         <div class="shop-name">红米Note 5</div>
                         <div class="shop-introduce">1.4μm大像素 AI 双摄</div>
@@ -185,54 +185,54 @@ export default {
     return {
       navArr: [
         {
-          imgSrc: require("./indeximages/nav1.jpg")
+          imgSrc: require("../images/indeximages/nav1.jpg")
         },
         {
-          imgSrc: require("./indeximages/nav2.jpg")
+          imgSrc: require("../images/indeximages/nav2.jpg")
         },
         {
-          imgSrc: require("./indeximages/nav3.jpg")
+          imgSrc: require("../images/indeximages/nav3.jpg")
         },
         {
-          imgSrc: require("./indeximages/nav4.jpg")
+          imgSrc: require("../images/indeximages/nav4.jpg")
         },
         {
-          imgSrc: require("./indeximages/nav5.jpg")
+          imgSrc: require("../images/indeximages/nav5.jpg")
         }
       ],
       shangouArr: [
         {
-          imgSrc: require("./indeximages/shangou001.webp"),
+          imgSrc: require("../images/indeximages/shangou001.webp"),
           price: 739,
           old_price: 799
         },
         {
-          imgSrc: require("./indeximages/shangou002.webp"),
+          imgSrc: require("../images/indeximages/shangou002.webp"),
           price: 739,
           old_price: 799
         },
         {
-          imgSrc: require("./indeximages/shangou003.webp"),
+          imgSrc: require("../images/indeximages/shangou003.webp"),
           price: 315,
           old_price: 349
         },
         {
-          imgSrc: require("./indeximages/shangou004.webp"),
+          imgSrc: require("../images/indeximages/shangou004.webp"),
           price: 639,
           old_price: 699
         },
         {
-          imgSrc: require("./indeximages/shangou005.webp"),
+          imgSrc: require("../images/indeximages/shangou005.webp"),
           price: 155,
           old_price: 199
         },
         {
-          imgSrc: require("./indeximages/shangou006.webp"),
+          imgSrc: require("../images/indeximages/shangou006.webp"),
           price: 6799,
           old_price: 6999
         },
         {
-          imgSrc: require("./indeximages/shangou007.jpg"),
+          imgSrc: require("../images/indeximages/shangou007.jpg"),
           price: 3899,
           old_price: 3999
         }

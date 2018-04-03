@@ -15,7 +15,7 @@
 export default {
   data() {
     return {
-      imgSrc: require("./indeximages/logo.png"),
+      imgSrc: require("../images/indeximages/logo.png"),
       arr:["推荐","手机","智能","电视","电脑","全面屏","生活周边","盒子"],
       nav_index:0
     };

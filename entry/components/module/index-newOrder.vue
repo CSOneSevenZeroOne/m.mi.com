@@ -28,8 +28,8 @@
 export default {
     data(){
         return {
-            first:require("../indeximages/newsshop001.jpg"),
-            second:require("../indeximages/newsshop002.jpg")
+            first:require("../../images/indeximages/newsshop001.jpg"),
+            second:require("../../images/indeximages/newsshop002.jpg")
         }
     }
 };

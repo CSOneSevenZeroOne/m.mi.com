@@ -1,6 +1,6 @@
 <template>
   <div class="newOrder-shop">
-        <img src="./indeximages/newsshop002.jpg" />
+        <img src="../../images/indeximages/newsshop002.jpg" />
         <div class="newshopInfo">
             <div class="shop-name">红米Note 5</div>
             <div class="shop-introduce">1.4μm大像素 AI 双摄</div>

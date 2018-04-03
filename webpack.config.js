@@ -6,12 +6,11 @@ module.exports = {
 	//入口
 	entry: {
         user:'./entry/entry.js',
-        //cart:'./entry/cart.entry.js'
     },
 	//出口
 	output: {
 		path: path.resolve(__dirname, 'output'),
-		filename: '[name].bundle.js'
+		filename: 'bundle.js'
 	},
 	//开发版本
 	mode: "development",
@@ -27,7 +26,7 @@ module.exports = {
 			test: /\.css$/,
 			use: ['style-loader', 'css-loader']
 		}, {
-			test: /\.(png|jpg|gif|woff|ttf|webp)$/,
+			test: /\.(png|jpg|gif|svg|eot|woff|ttf|webp)$/,
 			use: [{
 				loader: 'file-loader',
 			}]
