@@ -9,6 +9,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 require("./css/base.css");
 
+import cart from "./components/cart.vue";
 import xorder from "./components/order.vue";
 import xuser from "./components/user.vue";
 import xuser_pannel from "./components/user_pannel.vue";
@@ -35,6 +36,9 @@ const router = new VueRouter({
 	}, {
 		path: "/userafter",//用户售后
 		component: aftersale
+	},{
+		path: "/cart",//购物车
+		component: cart
 	}]
 	// （缩写）相当于 routes: routes
 })
@@ -57,8 +61,8 @@ new Vue({
 	//容器内容
 	template: `
 		<div style="height:100%; width:100%" id="user_page">
-			<xfooter />
-			<router-view></router-view>
+            <router-view></router-view>
+            <xfooter />
 		</div>
 	`,
 	data: {

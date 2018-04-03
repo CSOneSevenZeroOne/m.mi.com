@@ -5,13 +5,12 @@ const path = require('path');
 module.exports = {
 	//入口
 	entry: {
-        user:'./entry/entry.js',
-        //cart:'./entry/cart.entry.js'
+        user:'./entry/entry.js'
     },
 	//出口
 	output: {
 		path: path.resolve(__dirname, 'output'),
-		filename: '[name].bundle.js'
+		filename: 'bundle.js'
 	},
 	//开发版本
 	mode: "development",
