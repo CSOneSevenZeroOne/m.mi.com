@@ -6,6 +6,8 @@
 
 ### 用户
 
+* 用户页:'/user'
+
 |组件名|路径|
 |-|-|
 |公用头部组件|entry/compoents/module/header.vue|
@@ -14,7 +16,10 @@
 |空订单|entry/compoents/module/order/order_empty.vue|
 |会员中心|entry/compoents/module/vip/vipcenter.vue|
 |我的优惠|entry/compoents/module/coupon.vue|
-|售后|entry/compoents/module/aftersale/aftersale.vue|
+|mihome|entry/compoents/module/mihome.vue|
+|服务|entry/compoents/module/services.vue|
+|设置|entry/compoents/module/setting.vue|
+|f码|entry/compoents/module/fcodepipe.vue|
 
 ### 购物车
 
