@@ -35,3 +35,4 @@
 |未登录|entry/compoents/cart_unlogin.vue|
 |购买限制|entry/compoents/cart_max.vue|
 |结算栏|entry/compoents/cart_checkout.vue|
+|选购|entry/compoents/cart_selectshop.vue|
