@@ -1,6 +1,6 @@
 var mysql = require('mysql');
 
-function createConnection(sql,callback) {
+function createConnection(sql,json,callback) {
 	//创建连接对象
 	var connection = mysql.createConnection({
 		host: 'localhost',
@@ -12,7 +12,7 @@ function createConnection(sql,callback) {
 	connection.connect();
 
 	//执行sql语句查询
-	connection.query(sql, function(error, results, fields) {
+	connection.query(sql,json,function(error, results, fields) {
 		//执行关闭
 		connection.end();
 		if(error) throw error;

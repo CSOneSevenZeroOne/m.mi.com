@@ -5,7 +5,7 @@
         <div class="header_title">
             <p v-text="this.$store.state.header_title"></p>
         </div>
-        <a href="" class="header_search"><img src="../../images/user/icon/icon_03.jpg" alt=""></a>
+        <a href="#/search" class="header_search"><img src="../../images/user/icon/icon_03.jpg" alt=""></a>
     </header>
 </template>
 

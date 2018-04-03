@@ -129,7 +129,7 @@ new Vue({
 	},
 	mounted() {
 		var str = window.location.href;
-		if (str.split("#")[1] == "/index") {
+		if (str.split("#")[1] == "/") {
 			this.$store.state.foottab = {
 				home_src: require("./images/foottab/home_curr.jpg"),
 				home_curr: true,
