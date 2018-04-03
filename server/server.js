@@ -15,5 +15,5 @@ var services = require('./router/services.js');
 app.use('/services', services);//服务
 
 app.set('jsonp callback name', 'JSON_CALLBACK');
-app.listen(9000);
+app.listen(6789);
 console.log("开启服务器");

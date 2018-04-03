@@ -3,27 +3,27 @@
     <footer class="footer" v-if="this.$store.state.index">
         <ul class="footer_con">
             <li>
-                <a href="javascript:void(0)" @click="tabcurr(1)">
-                    <img :src="foottab.home_src" alt="">
-                    <p :style='{"color":foottab.home_curr?"#f56c02":"#212121"}'>首页</p>
+                <a href="#/" @click="tabcurr(1)">
+                    <img :src="this.$store.state.foottab.home_src" alt="">
+                    <p :style='{"color":this.$store.state.foottab.home_curr?"#f56c02":"#212121"}'>首页</p>
                 </a>
             </li>
             <li>
-                <a href="javascript:void(0)" @click="tabcurr(2)">
-                    <img :src="foottab.classify_src" alt="">
-                    <p :style='{"color":foottab.classify_curr?"#f56c02":"#212121"}'>分类</p>
+                <a href="#/" @click="tabcurr(2)">
+                    <img :src="this.$store.state.foottab.classify_src" alt="">
+                    <p :style='{"color":this.$store.state.foottab.classify_curr?"#f56c02":"#212121"}'>分类</p>
                 </a>
             </li>
             <li>
-                <a href="javascript:void(0)" @click="tabcurr(3)">
-                    <img :src='foottab.cart_src' alt="">
-                    <p :style='{"color":foottab.cart_curr?"#f56c02":"#212121"}'>购物车</p>
+                <a href="#/cart" @click="tabcurr(3)">
+                    <img :src='this.$store.state.foottab.cart_src' alt="">
+                    <p :style='{"color":this.$store.state.foottab.cart_curr?"#f56c02":"#212121"}'>购物车</p>
                 </a>
             </li>
             <li>
-                <a href="javascript:void(0)" @click="tabcurr(4)">
-                    <img :src='foottab.user_src' alt="">
-                    <p :style='{"color":foottab.user_curr?"#f56c02":"#212121"}'>我的</p>
+                <a href="#/user" @click="tabcurr(4)">
+                    <img :src='this.$store.state.foottab.user_src' alt="">
+                    <p :style='{"color":this.$store.state.foottab.user_curr?"#f56c02":"#212121"}'>我的</p>
                 </a>
             </li>
         </ul>
@@ -32,24 +32,10 @@
 
 <script>
 export default {
-  data() {
-    return {
-      foottab: {
-        home_src: require("../../images/foottab/home_curr.jpg"),
-        home_curr: true,
-        classify_src: require("../../images/foottab/classify.jpg"),
-        classify_curr: false,
-        cart_src: require("../../images/foottab/cart.jpg"),
-        cart_curr: false,
-        user_src: require("../../images/foottab/user.jpg"),
-        user_curr: false
-      }
-    };
-  },
   methods: {
     tabcurr: function(key) {
       if (key == 1) {
-        this.foottab = {
+        this.$store.state.foottab = {
         home_src: require("../../images/foottab/home_curr.jpg"),
         home_curr: true,
         classify_src: require("../../images/foottab/classify.jpg"),
@@ -60,7 +46,7 @@ export default {
         user_curr: false
       };
       } else if (key == 2) {
-        this.foottab = {
+        this.$store.state.foottab = {
           home_src: require("../../images/foottab/home.jpg"),
           home_curr: false,
           classify_src: require("../../images/foottab/classify_curr.jpg"),
@@ -71,7 +57,7 @@ export default {
           user_curr: false
         };
       } else if (key == 3) {
-        this.foottab = {
+        this.$store.state.foottab = {
           home_src: require("../../images/foottab/home.jpg"),
           home_curr: false,
           classify_src: require("../../images/foottab/classify.jpg"),
@@ -82,7 +68,7 @@ export default {
           user_curr: false
         };
       } else if (key == 4) {
-        this.foottab = {
+       this.$store.state.foottab = {
           home_src: require("../../images/foottab/home.jpg"),
           home_curr: false,
           classify_src: require("../../images/foottab/classify.jpg"),

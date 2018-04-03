@@ -3,14 +3,17 @@
         <header class="header">
         <a href="#/user" class="header_back" @click="vipcenterback"><img src="../../images/user/icon/icon_06.jpg" alt=""></a>
         <div class="header_title">
-            <p v-text="'优惠券列表'"></p>
+            <p v-text="'服务'"></p>
         </div>
         <a href="" class="header_search"><img src="../../images/user/icon/icon_03.jpg" alt=""></a>
     </header>
-        <div>
-            <a href="javascript:void(0)">
-                <img src="http://i8.mifile.cn/v1/a1/30bc2339-742e-bb1d-e502-0ae28daeed25.png" alt="">
-            </a>
+        <div class="services">
+          <h4>自助服务</h4>
+            <div class="items">
+              <a href="javascript:void(0)" v-for="key in services">
+                <img :src="key.img_url" alt="">
+              </a>
+            </div>
         </div>
     </div>
 </template>
@@ -25,21 +28,52 @@ export default {
   methods: {
     vipcenterback() {
       this.$store.state.index = true;
+      this.$store.state.discounts_active = true;
     }
   },
   mounted() {
+    var str = window.location.href;
+    if (str.split("#")[1] == "/services") {
+      this.$store.state.discounts_active = false;
+    }
+    var self=this;
     $.ajax({
-      url: "http://localhost:9000/insertdata",
+      url: "http://localhost:6789/services",
       type: "get",
-      dataType:"json"
-    }).then(function(res){
-      console.log(res)
+      dataType: "json"
+    }).then(function(res) {
+      // console.log(res);
+      self.services=res;
     });
   }
 };
 </script>
 
-<style scoped>
+<style <style lang="less" scoped>
+.services {
+  padding-top: .6rem;
+  h4 {
+    margin: 0;
+    margin-left: 0.16rem;
+    font-size: 0.12rem;
+    line-height: 0.36rem;
+    border-bottom: 1px solid #f6f6f6;
+    color: #919191;
+    font-weight: 400;
+    text-align: left;
+  }
+  .items{
+    display: flex;
+    flex-wrap: wrap;
+    a{
+      display: inline-block;
+      width: 25%;
+    }
+    img{
+      width: 100%;
+    }
+  }
+}
 .header {
   background: #f2f2f2;
   display: flex;
