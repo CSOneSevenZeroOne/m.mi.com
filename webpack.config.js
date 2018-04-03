@@ -68,26 +68,6 @@ module.exports = {
 						presets: ['@babel/preset-env']
 					}
 				}
-<<<<<<< HEAD
-			}
-		}]
-	},
-	//开启监听模式
-	watch: true,
-	//插件
-	plugins: [
-		//new UglifyJsPlugin(),
-		// new HtmlWebpackPlugin()//自动生成html
-	],
-	//全局安装webpack配置好的服务器 webpack-dev-server
-	devServer: {
-		contentBase: "./output", //本地服务器所加载的页面所在的目录
-		historyApiFallback: true, //不跳转
-		port: 8080,
-		//port 设置默认监听端口，如果省略，默认为”8080“
-		inline: true //实时刷新
-	}
-=======
 			}]
 		},
 			//开启监听模式
@@ -105,5 +85,4 @@ module.exports = {
 			//port 设置默认监听端口，如果省略，默认为”8080“
 			inline: true //实时刷新
 		}
->>>>>>> 8134ad21f8f501b92a07205eb0f171f2e656448d
 }
