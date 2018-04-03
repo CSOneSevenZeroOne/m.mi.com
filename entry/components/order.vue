@@ -1,9 +1,13 @@
 <template>
 <div style="width:100%; height:100%; background:white">
-    <xheader />
-    <xordertab />
+    <div style=" position:fixed; top:0; width:100%; background:#fff; z-index:99">
+        <xheader />
+        <xordertab />
+    </div>
+    <div style="padding-top:.7rem;">
     <xempty />
     <xlike />
+    </div>
 </div>
 </template>
 <script>

@@ -20,6 +20,11 @@
 |服务|entry/compoents/module/services.vue|
 |设置|entry/compoents/module/setting.vue|
 |f码|entry/compoents/module/fcodepipe.vue|
+|搜索|entry/compoents/public/search.vue|
+
+
+- 数据库名 xiaomi
+
 
 ### 购物车
 

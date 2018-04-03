@@ -5,7 +5,7 @@
         <div class="header_title">
             <p v-text="'个人中心'"></p>
         </div>
-        <a href="" class="header_search"><img src="../../images/user/icon/icon_03.jpg" alt=""></a>
+        <a href="#/search" class="header_search"><img src="../../images/user/icon/icon_03.jpg" alt=""></a>
     </header>
     <ul class="setting_list">
         <li>

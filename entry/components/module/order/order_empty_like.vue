@@ -4,7 +4,7 @@
             <img src="//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/e95ade2750a7fde92369b416c7d3176d.jpg" alt="" class="order_like_title">
         </div>
         <div class="order_like_con">
-            <a href="javascript:void(0)" v-for="key in recom_list">
+            <a href="javascript:void(0)" v-for="(key,index) in recom_list" :key="index">
                 <img :src="key.image_url">
                 <div class="goods_info">
                     <div class="goods_name" v-text="key.name"></div>
@@ -26,11 +26,12 @@ export default {
   mounted: function() {
     var self = this;
     $.ajax({
-      url: "../../../../pay.json",
-      type: "get"
+      url: "http://localhost:6789/recommend",
+      type: "get",
+      dataType: "json"
     }).then(function(res) {
-      var data = res["data"].recom_list;
-      self.recom_list = data;
+      // console.log(res);
+      self.recom_list=res;
     });
   }
 };
@@ -48,13 +49,13 @@ export default {
 .order_like_con {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .order_like_con a {
   display: block;
   height: 2.43rem;
-  width: 50%;
-  flex: 0.5;
+  width: 49.5%;
 }
 
 .order_like_con a img {

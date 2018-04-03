@@ -28,19 +28,19 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.header_input{
+.header_input {
   border: 1px solid #e5e5e5;
-    margin: 0 .1rem;
-     background: #fff;
+  margin: 0 0.1rem;
+  background: #fff;
 }
 .header input {
-  width: 100%;
+  width: 92%;
   border: 0 none;
   outline: 0;
   font-size: 0.14rem;
   font-weight: 400;
   height: 0.18rem;
-  padding: 0.05rem .1rem;
+  padding: 0.05rem 0.1rem;
   line-height: normal;
 }
 .header_title {
