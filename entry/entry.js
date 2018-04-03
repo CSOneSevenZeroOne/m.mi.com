@@ -77,16 +77,16 @@ const store = new Vuex.Store({
 	//消息
 	state: {
 		order_tab_title: "商品订单",
-		index: true, //footer组件隐藏
-		order_tab_active: {
-			"all": true,
-			"wait": false,
-			"take": false
-		},
-		discounts_active: true, //user页面
-		index_page: 0,
-		header_title: "购物车",
-		bMax: false, //默认隐藏遮罩层
+		index:true,
+		order_tab_active:{"all":true,"wait":false,"take":false},
+		discounts_active:true,
+        index_page: 0,
+        header_title:"购物车",
+        bMax:false,//默认隐藏遮罩层
+        bEmpty:true,//默认空购物车
+        bFooter:true,//默认底部为导航
+        total:0,//购入商品总数，默认为0
+        prices:0,//所购商品总价，默认为0
 		foottab: {
 			home_src: require("./images/foottab/home_curr.jpg"),
 			home_curr: true,
@@ -109,7 +109,7 @@ new Vue({
 	template: `
 		<div style="height:100%; width:100%" id="user_page">
             <router-view></router-view>
-            <xfooter />
+            <xfooter v-show='this.$store.state.bFooter'/>
 		</div>
 	`,
 	data: {
