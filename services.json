@@ -1,0 +1,74 @@
+{
+    "code": 0,
+    "data": {
+        "service_icon_list": {
+            "name": "",
+            "data_json": [{
+                "img_url": "http://i8.mifile.cn/v1/a1/30bc2339-742e-bb1d-e502-0ae28daeed25.png",
+                "title": "售后服务",
+                "m_action": {
+                    "type": "url",
+                    "login": false,
+                    "path": "https://m.mi.com/legacy/#/aftersale/list"
+                }
+            }, {
+                "img_url": "http://i8.mifile.cn/v1/a1/df270244-1d4e-08f5-407b-9e76b02df338.png",
+                "title": "售后政策",
+                "m_action": {
+                    "type": "url",
+                    "login": false,
+                    "path": "https://m.mi.com/legacy/#/exchange"
+                }
+            }, {
+                "img_url": "http://i8.mifile.cn/v1/a1/0d35b4ac-8735-6e0f-dab8-cfb1248387d6.png",
+                "title": "服务网点",
+                "m_action": {
+                    "type": "url",
+                    "login": false,
+                    "path": "https://m.mi.com/legacy/#/station"
+                }
+            }, {
+                "img_url": "http://i8.mifile.cn/v1/a1/4f075e4e-23db-1bd7-23f9-50eb1fa55b21.png",
+                "title": "故障排除",
+                "m_action": {
+                    "type": "url",
+                    "login": false,
+                    "path": "https://m.mi.com/legacy/#/trouble"
+                }
+            }, {
+                "img_url": "http://i8.mifile.cn/b2c-mimall-media/1c6b29ff6f55ca6dde01036d4a83a086.jpg",
+                "title": "付费服务",
+                "m_action": {
+                    "type": "url",
+                    "login": false,
+                    "path": "https://m.mi.com/legacy/#/aftersale/sminstall"
+                }
+            }, {
+                "img_url": "http://i8.mifile.cn/v1/a1/a71febf3-e4dd-25f9-af6d-7503888f97c4.png",
+                "title": "维修价格",
+                "m_action": {
+                    "type": "url",
+                    "login": false,
+                    "path": "https://m.mi.com/legacy/#/repair"
+                }
+            }, {
+                "img_url": "http://i8.mifile.cn/v1/a1/043f196f-3ef0-48ce-3c7e-9ac9b706d90c.png",
+                "title": "真伪查询",
+                "m_action": {
+                    "type": "inside",
+                    "login": false,
+                    "path": "{\"name\":\"aftersale-security\"}"
+                }
+            }, {
+                "img_url": "http://i8.mifile.cn/v1/a1/f6c78ec3-59be-131d-0c48-ebbdc4dc5d29.png",
+                "title": "以旧换新",
+                "m_action": {
+                    "type": "url",
+                    "login": false,
+                    "path": "https://m.mi.com/legacy/#/recycling/"
+                }
+            }]
+        }
+    },
+    "result": "ok"
+}

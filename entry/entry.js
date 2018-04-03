@@ -15,16 +15,13 @@ import cart from "./components/cart.vue";//导入购物车
 import xindex from "./components/index-all.vue";//导入主页
 
 
-
 import xorder from "./components/order.vue";
 import xuser from "./components/user.vue";
-import xuser_pannel from "./components/user_pannel.vue";
-import xuser_header from "./components/user_header.vue";
-import xuser_order from "./components/user_order.vue";
 import xfooter from "./components/module/footer.vue";
-import xvipcenter from "./components/module/vip/vipcenter.vue"
-import aftersale from "./components/module/aftersale/aftersale.vue"
-import coupon from "./components/module/coupon.vue"
+import xvipcenter from "./components/module/vip/vipcenter.vue";
+import aftersale from "./components/module/aftersale/aftersale.vue";
+import coupon from "./components/module/coupon.vue";
+import services from "./components/module/services.vue";
 const router = new VueRouter({
 	routes: [{
 		path: '/user',//用户
@@ -32,6 +29,9 @@ const router = new VueRouter({
 		children:[{
 			path:"coupon",
 			component: coupon
+		},{
+			path:"services",
+			component: services
 		}]
 	}, {
 		path: "/order",//订单
@@ -58,7 +58,9 @@ const store = new Vuex.Store({
 		index:true,
 		order_tab_active:{"all":true,"wait":false,"take":false},
 		discounts_active:true,
-		index_page: 0
+        index_page: 0,
+        header_title:"购物车",
+        bMax:false//默认隐藏遮罩层
 	},
 	//获取值得方法
 	getters: {
@@ -82,10 +84,6 @@ new Vue({
 	router,
 	methods: {},
 	components: {
-		xuser_pannel,
-		xuser_header,
-		xuser_order,
 		xfooter,
-		xuser
 	}
 })
