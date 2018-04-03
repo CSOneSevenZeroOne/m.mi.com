@@ -9,7 +9,7 @@
             </div>
             <div class="item_list my_sale">
                 <div class="item_line">
-                    <a href="#/user/coupon" @click="discounts()" class="flextag item_line_taga">我的优惠</a>
+                    <a href="#/coupon" @click="discounts()" class="flextag item_line_taga">我的优惠</a>
                 </div>
             </div>
         </div>
@@ -17,7 +17,7 @@
         <div class="user_item">
             <div class="item_list serve_center">
                 <div class="item_line bdb1">
-                    <a href="#/user/services" @click="discounts()" class="flextag item_line_taga">服务中心</a>
+                    <a href="#/services" @click="discounts()" class="flextag item_line_taga">服务中心</a>
                 </div>
             </div>
             <div class="item_list mi_home">
@@ -26,24 +26,22 @@
                 </div>
             </div>
         </div>
-
         <div class="user_item">
             <div class="item_list u_fcode">
                 <div class="item_line">
-                    <a href="#/user/fcode" class="flextag item_line_taga">F码通道</a>
+                    <a href="#/fcodepipe" class="flextag item_line_taga">F码通道</a>
                 </div>
             </div>
         </div>
         <div class="user_item">
             <div class="item_list u_setting">
                 <div class="item_line">
-                    <a href="#/user/setting" class="flextag item_line_taga">设置</a>
+                    <a href="#/setting" class="flextag item_line_taga">设置</a>
                 </div>
             </div>
         </div>
     </div>
 </template>
-
 <script>
 export default {
   methods: {

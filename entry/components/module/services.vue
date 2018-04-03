@@ -33,7 +33,7 @@ export default {
   },
   mounted() {
     var str = window.location.href;
-    if (str.split("#")[1] == "/user/services") {
+    if (str.split("#")[1] == "/services") {
       this.$store.state.discounts_active = false;
     }
     var self=this;
