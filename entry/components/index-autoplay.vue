@@ -58,6 +58,8 @@
                 }
             }
         },
+        mounted(){
+        },
         components: {
             slider
         }

@@ -27,53 +27,74 @@
 </html>
 <script src="../jquery.js"></script>
 <script>
-    $("button").on("click", function () {
-        $.ajax({
-            url: "../../classfiy.json",
-            type: "GET",
-        }).then(function (res) {
+    // $("button").on("click", function () {
+    //     $.ajax({
+    //         url: "../../data.json",
+    //         type: "GET",
+    //     }).then(function (res) {
+    //         var arr = res.data.data.sections
+    //         for (var i = 0; i < arr.length; i++) {
+    //             var type = arr[i].view_type;
+    //             if (arr[i].body.items) {
+    //                 //console.log(arr[i].body.items.length)
+    //                 for (var j = 0; j < arr[i].body.items.length; j++) {
+    //                     arr[i].body.items[j].goods_type = type;
+    //                     //console.log(arr[i].body.items[j])
+    //                     $.ajax({
+    //                         url: "http://localhost:6789/inserthome",
+    //                         type: "post",
+    //                         data: {
+    //                             obj: JSON.stringify(arr[i].body.items[j])
+    //                         }
+    //                     }).then(function (res) {
+    //                         console.log(res);
+    //                     })
+    //                 }
+    //             }
+    //         }
+    //     })
+    // })
+    //             for(var i=0; i<res.data.length; i++){
+    //                 console.log(res.data[i].category_name);
+    //                 $.ajax({
+    //                     url: "http://localhost:6789/insertproduct",
+    //                     type: "post",
+    //                     data: {
+    //                         data: res.data[i].category_name
+    //                     }
+    //                 }).then(function (res) {
+    //                     console.log(res);
+    //                 })
+    // //               console.log(res.data[i].category_list)
+    //                 for(var j=0; j<res.data[i].category_list.length; j++){
 
-            for(var i=0; i<res.data.length; i++){
-                console.log(res.data[i].category_name);
-                $.ajax({
-                    url: "http://localhost:6789/insertproduct",
-                    type: "post",
-                    data: {
-                        data: res.data[i].category_name
-                    }
-                }).then(function (res) {
-                    console.log(res);
-                })
-//               console.log(res.data[i].category_list)
-                for(var j=0; j<res.data[i].category_list.length; j++){
-
-                    // var obj={
-                    //     goods_type:res.data[i].category_name,
-                    //     is_show:res.data[i].category_list[j].is_show,
-                    //     stat:res.data[i].category_list[j].stat,
-                    //     view_type:res.data[i].category_list[j].view_type,
-                    //     category_name:res.data[i].category_list[j].body.category_name,
-                    //     w:res.data[i].category_list[j].body.w,
-                    //     h:res.data[i].category_list[j].body.h,
-                    //     items:JSON.stringify(res.data[i].category_list[j].body.items),
-                    //     action:JSON.stringify(res.data[i].category_list[j].body.action)
-                    // }
+    //                     // var obj={
+    //                     //     goods_type:res.data[i].category_name,
+    //                     //     is_show:res.data[i].category_list[j].is_show,
+    //                     //     stat:res.data[i].category_list[j].stat,
+    //                     //     view_type:res.data[i].category_list[j].view_type,
+    //                     //     category_name:res.data[i].category_list[j].body.category_name,
+    //                     //     w:res.data[i].category_list[j].body.w,
+    //                     //     h:res.data[i].category_list[j].body.h,
+    //                     //     items:JSON.stringify(res.data[i].category_list[j].body.items),
+    //                     //     action:JSON.stringify(res.data[i].category_list[j].body.action)
+    //                     // }
 
 
-//                     $.ajax({
-//                         url: "http://localhost:6789/insertclassfiy",
-//                         type: "post",
-//                         data: {
-//                             action: JSON.stringify(obj)
-//                         }
-//                     }).then(function (res) {
-//                         console.log(res);
-//                     })
-                    //console.log(obj)
-                }
-            }
-        })
-    })
+    // //                     $.ajax({
+    // //                         url: "http://localhost:6789/insertclassfiy",
+    // //                         type: "post",
+    // //                         data: {
+    // //                             action: JSON.stringify(obj)
+    // //                         }
+    // //                     }).then(function (res) {
+    // //                         console.log(res);
+    // //                     })
+    //                     //console.log(obj)
+    //                 }
+    //             }
+    //         })
+
 
 
 
@@ -106,15 +127,15 @@
     //         for (var j = 0; j < arr[i].body.items.length; j++) {
     //             arr[i].body.items[j].goods_type = type;
     //             console.log(arr[i].body.items[j])
-//                 $.ajax({
-//                     url: "http://localhost:6789/inserthome",
-//                     type: "post",
-//                     data: {
-//                         obj: JSON.stringify(arr[i].body.items[j])
-//                     }
-//                 }).then(function (res) {
-//                     console.log(res);
-//                 })
+    //                 $.ajax({
+    //                     url: "http://localhost:6789/inserthome",
+    //                     type: "post",
+    //                     data: {
+    //                         obj: JSON.stringify(arr[i].body.items[j])
+    //                     }
+    //                 }).then(function (res) {
+    //                     console.log(res);
+    //                 })
     //         }
     //     }
     // }
