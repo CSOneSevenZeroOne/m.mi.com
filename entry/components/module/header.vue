@@ -1,7 +1,7 @@
 <template>
 	<!-- 头部 -->
     <header class="header"  @touchmove.prevent>
-        <a href="" class="header_back"><img src="../../images/user/icon/icon_06.jpg" alt=""></a>
+        <a href="#/" class="header_back" @click="()=>{this.$store.state.bFooter=true}"><img src="../../images/user/icon/icon_06.jpg" alt=""></a>
         <div class="header_title">
             <p v-text="this.$store.state.header_title"></p>
         </div>

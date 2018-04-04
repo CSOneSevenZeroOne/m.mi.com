@@ -1,8 +1,8 @@
 <template>
-    <div class="cart-selectshop" @touchmove.prevent>
+    <div class="cart-selectshop" @touchmove.prevent v-show="!this.$store.state.bClose">
         <div class="mask"></div>
         <div class="interface">
-            <div class="close">
+            <div class="close" @click="close">
                 <i></i>
             </div>
             <div class="title">购买服务</div>
@@ -165,6 +165,18 @@
 
 <script>
     export default {
+        data(){
+            return {
+                
+            }
+        },
+        methods:{
+            close(){
+                this.$store.state.bClose=true;
+            }   
+        },
+        mounted(){
 
+        }
     }
 </script>
