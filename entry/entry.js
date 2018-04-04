@@ -88,13 +88,13 @@ const store = new Vuex.Store({
     //消息
     state: {
         order_tab_title: "商品订单",
-        index: true,
         order_tab_active: {
             "all": true,
             "wait": false,
             "take": false
         },
         discounts_active: true,
+		index:true,//底部显示
         index_page: 0,
         header_title: "购物车",
         bMax: false, //默认隐藏遮罩层

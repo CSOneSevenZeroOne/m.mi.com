@@ -49,7 +49,7 @@ export default {
 };
 </script>
 
-<style <style lang="less" scoped>
+<style lang="less" scoped>
 .services {
   padding-top: .6rem;
   h4 {

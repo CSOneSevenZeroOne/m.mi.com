@@ -10,6 +10,8 @@
 
 使用 html-webpack-plugin 插件生成
 
+* 入口文件：'/entry/entry.js'
+
 ### 出口
 
 * 文件夹 ：'./output'
