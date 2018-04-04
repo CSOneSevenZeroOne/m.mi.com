@@ -4,7 +4,7 @@
             <li v-for="item in product" :key="item.id" class="item">
                 <div class="content">
                     <div class="choose" :class="item.isChecked?'checked':'unchecked'" @click="checked(item)"></div>
-                    <a href="javascript:void(0);" class="imgProduct">
+                    <a href="#/commodity" class="imgProduct">
                         <img :src="item.src">
                     </a>
                     <div class="info">
@@ -258,6 +258,14 @@
             return {
                 imgSrc: [require("../../images/cart/insurance.png")],
                 product: [{
+                        src: require("../../images/cart/pms3.jpg"),
+                        name: "小米MIX 2 全网通版 8GB内存 全陶瓷尊享版 黑色",
+                        price: "3899",
+                        num: 1,
+                        max: 5,
+                        insurance: 279,
+                        isChecked: true
+                    }, {
                         src: require("../../images/cart/pms.jpg"),
                         name: "小米5X 全网通版 4GB内存 红色",
                         price: 1499,
@@ -281,18 +289,18 @@
         methods: {
             //判断购物车是否为空,底部是否为结算模块
             isEmpty() {
-                if (this.product.length!=0) { //若有商品列表
+                if (this.product.length != 0) { //若有商品列表
                     this.$store.state.bEmpty = false;
-                    this.$store.state.bFooter=false;
+                    this.$store.state.bFooter = false;
                 } else {
                     this.$store.state.bEmpty = true;
-                    this.$store.state.bFooter=true;
+                    this.$store.state.bFooter = true;
                 }
             },
             // 更改选中状态
             checked(item) {
                 item.isChecked = !item.isChecked;
-                item.num=0;
+                item.num = 0;
                 this.calc();
             },
             // 减少物品
@@ -322,17 +330,17 @@
                 this.calc();
             },
             // 计算数量价格
-            calc(){
-                this.$store.state.total=0;
-                this.$store.state.prices=0;
+            calc() {
+                this.$store.state.total = 0;
+                this.$store.state.prices = 0;
                 for (const item of this.product) {
-                    this.$store.state.total+=item.num;
-                    this.$store.state.prices+=item.num*item.price;
+                    this.$store.state.total += item.num;
+                    this.$store.state.prices += item.num * item.price;
                 }
             },
             // 打开选购窗口
-            open(insurance){
-                this.$store.state.bClose=false;
+            open(insurance) {
+                this.$store.state.bClose = false;
             }
         },
         mounted() {
