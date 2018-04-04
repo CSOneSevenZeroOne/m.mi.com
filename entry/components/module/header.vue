@@ -1,7 +1,7 @@
 <template>
 	<!-- 头部 -->
     <header class="header"  @touchmove.prevent>
-        <a href="#/" @click="back" class="header_back"><img src="../../images/user/icon/icon_06.jpg" alt=""></a>
+        <a href="#/" class="header_back" @click="back"><img src="../../images/user/icon/icon_06.jpg" alt=""></a>
         <div class="header_title">
             <p v-text="this.$store.state.header_title"></p>
         </div>
@@ -13,7 +13,7 @@
 export default {
     methods:{
         back(){
-            console.log(this.$store.state.foottab)
+            this.$store.state.bFooter=true
             this.$store.state.foottab = {
                 home_src: require("../../images/foottab/home_curr.jpg"),
                 home_curr: true,

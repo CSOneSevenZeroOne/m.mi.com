@@ -23,6 +23,8 @@ var classfiy = require('./router/classfiy.js');
 app.use('/classfiy', classfiy);//分类商品获取
 var classfiytype = require('./router/classfiytype.js');
 app.use('/classfiytype', classfiytype);//获取分类
+var indexinfo = require('./router/indexinfo.js');
+app.use('/indexinfo', indexinfo);//主页信息获取
 
 app.set('jsonp callback name', 'JSON_CALLBACK');
 app.listen(6789);

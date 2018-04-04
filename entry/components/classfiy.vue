@@ -15,19 +15,19 @@
                         <div data-v-06d70f2d="" class="list-wrap">
                             <div data-v-06d70f2d="" class="list-item category0" v-for="(b,b_index) in a" :id="b_index">
                                 <div data-v-06d70f2d="" class="component-list-main" >
-                                    <div class="cells_auto_fill" index="0" v-for="c in b.category_list" v-if="c.view_type=='cells_auto_fill'">
-                                        <a data-log_code="31wapcategorycells_auto_fill001001#rid=f9b40a00f9d8fbec38dbee729418791f&amp;t=ad&amp;page=category&amp;act=product&amp;pid=10000080&amp;page_id=25&amp;bid=3002987.1&amp;adp=757&amp;adm=5267" class="exposure items" style="width: 5rem; height: 2rem;">
-                                            <img :src="c.body.items[0].img_url"  lazy="loaded" style="height: 2rem; width: 5rem;">
+                                    <div class="cells_auto_fill" index="0" v-for="c in JSON.parse(b.items)" v-if="b.view_type=='cells_auto_fill'">
+                                        <a href="javascript:void(0)" class="exposure items" style="height: 1rem; padding-right:0">
+                                            <img :src="c.img_url" lazy="loaded" style="height: 1rem; width: 100%;">
                                         </a>
                                     </div>
-                                    <div name="m1" class="category_title" v-else-if="c.view_type=='category_title'"><span>{{c.body.category_name}}</span></div>
-                                    <div data-v-6b9822de="" class="category_group box-flex" index="2" v-else>
+                                    <div name="m1" class="category_title" v-if="b.view_type=='category_title'"><span>{{b.category_name}}</span></div>
+                                    <div data-v-6b9822de="" class="category_group box-flex" index="2" v-else-if="b.view_type=='category_group'">
                                         <div data-v-6b9822de="" class="box">
-                                            <div data-v-6b9822de="" class="product" v-for="d in c.body.items">
+                                            <div data-v-6b9822de="" class="product" v-for="c in JSON.parse(b.items)">
                                                 <a data-v-6b9822de="" data-log_code="31wapcategorycategory_group001017#rid=8c65c00166258adf46acb1bfe9221e32&amp;t=normal&amp;page=category&amp;act=product&amp;pid=10000085&amp;bid=3194830.1" class="exposure item">
-                                                    <div data-v-6b9822de="" class="img"><img data-v-6b9822de="" class="big" :src="d.img_url"lazy="loaded" style="width: 1.2rem; height: 1.2rem;">
+                                                    <div data-v-6b9822de="" class="img"><img :src="c.img_url" data-v-6b9822de="" class="big" style="width: .6rem; height: .6rem;">
                                                     </div>
-                                                    <div data-v-6b9822de="" class="name">{{d.product_name}}</div>
+                                                    <div data-v-6b9822de="" class="name" v-text="c.product_name"></div>
                                                 </a>
                                             </div>
                                         </div>
@@ -52,9 +52,8 @@
     export default {
         data() {
             return {
-                a:1,
+                a:[],
                 index:0,
-                data:[],
                 classfiytype:[]
             }
         },
@@ -68,10 +67,10 @@
                     type: "get"
                 }).then(function (res) {
                     sessionStorage.setItem("classfiy", res);
-                    self.data=JSON.parse(res);
+                    self.a=JSON.parse(res);
                 });
             }else{
-                this.data=JSON.parse(sessionStorage.getItem("classfiy"))
+                this.a=JSON.parse(sessionStorage.getItem("classfiy"))
             }
             //获取分类
             if(!sessionStorage.getItem("classfiytype")){
@@ -86,8 +85,7 @@
             }else{
                 this.classfiytype=JSON.parse(sessionStorage.getItem("classfiytype"))
             }
-
-            console.log(this.data);
+            console.log(this.a);
             (function(doc, win, undefined) {
                 var docEl = doc.documentElement,
                     resizeEvt = 'orientationchange' in win ? 'orientationchange' : 'resize',
@@ -176,8 +174,8 @@
 	}
 	
 	.container .list-wrap>div[data-v-06d70f2d]:last-child {
-		min-height: -webkit-calc(100vh - .4rem);
-		min-height: calc(100vh - .4rem)
+		min-height: -webkit-calc(50vh - .4rem);
+		min-height: calc(50vh - .4rem)
 	}
 </style>
 <style type="text/css">
