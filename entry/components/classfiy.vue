@@ -86,7 +86,6 @@
             }else{
                 this.classfiytype=JSON.parse(sessionStorage.getItem("classfiytype"))
             }
-
             console.log(this.data);
             (function(doc, win, undefined) {
                 var docEl = doc.documentElement,
