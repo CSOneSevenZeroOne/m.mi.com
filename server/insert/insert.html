@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <rect width="48" height="48" rx="3" ry="3" style="fill:#ff6700"></rect>
+        <rect x="10" y="15" width="4.2" height="18" style="fill:#ffffff"></rect>
+        <rect x="33.75" y="15" width="4.2" height="18" style="fill:#ffffff"></rect>
+        <rect x="11.25" y="15" width="15" height="4.1" style="fill:#ffffff"></rect>
+        <rect x="26.2" y="20.55" width="4.2" height="12.5" style="fill:#ffffff"></rect>
+        <rect x="20.6" y="15" width="9.8" height="9.8" rx="4.4" ry="4.4" style="fill:#ffffff"></rect>
+        <rect x="20.2" y="19" width="6" height="6" rx="2" ry="2" style="fill:#ff6700"></rect>
+        <rect x="18" y="19.1" width="4" height="2.2" style="fill:#ff6700"></rect>
+        <rect x="24.2" y="23" width="1.94" height="10" style="fill:#ff6700"></rect>
+        <rect x="18.1" y="22.8" width="4.2" height="10.2" style="fill:#ffffff"></rect>
+    </svg>
+    <button type="button">start</button>
+</body>
+
+</html>
+<script src="../jquery.js"></script>
+<script>
+    $("button").on("click", function () {
+        $.ajax({
+            url: "../../classfiy.json",
+            type: "GET",
+        }).then(function (res) {
+
+            for(var i=0; i<res.data.length; i++){
+                console.log(res.data[i].category_name);
+                $.ajax({
+                    url: "http://localhost:6789/insertproduct",
+                    type: "post",
+                    data: {
+                        data: res.data[i].category_name
+                    }
+                }).then(function (res) {
+                    console.log(res);
+                })
+//               console.log(res.data[i].category_list)
+                for(var j=0; j<res.data[i].category_list.length; j++){
+
+                    // var obj={
+                    //     goods_type:res.data[i].category_name,
+                    //     is_show:res.data[i].category_list[j].is_show,
+                    //     stat:res.data[i].category_list[j].stat,
+                    //     view_type:res.data[i].category_list[j].view_type,
+                    //     category_name:res.data[i].category_list[j].body.category_name,
+                    //     w:res.data[i].category_list[j].body.w,
+                    //     h:res.data[i].category_list[j].body.h,
+                    //     items:JSON.stringify(res.data[i].category_list[j].body.items),
+                    //     action:JSON.stringify(res.data[i].category_list[j].body.action)
+                    // }
+
+
+//                     $.ajax({
+//                         url: "http://localhost:6789/insertclassfiy",
+//                         type: "post",
+//                         data: {
+//                             action: JSON.stringify(obj)
+//                         }
+//                     }).then(function (res) {
+//                         console.log(res);
+//                     })
+                    //console.log(obj)
+                }
+            }
+        })
+    })
+
+
+
+
+    // for (var i = 0; i < arr.length; i++) {
+    //     console.log(arr[i].image_url, arr[i].name, arr[i].product_desc, arr[i].action.path, arr[
+    //         i].action.type, arr[i].price)
+    //     $.ajax({
+    //         url: "http://localhost:6789/insertdata",
+    //         type: "post",
+    //         data: {
+    //             image_url: arr[i].image_url,
+    //             name: arr[i].name,
+    //             product_desc: arr[i].product_desc,
+    //             path: arr[i].action.path,
+    //             type: arr[i].action.type,
+    //             price: arr[i].price
+    //         }
+    //     }).then(function (res) {
+    //         console.log(res);
+    //     })
+    //}
+
+
+    // var arr = res.data.data.sections
+    // for (var i = 0; i < arr.length; i++) {
+    //     var type = arr[i].view_type;
+    //     if (arr[i].body.items) {
+    //         console.log(arr[i].body.items.length)
+    //         for (var j = 0; j < arr[i].body.items.length; j++) {
+    //             arr[i].body.items[j].goods_type = type;
+    //             console.log(arr[i].body.items[j])
+//                 $.ajax({
+//                     url: "http://localhost:6789/inserthome",
+//                     type: "post",
+//                     data: {
+//                         obj: JSON.stringify(arr[i].body.items[j])
+//                     }
+//                 }).then(function (res) {
+//                     console.log(res);
+//                 })
+    //         }
+    //     }
+    // }
+</script>

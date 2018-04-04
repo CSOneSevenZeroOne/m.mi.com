@@ -1,68 +1,117 @@
-
 <template>
-	<div data-v-bc186c1a="" id="app">
-		<div data-v-bc186c1a="" class="app-shell app-shell-bottom-navigation">
+	<div style="width:100%; height:100%">
+        <xheader></xheader>
+        <div data-v-bc186c1a="" id="app">
+            <div data-v-bc186c1a="" class="app-shell app-shell-bottom-navigation">
+                <div data-v-bc186c1a="" class="app-view-wrapper">
+                    <div data-v-06d70f2d="" data-v-bc186c1a="" class="container app-view app-view-with-header app-view-with-footer">
+                        <div data-v-06d70f2d="" class="list-navbar">
+                            <ul data-v-06d70f2d="">
+                                <li data-v-06d70f2d="" categoryid="653" class="active" v-for="(b,index) in classfiytype" v-on:click="turn(index,$event)" >
+                                    <a :href="'#'+index" data-v-06d70f2d=""><span data-v-06d70f2d="">{{b.goods_type}}</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div data-v-06d70f2d="" class="list-wrap">
+                            <div data-v-06d70f2d="" class="list-item category0" v-for="(b,b_index) in a" :id="b_index">
+                                <div data-v-06d70f2d="" class="component-list-main" >
+                                    <div class="cells_auto_fill" index="0" v-for="c in b.category_list" v-if="c.view_type=='cells_auto_fill'">
+                                        <a data-log_code="31wapcategorycells_auto_fill001001#rid=f9b40a00f9d8fbec38dbee729418791f&amp;t=ad&amp;page=category&amp;act=product&amp;pid=10000080&amp;page_id=25&amp;bid=3002987.1&amp;adp=757&amp;adm=5267" class="exposure items" style="width: 5rem; height: 2rem;">
+                                            <img :src="c.body.items[0].img_url"  lazy="loaded" style="height: 2rem; width: 5rem;">
+                                        </a>
+                                    </div>
+                                    <div name="m1" class="category_title" v-else-if="c.view_type=='category_title'"><span>{{c.body.category_name}}</span></div>
+                                    <div data-v-6b9822de="" class="category_group box-flex" index="2" v-else>
+                                        <div data-v-6b9822de="" class="box">
+                                            <div data-v-6b9822de="" class="product" v-for="d in c.body.items">
+                                                <a data-v-6b9822de="" data-log_code="31wapcategorycategory_group001017#rid=8c65c00166258adf46acb1bfe9221e32&amp;t=normal&amp;page=category&amp;act=product&amp;pid=10000085&amp;bid=3194830.1" class="exposure item">
+                                                    <div data-v-6b9822de="" class="img"><img data-v-6b9822de="" class="big" :src="d.img_url"lazy="loaded" style="width: 1.2rem; height: 1.2rem;">
+                                                    </div>
+                                                    <div data-v-6b9822de="" class="name">{{d.product_name}}</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!---->
 
-			<div data-v-bc186c1a="" class="app-view-wrapper">
-				<div data-v-06d70f2d="" data-v-bc186c1a="" class="container app-view app-view-with-header app-view-with-footer">
-					<div data-v-06d70f2d="" class="list-navbar">
-						<ul data-v-06d70f2d="">
+                                </div>
+                            </div>
 
-							<li data-v-06d70f2d="" categoryid="653" class="active" v-for="(b,index) in a" v-on:click="turn(index,$event)" >
-								
-								<a :href="'#'+index" data-v-06d70f2d=""><span data-v-06d70f2d="">{{b.category_name}}</span></a>
-							</li>
+                        </div>
+                    </div>
+                    <!---->
+                </div>
 
-						</ul>
-					</div>
-					<div data-v-06d70f2d="" class="list-wrap">
-						<div data-v-06d70f2d="" class="list-item category0" v-for="(b,b_index) in a" :id="b_index">
-							<div data-v-06d70f2d="" class="component-list-main" >
-								<!---->
-								
-								<div class="cells_auto_fill" index="0" v-for="c in b.category_list" v-if="c.view_type=='cells_auto_fill'">
-									<a data-log_code="31wapcategorycells_auto_fill001001#rid=f9b40a00f9d8fbec38dbee729418791f&amp;t=ad&amp;page=category&amp;act=product&amp;pid=10000080&amp;page_id=25&amp;bid=3002987.1&amp;adp=757&amp;adm=5267" class="exposure items" style="width: 5rem; height: 2rem;">
-										<!--{{}}-->
-										<img :src="c.body.items[0].img_url"  lazy="loaded" style="height: 2rem; width: 5rem;">
-									</a>
-									<!---->
-								</div>
-								<!---->
-								<div name="m1" class="category_title" v-else-if="c.view_type=='category_title'"><span>{{c.body.category_name}}</span></div>
-								<!---->
-								<div data-v-6b9822de="" class="category_group box-flex" index="2" v-else>
-									<div data-v-6b9822de="" class="box">
-										<div data-v-6b9822de="" class="product" v-for="d in c.body.items">
-											<a data-v-6b9822de="" data-log_code="31wapcategorycategory_group001017#rid=8c65c00166258adf46acb1bfe9221e32&amp;t=normal&amp;page=category&amp;act=product&amp;pid=10000085&amp;bid=3194830.1" class="exposure item">
-												<div data-v-6b9822de="" class="img"><img data-v-6b9822de="" class="big" :src="d.img_url"lazy="loaded" style="width: 1.2rem; height: 1.2rem;">
-													<!---->
-													<!---->
-												</div>
-												<div data-v-6b9822de="" class="name">{{d.product_name}}</div>
-											</a>
-										</div>
-									
-									</div>
-								</div>
-								<!---->
-						
-							</div>
-						</div>
-					
-					</div>
-				</div>
-				<!---->
-			</div>
-
-		</div>
-	</div>
+            </div>
+        </div>
+    </div>
 </template>
+<script type="text/javascript">
+    import $$ from "jquery";
+    import xheader from "./module/header.vue"
+    export default {
+        data() {
+            return {
+                a:1,
+                index:0,
+                data:[],
+                classfiytype:[]
+            }
+        },
+        mounted: function() {
+            this.$store.state.header_title="分类";
+            //分类商品
+            if(!sessionStorage.getItem("classfiy")){
+                var self=this;
+                $$.ajax({
+                    url: "http://localhost:6789/classfiy",
+                    type: "get"
+                }).then(function (res) {
+                    sessionStorage.setItem("classfiy", res);
+                    self.data=JSON.parse(res);
+                });
+            }else{
+                this.data=JSON.parse(sessionStorage.getItem("classfiy"))
+            }
+            //获取分类
+            if(!sessionStorage.getItem("classfiytype")){
+                var self=this;
+                $$.ajax({
+                    url: "http://localhost:6789/classfiytype",
+                    type: "get"
+                }).then(function (res) {
+                    sessionStorage.setItem("classfiytype", res);
+                    self.classfiytype=JSON.parse(res);
+                });
+            }else{
+                this.classfiytype=JSON.parse(sessionStorage.getItem("classfiytype"))
+            }
 
+            console.log(this.data);
+            (function(doc, win, undefined) {
+                var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in win ? 'orientationchange' : 'resize',
+                    recalc = function() {
+                        var clientWidth = docEl.clientWidth;
+                        if(clientWidth === undefined) return;
+                        docEl.style.fontSize = 20 * (clientWidth / 150) + 'px';
+                    };
+                if(doc.addEventListener === undefined) return;
+                win.addEventListener(resizeEvt, recalc, false);
+                doc.addEventListener('DOMContentLoaded', recalc, false)
+            })(document, window);
+        },
+        methods:{
+        },
+        components:{
+            xheader
+        }
+    }
+</script>
 <style type="text/css">
 	.container[data-v-06d70f2d] {
 		color: #3c3c3c
 	}
-	
 	.container .list-navbar[data-v-06d70f2d] {
 		position: fixed;
 		top: 49px;
@@ -72,7 +121,6 @@
 		border-right: 1px solid #efefef;
 		overflow: hidden
 	}
-	
 	.container .list-navbar ul[data-v-06d70f2d] {
 		z-index: 90;
 		position: absolute;
@@ -758,60 +806,7 @@
 </style>
 
 
-<script type="text/javascript">
-	export default {
-		data() {
-			return {
-				a: 1,
-				index:0
 
-			}
-
-		},
-		mounted: function() {
-			
-			var self = this;
-			var xmlhttp = new XMLHttpRequest();
-			xmlhttp.onreadystatechange = function() {
-				if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-					var json = JSON.parse(xmlhttp.responseText)
-					console.log(json)
-					console.log(self.a)
-					self.a = json.data;
-				}
-			}
-			xmlhttp.open("GET", "classfiy.json", true);
-			xmlhttp.send();
-			
-			(function(doc, win, undefined) {
-				var docEl = doc.documentElement,
-					resizeEvt = 'orientationchange' in win ? 'orientationchange' : 'resize',
-					recalc = function() {
-						var clientWidth = docEl.clientWidth;
-						if(clientWidth === undefined) return;
-						docEl.style.fontSize = 20 * (clientWidth / 150) + 'px';
-					};
-				if(doc.addEventListener === undefined) return;
-				win.addEventListener(resizeEvt, recalc, false);
-				doc.addEventListener('DOMContentLoaded', recalc, false)
-			})(document, window);
-			
-//			function () {
-//				
-//			}
-	},
-		methods:{
-			init(){
-				return this.$refs.a
-			},
-			turn(index,event){
-				console.log(document.getElementsByClassName("list-wrap").scrollTop)
-				document.getElementsByClassName("list-wrap").scrollTop
-			}
-			
-		}
-	}
-</script>
 <!--<script type="text/javascript">
 	$(function () {
 		for (var i = 0; i < $(".active").length; i++) {

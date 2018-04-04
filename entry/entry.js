@@ -84,7 +84,7 @@ const store = new Vuex.Store({
 	//消息
 	state: {
 		order_tab_title: "商品订单",
-		index:true,
+		index:true,//底部显示
 		order_tab_active:{"all":true,"wait":false,"take":false},
 		discounts_active:true,
         index_page: 0,
