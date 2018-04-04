@@ -152,13 +152,13 @@ new Vue({
 				user_src: require("./images/foottab/user.jpg"),
 				user_curr: false
 			}
-		} else if (str.split("#")[1] == "/classify") {
+		} else if (str.split("#")[1] == "/classfiy") {
 			this.$store.state.foottab = {
 				home_src: require("./images/foottab/home.jpg"),
 				home_curr: false,
 				classify_src: require("./images/foottab/classify_curr.jpg"),
 				classify_curr: true,
-				cart_src: require("./images/foottab/cart_curr.jpg"),
+				cart_src: require("./images/foottab/cart.jpg"),
 				cart_curr: false,
 				user_src: require("./images/foottab/user.jpg"),
 				user_curr: false
