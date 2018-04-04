@@ -38,7 +38,7 @@
                     <div class="i2">
                         <span v-text="' 意外保障服务 '+item.insurance+'元'"></span>
                     </div>
-                    <div class="i3">
+                    <div class="i3" @click="open(item.insurance)">
                         <span>选购</span>
                     </div>
                 </div>
@@ -329,7 +329,10 @@
                     this.$store.state.total+=item.num;
                     this.$store.state.prices+=item.num*item.price;
                 }
-
+            },
+            // 打开选购窗口
+            open(insurance){
+                this.$store.state.bClose=false;
             }
         },
         mounted() {

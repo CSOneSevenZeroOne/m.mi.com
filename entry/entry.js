@@ -94,7 +94,7 @@ const store = new Vuex.Store({
         bFooter:true,//默认底部为导航
         total:0,//购入商品总数，默认为0
         prices:0,//所购商品总价，默认为0
-		foottab: {
+		foottab: {//footer组件图片请求和切换
 			home_src: require("./images/foottab/home_curr.jpg"),
 			home_curr: true,
 			classify_src: require("./images/foottab/classify.jpg"),
@@ -103,7 +103,8 @@ const store = new Vuex.Store({
 			cart_curr: false,
 			user_src: require("./images/foottab/user.jpg"),
 			user_curr: false
-		}, //footer组件图片请求和切换
+        },
+        bClose:true,//默认不显示选购窗口
 	},
 	//获取值得方法
 	getters: {}

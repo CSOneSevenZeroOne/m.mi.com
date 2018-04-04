@@ -1,7 +1,11 @@
 <template>
 	<!-- 头部 -->
     <header class="header"  @touchmove.prevent>
+<<<<<<< HEAD
         <a href="#/" @click="back" class="header_back"><img src="../../images/user/icon/icon_06.jpg" alt=""></a>
+=======
+        <a href="#/" class="header_back" @click="()=>{this.$store.state.bFooter=true}"><img src="../../images/user/icon/icon_06.jpg" alt=""></a>
+>>>>>>> 5a5e2bbd28baa2d640cc1f91f40c31fcf1c0e4a3
         <div class="header_title">
             <p v-text="this.$store.state.header_title"></p>
         </div>
