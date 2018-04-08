@@ -8,7 +8,7 @@
                         <div data-v-06d70f2d="" class="list-navbar">
                             <ul data-v-06d70f2d="">
                                 <li data-v-06d70f2d="" categoryid="653" class="active" v-for="(b,index) in classfiytype"  >
-                                    <a @click="goAnchor('#anchor-'+index,index)" data-v-06d70f2d=""><span data-v-06d70f2d="">{{b.goods_type}}</span></a>
+                                    <a data-v-06d70f2d=""><span data-v-06d70f2d="">{{b.goods_type}}</span></a>
                                 </li>
                             </ul>
                         </div>
@@ -100,14 +100,14 @@
             })(document, window);
         },
         methods:{
-        	goAnchor(selector,index) {
-				$$(".active").children("a").css({"color":"black","font-size":".34rem"})
-				$$($$(".active")[index]).children("a").css({"color":"orange","font-size":".44rem"})
-				var anchor = this.$el.querySelector(selector)
-//				console.log(anchor)
-				$$(".list-wrap").scrollTop(anchor.offsetTop)
+//         	goAnchor(selector,index) {
+// 				$$(".active").children("a").css({"color":"black","font-size":".34rem"})
+// 				$$($$(".active")[index]).children("a").css({"color":"orange","font-size":".44rem"})
+// 				var anchor = this.$el.querySelector(selector)
+// //				console.log(anchor)
+// 				$$(".list-wrap").scrollTop(anchor.offsetTop)
 				
-			}
+// 			}
         },
         components:{
             xheader

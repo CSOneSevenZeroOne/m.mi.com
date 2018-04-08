@@ -81,13 +81,16 @@ const router = new VueRouter({
         }, {
             path: "/commodity", //详情页
             component: commodity
-        }, {
+        }
+        , {
             path: "/loginphone", //手机登录
             component: login_phone
-        }, {
-            path: "/loginuser", //用户登录
-            component: login_user
-        }, {
+        }
+        , {
+             path: "/loginuser", //用户登录
+             component: login_user
+         }
+         , {
             path: "/register", //注册
             component: register
         }
