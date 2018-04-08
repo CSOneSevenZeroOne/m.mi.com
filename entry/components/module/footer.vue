@@ -79,6 +79,55 @@ export default {
           user_curr: true
         };
       }
+    },
+    mounted(){
+      var str = window.location.href;
+      var loca=str.split("#")[1];
+      if (loca == "/") {
+        this.$store.state.foottab = {
+        home_src: require("../../images/foottab/home_curr.jpg"),
+        home_curr: true,
+        classify_src: require("../../images/foottab/classify.jpg"),
+        classify_curr: false,
+        cart_src: require("../../images/foottab/cart.jpg"),
+        cart_curr: false,
+        user_src: require("../../images/foottab/user.jpg"),
+        user_curr: false
+      };
+      } else if (loca == "/classfiy") {
+        this.$store.state.foottab = {
+          home_src: require("../../images/foottab/home.jpg"),
+          home_curr: false,
+          classify_src: require("../../images/foottab/classify_curr.jpg"),
+          classify_curr: true,
+          cart_src: require("../../images/foottab/cart.jpg"),
+          cart_curr: false,
+          user_src: require("../../images/foottab/user.jpg"),
+          user_curr: false
+        };
+      } else if (loca == "/cart") {
+        this.$store.state.foottab = {
+          home_src: require("../../images/foottab/home.jpg"),
+          home_curr: false,
+          classify_src: require("../../images/foottab/classify.jpg"),
+          classify_curr: false,
+          cart_src: require("../../images/foottab/cart_curr.jpg"),
+          cart_curr: true,
+          user_src: require("../../images/foottab/user.jpg"),
+          user_curr: false
+        };
+      } else {
+       this.$store.state.foottab = {
+          home_src: require("../../images/foottab/home.jpg"),
+          home_curr: false,
+          classify_src: require("../../images/foottab/classify.jpg"),
+          classify_curr: false,
+          cart_src: require("../../images/foottab/cart.jpg"),
+          cart_curr: false,
+          user_src: require("../../images/foottab/user_curr.jpg"),
+          user_curr: true
+        }
+      }
     }
   }
 };

@@ -1,29 +1,38 @@
 const request = require("request");
 //SPDY Server for node.js
 request.post({
-    url: "https://m.mi.com/v1/product/productView2_new",
+    url: "https://m.mi.com/v1/product/recommend",
+    type:"POST",
     headers: {
-        ':authority': 'm.mi.com',
-        ':method': 'POST',
-        ':path': '/v1/product/productView2_new',
-        ':scheme': 'https',
-        'accept': 'application/json, text/plain, */*',
-        'accept-encoding': 'gzip, deflate, br',
-        'accept-language': 'zh-CN,zh;q=0.9',
-        'cache-control': 'no-cache',
-        'content-length': 74,
-        'content-type': 'application/x-www-form-urlencoded',
-        'cookie': 'xmuuid=XMGUEST-A5300CF0-2B05-11E7-BA89-1915B2B99B4C; mstuid=1493268890580_4121; muuid=1521951934233_2635; Hm_lvt_4982d57ea12df95a2b24715fb6440726=1522760358,1522761501,1522808871,1523108677; log_code=be3508ef26ecd981-4f3e9d63a6677a31|https%3A%2F%2Fm.mi.com%2Fcategory; hd_log_code=31wapcategorycategory_group001017%23t%3Dnormal%26page%3Dcategory%26act%3Dproduct%26pid%3D10000085%26bid%3D3194830.1; pageid=e788ae18b5944665; msttime=https%3A%2F%2Fm.mi.com%2Fcommodity%2Fdetail%2F10000085; msttime1=https%3A%2F%2Fm.mi.com%2Fcommodity%2Fdetail%2F10000085; mstz=||1728593202.20|||; xm_vistor=1493268890580_4121_1523108669133-1523109228251; Hm_lpvt_4982d57ea12df95a2b24715fb6440726=1523109232',
-        'origin': 'https://m.mi.com',
-        'pragma': 'no-cache',
-        'referer': 'https://m.mi.com/commodity/detail/10000085',
-        'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1x-requested-with: XMLHttpRequest'
+        'Host': 'm.mi.com',
+        'Accept': 'application/json, text/plain, */*',
+        'X-Requested-With': 'XMLHttpRequest',
+        'Accept-Language': 'zh-cn',
+        'Accept-Encoding': 'br, gzip, deflate',
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Origin': 'https://m.mi.com',
+        'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E216 MicroMessenger/6.6.5 NetType/WIFI Language/zh_CN',
+        'Connection': 'keep-alive',
+        'Referer': 'https://m.mi.com/commodity/detail/10000064',
+        'Cookie': 'Hm_lpvt_4982d57ea12df95a2b24715fb6440726=1523151644; Hm_lvt_4982d57ea12df95a2b24715fb6440726=1522130130,1523150127,1523151644; xmuuid=XMGUEST-DA69E5C0-3ACD-11E8-B886-31CE6E27BC53; log_code=AJAX_ERROR|https%3A%2F%2Fm.mi.com%2Fcommodity%2Fdetail%2F10000064; mstuid=1520070089272_3621; callback_url=https://m.mi.com/cart?from=product&address_id=; client_id=180100041061; fbh20180327_uuid=7ca4a426-8d6d-460c-8f68-f1aacbf95e35; muuid=1522130125158_2635'
+    },
+    Cookies:{
+        'Hm_lpvt_4982d57ea12df95a2b24715fb6440726':	'1523151644',
+        'Hm_lvt_4982d57ea12df95a2b24715fb6440726':	'1522130130,1523150127,1523151644',
+        'xmuuid':	'XMGUEST-DA69E5C0-3ACD-11E8-B886-31CE6E27BC53',
+        'log_code':	'AJAX_ERROR|https%3A%2F%2Fm.mi.com%2Fcommodity%2Fdetail%2F10000064',
+        'mstuid':	'1520070089272_3621',
+        'callback_url':	'https://m.mi.com/cart?from=product&address_id=',
+        'client_id':	'180100041061',
+        'fbh20180327_uuid':	'7ca4a426-8d6d-460c-8f68-f1aacbf95e35',
+        'muuid':	'1522130125158_2635',
+        'Body':'client_id=180100031051&channel_id=0&webp=0&product_id=10000064'
     },
     formData: {
         'client_id': 180100031051,
         'channel_id': 0,
         'webp': 1,
-        'commodity_id': 10000085,
+        'commodity_id': 10000064,
         'width': 720
     },
 }, function optionalCallback(err, httpResponse, body) {
@@ -32,3 +41,17 @@ request.post({
     }
     console.log(body);
 });
+
+// Cookies
+// Name	Value
+// Hm_lpvt_4982d57ea12df95a2b24715fb6440726	1523151644
+// Hm_lvt_4982d57ea12df95a2b24715fb6440726	1522130130,1523150127,1523151644
+// xmuuid	XMGUEST-DA69E5C0-3ACD-11E8-B886-31CE6E27BC53
+// log_code	AJAX_ERROR|https%3A%2F%2Fm.mi.com%2Fcommodity%2Fdetail%2F10000064
+// mstuid	1520070089272_3621
+// callback_url	https://m.mi.com/cart?from=product&address_id=
+// client_id	180100041061
+// fbh20180327_uuid	7ca4a426-8d6d-460c-8f68-f1aacbf95e35
+// muuid	1522130125158_2635
+// Body
+// client_id=180100031051&channel_id=0&webp=0&product_id=10000064
