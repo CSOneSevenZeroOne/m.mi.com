@@ -7,13 +7,13 @@
                     <div data-v-06d70f2d="" data-v-bc186c1a="" class="container app-view app-view-with-header app-view-with-footer">
                         <div data-v-06d70f2d="" class="list-navbar">
                             <ul data-v-06d70f2d="">
-                                <li data-v-06d70f2d="" categoryid="653" class="active" v-for="(b,index) in classfiytype" v-on:click="turn(index,$event)" >
-                                    <a :href="'#'+index" data-v-06d70f2d=""><span data-v-06d70f2d="">{{b.goods_type}}</span></a>
+                                <li data-v-06d70f2d="" categoryid="653" class="active" v-for="(b,index) in classfiytype"  >
+                                    <a @click="goAnchor('#anchor-'+index,index)" data-v-06d70f2d=""><span data-v-06d70f2d="">{{b.goods_type}}</span></a>
                                 </li>
                             </ul>
                         </div>
                         <div data-v-06d70f2d="" class="list-wrap">
-                            <div data-v-06d70f2d="" class="list-item category0" v-for="(b,b_index) in a" :id="b_index">
+                            <div data-v-06d70f2d="" class="list-item category0" v-for="(b,b_index) in a" :id="'anchor-'+b_index">
                                 <div data-v-06d70f2d="" class="component-list-main" >
                                     <div class="cells_auto_fill" index="0" v-for="c in JSON.parse(b.items)" v-if="b.view_type=='cells_auto_fill'">
                                         <a href="javascript:void(0)" class="exposure items" style="height: 1rem; padding-right:0">
@@ -100,6 +100,14 @@
             })(document, window);
         },
         methods:{
+        	goAnchor(selector,index) {
+				$$(".active").children("a").css({"color":"black","font-size":".34rem"})
+				$$($$(".active")[index]).children("a").css({"color":"orange","font-size":".44rem"})
+				var anchor = this.$el.querySelector(selector)
+//				console.log(anchor)
+				$$(".list-wrap").scrollTop(anchor.offsetTop)
+				
+			}
         },
         components:{
             xheader

@@ -3,7 +3,7 @@
     <header class="header">
         <div class="header_con">
             <div class="head_img">
-                <img src="../images/user/default.png" alt="">
+                <img src="../../../images/user/default.png" alt="">
             </div>
             <div class="userinfo">
                 <p class="username"><a href="#/login">登录/注册</a></p>
@@ -24,7 +24,7 @@ export default {
 
 <style scoped>
 .header {
-  background: url(../images/user/bg.63c8e19.png) center 0 #f37d0f;
+  background: url(../../../images/user/bg.63c8e19.png) center 0 #f37d0f;
   background-size: auto 100%;
   width: 100%;
   padding: 0.17rem 0;
