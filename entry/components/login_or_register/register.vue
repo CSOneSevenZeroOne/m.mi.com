@@ -412,7 +412,6 @@
 												</div>
 												<div class="navbar_panel">
 													<div class="navbar">
-														<a  v-for="(b,index) in a" @click="goAnchor('#anchor-'+index)">{{b}}</a>
 														
 													</div>
 												</div>
@@ -917,27 +916,16 @@
 </template>
 
 <script>
-	 import $$ from "jquery";
+import $$ from "jquery";
+import "../../css/register.css"; 
 export default {
-	data(){
-		return {
-			a:["#","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-		}
-	},
-	methods: {
-		goAnchor(selector) {
-			console.log(selector)
-			var anchor = this.$el.querySelector(selector)
-			document.body.scrollTop = anchor.offsetTop
-		}
-	}
-}
+};
 </script>
 <style>
-	.btn-action-go {
-		display: none;
-	}
-	.nf-intro{
-		display: none;
-	}
+.btn-action-go {
+  display: none;
+}
+.nf-intro {
+  display: none;
+}
 </style>

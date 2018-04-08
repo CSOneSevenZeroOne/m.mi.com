@@ -9,9 +9,9 @@
 </div>
 </template>
 <script>
-import xheader from "./module/user_header.vue";
-import xorder from "./module/user_order.vue";
-import xpannel from "./module/user_pannel.vue";
+import xheader from "./module/user/user_header.vue";
+import xorder from "./module/user/user_order.vue";
+import xpannel from "./module/user/user_pannel.vue";
 export default {
   components: {
     xheader,

@@ -2,11 +2,11 @@
   <div id="header_wrap_h">
     <div class="header_top">
       <div class="header_logo">
-        <img :src="imgSrc" alt="">
+        <a href="#/"><img :src="imgSrc" alt=""></a>
       </div>
       <div class="header_search">
         <span class="iconfont">&#xe62e;</span>搜索商品名称</div>
-      <div class="iconfont" id="people_pic">&#xe619;</div>
+      <div><a href="#/user" class="iconfont" id="people_pic" @click="gouser">&#xe619;</a></div>
     </div>
     <ul class="header_nav_h_list">
       <li v-for="(item,index) in arr" :key="index" @click="showPage(index)">
@@ -29,6 +29,18 @@
       showPage(index) {
         this.$store.state.index_page = index;
         this.nav_index = index;
+      },
+      gouser(){
+        this.$store.state.foottab = {
+          home_src: require("../images/foottab/home.jpg"),
+          home_curr: false,
+          classify_src: require("../images/foottab/classify.jpg"),
+          classify_curr: false,
+          cart_src: require("../images/foottab/cart.jpg"),
+          cart_curr: false,
+          user_src: require("../images/foottab/user_curr.jpg"),
+          user_curr: true
+        };
       }
     }
   };

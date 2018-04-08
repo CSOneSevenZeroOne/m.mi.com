@@ -225,6 +225,10 @@
 </template>
 
 <script>
+import "../../css/login.css";
+export default {
+
+}
 </script>
 
 <style>

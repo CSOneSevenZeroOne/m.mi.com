@@ -82,24 +82,24 @@ export default {
   font-size: 0.14rem;
   line-height: 0.55rem;
   margin-right: 0.14rem;
-  background: url(../images/user/icon/xiaomi_03.jpg) no-repeat right center;
+  background: url(../../../images/user/icon/xiaomi_03.jpg) no-repeat right center;
 }
 .vip_center {
-  background: url(../images/user/icon/xiaomi_18.jpg) no-repeat 0.16rem center;
+  background: url(../../../images/user/icon/xiaomi_18.jpg) no-repeat 0.16rem center;
 }
 .my_sale {
-  background: url(../images/user/icon/xiaomi_21.jpg) no-repeat 0.16rem center;
+  background: url(../../../images/user/icon/xiaomi_21.jpg) no-repeat 0.16rem center;
 }
 .serve_center {
-  background: url(../images/user/icon/xiaomi_23.jpg) no-repeat 0.16rem center;
+  background: url(../../../images/user/icon/xiaomi_23.jpg) no-repeat 0.16rem center;
 }
 .mi_home {
-  background: url(../images/user/icon/xiaomi_25.jpg) no-repeat 0.16rem center;
+  background: url(../../../images/user/icon/xiaomi_25.jpg) no-repeat 0.16rem center;
 }
 .u_fcode {
-  background: url(../images/user/icon/xiaomi_25.jpg) no-repeat 0.16rem center;
+  background: url(../../../images/user/icon/xiaomi_25.jpg) no-repeat 0.16rem center;
 }
 .u_setting {
-  background: url(../images/user/icon/xiaomi_29.jpg) no-repeat 0.16rem center;
+  background: url(../../../images/user/icon/xiaomi_29.jpg) no-repeat 0.16rem center;
 }
 </style>

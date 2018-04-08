@@ -11,19 +11,19 @@
             <ul>
                 <li>
                     <a href="#/order" @click="goorder">
-                        <img src="../images/user/icon/xiaomi_10.jpg" alt="">
+                        <img src="../../../images/user/icon/xiaomi_10.jpg" alt="">
                         <p>待付款</p>
                     </a>
                 </li>
                 <li>
                     <a href="#/order" @click="gotake">
-                        <img src="../images/user/icon/xiaomi_12.jpg" alt="">
+                        <img src="../../../images/user/icon/xiaomi_12.jpg" alt="">
                         <p>待收货</p>
                     </a>
                 </li>
                 <li>
                     <a href="#/userafter" @click="goaftersale">
-                        <img src="../images/user/icon/xiaomi_07.jpg" alt="">
+                        <img src="../../../images/user/icon/xiaomi_07.jpg" alt="">
                         <p>退换修</p>
                     </a>
                 </li>
@@ -75,7 +75,7 @@ order
 
 .all_order {
   padding-right: 0.16rem;
-  background: url(../images/user/icon/xiaomi_03.jpg) no-repeat right center;
+  background: url(../../../images/user/icon/xiaomi_03.jpg) no-repeat right center;
 }
 .my_order {
   font-size: 0.14rem;
