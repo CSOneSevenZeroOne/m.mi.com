@@ -25,8 +25,6 @@
     import cart_selectshop from "./cart/cart_selectshop.vue"; //选购
 
     export default {
-
-        
         components: {
             xheader,
             "cart-unlogin": cart_unlogin,
@@ -37,11 +35,5 @@
             "cart-checkout":cart_checkout,
             "cart-selectshop":cart_selectshop
         },
-        methods: {
-
-        },
-        mounted() {
-
-        }
     }
 </script>

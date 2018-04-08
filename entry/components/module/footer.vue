@@ -9,7 +9,7 @@
                 </a>
             </li>
             <li>
-                <a href="#/" @click="tabcurr(2)">
+                <a href="#/classfiy" @click="tabcurr(2)">
                     <img :src="this.$store.state.foottab.classify_src" alt="">
                     <p :style='{"color":this.$store.state.foottab.classify_curr?"#f56c02":"#212121"}'>分类</p>
                 </a>

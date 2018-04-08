@@ -6,7 +6,7 @@
             <strong v-text="this.$store.state.prices"></strong>
             <span>元</span>
         </div>
-        <a href="javascript:void(0);">继续购物</a>
+        <a href="#/classfiy" @click="()=>{this.$store.state.bFooter=true}">继续购物</a>
         <a href="javascript:void(0);">去结算</a>
     </div>
 </template>

@@ -7,7 +7,10 @@
 ### 入口
 
 * 页面：'/entry/index.html'
+
 使用 html-webpack-plugin 插件生成
+
+* 入口文件：'/entry/entry.js'
 
 ### 出口
 
@@ -15,7 +18,7 @@
 
 使用 clean-webpack-plugin 插件清理
 
-输入 `npm start` 命令运行 webpack-dev-server,自动打开路径为 http://localhost:8000/#/ 主页面
+输入 `npm start` 命令运行 webpack-dev-server,自动打开路径为 localhost:8000/#/ 主页面
 
 输入 `npm run build` 命令进行构建
 
@@ -37,9 +40,18 @@
 |f码|entry/compoents/module/fcodepipe.vue|
 |搜索|entry/compoents/public/search.vue|
 
+* 数据库名 xiaomi
 
-- 数据库名 xiaomi
+### 详情页
 
+* 路由：'/commodity/'+id
+* 组件：
+
+|组件名|路径|
+|-|-|
+|commodity|entry/compoents/commodity.vue|
+|commodity|entry/compoents/commodity/comm_content.vue|
+|commodity|entry/compoents/commodity/comm_footer.vue|
 
 ### 购物车
 
