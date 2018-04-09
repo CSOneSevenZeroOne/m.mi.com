@@ -5,9 +5,12 @@
             <div class="head_img">
                 <img src="../../../images/user/default.png" alt="">
             </div>
-            <div class="userinfo">
+            <div class="userinfo" v-if="username.length>2">
                 <p class="username">刘处长</p>
                 <p class="userid">1301723</p>
+            </div>
+            <div class="userinfo" v-else>
+                <p class="username"><a href="#/loginuser">登录/注册</a></p>
             </div>
         </div>
     </header>
@@ -17,12 +20,11 @@
 export default {
   data() {
     return {
-      username: "刘处长"
+      username: ""
     };
   }
 };
 </script>
-
 <style scoped>
 .header {
   background: url(../../../images/user/bg.63c8e19.png) center 0 #f37d0f;
@@ -30,6 +32,9 @@ export default {
   width: 100%;
   padding: 0.17rem 0;
   font-size: 0.12rem;
+}
+.username a{
+  color: #fff
 }
 
 .header_con {

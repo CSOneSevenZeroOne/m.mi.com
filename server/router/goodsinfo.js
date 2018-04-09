@@ -4,10 +4,11 @@ const url = require('url');
 var querystring = require('querystring');//字符串转对象
 var createConnection = require("../createConnection.js")
 
-router.get('/', function (req, res, next) {
+router.post('/', function (req, res, next) {
     res.setHeader("Access-Control-Allow-Origin", "*");//允许跨域
     res.setHeader("Content-Type", "text/plain;charset=UTF-8");//字符编码
-    createConnection(`select * from goodsinfo where items like '%path:${req.body.path}%'`,function (results) {
+    createConnection(`select * from goodsinfo where path='${req.body.path}'`,function (results) {
+        console.log(results)
         res.send(results)
     });
 });

@@ -31,6 +31,8 @@ var indexinfo = require('./router/indexinfo.js');
 app.use('/indexinfo', indexinfo);//主页信息获取
 var sign = require('./router/sign.js');
 app.use('/sign', sign);//登录注册
+var goodsinfo = require('./router/goodsinfo.js');
+app.use('/goodsinfo', goodsinfo);//商品信息
 
 app.set('jsonp callback name', 'JSON_CALLBACK');
 app.listen(6789);
