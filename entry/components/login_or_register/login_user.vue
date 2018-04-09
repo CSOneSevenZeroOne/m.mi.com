@@ -50,15 +50,15 @@
                               <span class="country_code"><tt class="countrycode-value" id="countrycode_value">+86</tt><i class="icon_arrow_down"></i></span>
                             </div>
                           </div>
-                          <input class="item_account" autocomplete="off" type="text" name="user" id="username" placeholder="邮箱/手机号码/小米ID" _type="text">
+                          <input class="item_account" autocomplete="off" type="text" name="user" id="username" placeholder="邮箱/手机号码/小米ID" _type="text" v-model="username">
                         </label>
 												<div class="country-container" id="countrycode_container" style="display: none;">
 													<div class="country_container_con" id="countrycode_container_con"></div>
 												</div>
 												<label class="labelbox pwd_panel c_b">
-                          <input class="item_account" type="password" placeholder="密码" autocomplete="off" id="pwd" name="password" _type="password">
-                          <input class="item_account" type="text" placeholder="密码" autocomplete="off" id="visiablePwd" name="visiablepwd" style="display:none">
-                          <div class="eye_panel pwd-visiable">
+                          <input class="item_account" type="password" placeholder="密码" autocomplete="off" id="pwd" name="password" _type="password" v-show="password" v-model="pwd">
+                          <input class="item_account" type="text" placeholder="密码" autocomplete="off" id="visiablePwd" name="visiablepwd" v-show="!password" v-model="pwd">
+                          <div class="eye_panel pwd-visiable" @click="passwordchick">
                             <i class="eye pwd-eye">
                               <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
                                 <path class="eye_outer" d="M0 8 C6 0,14 0,20 8, 14 16,6 16, 0 8 z"></path>
@@ -79,22 +79,22 @@
 											<!-- 错误信息 -->
 											<div id="captcha"></div>
 											<div class="err_tip">
-												<div><em class="icon_error"></em><span class="error-con"></span></div>
+												<div><em class="icon_error" v-text="msg" style="color:#ff6700"></em><span class="error-con"></span></div>
 											</div>
 											<!-- 登录频繁 -->
 											<div id="error-forbidden" class="err_forbidden">您的操作频率过快，请稍后再试。</div>
 											<div class="btns_bg">
-												<input class="btnadpt" id="login-button" type="submit" value="登录">
+												<input class="btnadpt" id="login-button" type="button" value="登录" @click="login">
 												<span id="custom_display_8" class="sns-default-container sns_default_container" style="display: none;">
                           </span>
 											</div>
 											<div class="other_panel clearfix">
 												<span id="custom_display_256" class="sms_link">
-                            <a href="javascript:;" class="btnadpt btn_gray" id="ChangeLoginType">手机短信登录/注册</a>
+                            <a href="#/loginphone" class="btnadpt btn_gray" id="ChangeLoginType">手机短信登录/注册</a>
                           </span>
 												<div class="reverse">
 													<div class="n_links_area" id="custom_display_64" style="">
-														<a class="outer-link" href="https://account.xiaomi.com/pass/register">立即注册</a><span>|</span>
+														<a class="outer-link" href="#/register">立即注册</a><span>|</span>
 														<a class="outer-link" href="https://account.xiaomi.com/pass/forgetPassword">忘记密码？</a>
 													</div>
 												</div>
@@ -225,978 +225,1031 @@
 </template>
 
 <script>
-//import "../../css/login.css";
+import $ from "jquery";
 export default {
-
-}
+  data() {
+    return {
+      password: true,
+      username: "",
+      pwd: "",
+      msg: ""
+    };
+  },
+  methods: {
+    passwordchick() {
+      this.password = !this.password;
+    },
+    login() {
+      var self = this;
+      //console.log(111);
+      $.ajax({
+        url: "http://localhost:6789/sign/login",
+        type: "post",
+        data: {
+          user_name: self.username,
+          user_pwd: self.pwd
+        },
+        dataType: "JSON"
+      }).then(function(res) {
+        if (res.status == 1) {
+          window.location.href = "#/";
+          self.$store.state.foottab = {
+            home_src: require("../../images/foottab/home_curr.jpg"),
+            home_curr: true,
+            classify_src: require("../../images/foottab/classify.jpg"),
+            classify_curr: false,
+            cart_src: require("../../images/foottab/cart.jpg"),
+            cart_curr: false,
+            user_src: require("../../images/foottab/user.jpg"),
+            user_curr: false
+          };
+        } else {
+          self.msg = "用户名或密码错误";
+        }
+      });
+    }
+  }
+};
 </script>
 <style type="text/css">
-	html,
-	body,
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	blockquote,
-	p,
-	pre,
-	dl,
-	dd,
-	ol,
-	ul,
-	li,
-	a,
-	span,
-	caption,
-	th,
-	td,
-	form,
-	fieldset,
-	legend,
-	input,
-	button,
-	textarea,
-	address {
-		margin: 0;
-		padding: 0
-	}
-	
-	* {
-		padding: 0;
-		margin: 0
-	}
-	
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		font-size: 100%
-	}
-	
-	ol,
-	ul {
-		list-style: none
-	}
-	
-	li {
-		list-style: none
-	}
-	
-	fieldset,
-	img {
-		border: 0
-	}
-	
-	address,
-	cite,
-	dfn,
-	em,
-	var {
-		font-style: normal
-	}
-	
-	code,
-	kbd,
-	pre,
-	samp {
-		font-family: courier new, courier, monospace
-	}
-	
-	input,
-	button,
-	textarea,
-	select {
-		font-size: 100%
-	}
-	
-	input,
-	button,
-	select,
-	textarea {
-		outline: 0
-	}
-	
-	textarea {
-		resize: none
-	}
-	
-	table {
-		border-collapse: collapse;
-		border-spacing: 0;
-		empty-cells: show;
-		font-size: inherit
-	}
-	
-	abbr[title] {
-		border-bottom: 1px dotted;
-		cursor: help
-	}
-	
-	a,
-	a:hover {
-		text-decoration: none
-	}
-	
-	a,
-	label,
-	:focus {
-		outline: 0 none
-	}
-	
-	a,
-	img,
-	input {
-		border: 0 none
-	}
-	
-	s {
-		font-style: normal;
-		text-decoration: none
-	}
-	
-	body {
-		font-size: 14px;
-		font-family: arial, "Hiragino Sans GB", "Microsoft YaHei", "微軟正黑體", "儷黑 Pro", sans-serif
-	}
-	
-	button,
-	input,
-	select,
-	textarea {
-		font-family: arial, "Hiragino Sans GB", "Microsoft YaHei", sans-serif
-	}
-	
-	input::-moz-placeholder,
-	textarea::-moz-placeholder {
-		color: #3b3b3b;
-		font-weight: normal
-	}
-	
-	::-webkit-input-placeholder {
-		color: #3b3b3b;
-		font-weight: normal
-	}
-	
-	input:-ms-input-placeholder {
-		color: #3b3b3b;
-		font-weight: normal
-	}
-	
-	::-ms-clear {
-		display: none
-	}
-	
-	::-ms-reveal {
-		display: none
-	}
-	
-	.clearfix:after {
-		display: block;
-		content: "\20";
-		height: 0;
-		clear: both;
-		overflow: hidden;
-		visibility: hidden
-	}
-	
-	.clearfix {
-		*zoom: 1
-	}
-	
-	input::-ms-clear {
-		display: none
-	}
-	
-	input::-ms-reveal {
-		display: none
-	}
-	
-	input:-webkit-autofill {
-		-webkit-box-shadow: 0 0 0 1000px white inset
-	}
-	
-	@media screen and (-ms-high-contrast:active),
-	(-ms-high-contrast:none) {
-		a {
-			background-color: transparent
-		}
-	}
-	
-	input {
-		background: 0;
-		border: 0 none
-	}
-	
-	input[type="button"],
-	input[type="submit"],
-	input[type="reset"],
-	a {
-		-webkit-appearance: none;
-		appearance: none
-	}
-	
-	.fl {
-		float: left
-	}
-	
-	.fr {
-		float: right
-	}
-	
-	.nbg {
-		background: none !important
-	}
-	
-	.t_l {
-		text-align: left
-	}
-	
-	.t_c {
-		text-align: center
-	}
-	
-	.t_r {
-		text-align: right
-	}
-	
-	.c_b:before,
-	.c_b:after {
-		content: "";
-		display: block
-	}
-	
-	.c_b:after {
-		clear: both
-	}
-	
-	.c_b {
-		zoom: 1
-	}
-	
-	.hidden,
-	.hide {
-		display: none
-	}
-	
-	.hideimportant {
-		display: none !important
-	}
-	
-	.underline {
-		text-decoration: underline
-	}
-	
-	input[type=text]::-ms-clear,
-	input[type=password]::-ms-reveal {
-		display: none
-	}
-	
-	input {
-		color: #333
-	}
-	
-	input:required,
-	input:invalid {
-		-moz-box-shadow: none;
-		box-shadow: none
-	}
-	
-	input::-moz-focus-inner {
-		border: 0
-	}
-	
-	input[type=number]::-webkit-inner-spin-button,
-	input[type=number]::-webkit-outer-spin-button {
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-		margin: 0
-	}
-	
-	input[type="number"] {
-		-moz-appearance: textfield
-	}
-	
-	input {
-		color: #4a4a4a
-	}
-	
-	::-webkit-input-placeholder {
-		color: #9b9b9b
-	}
-	
-	input:-ms-input-placeholder {
-		color: #9b9b9b
-	}
-	
-	.blue {
-		color: #2ea5e5
-	}
-	
-	.orange {
-		color: #ff6700
-	}
-	
-	.fr {
-		float: right
-	}
-	
-	.tac {
-		text-align: center
-	}
-	
-	.ptb30 {
-		padding: 30px 0
-	}
-	
-	.clearfix:before,
-	.clearfix:after {
-		content: " ";
-		display: table
-	}
-	
-	.clearfix:after {
-		clear: both
-	}
-	
-	@media only screen and (max-width:420px) {
-		html {
-			font-size: 625%
-		}
-	}
-	
-	@media only screen and (max-width:580px) and (min-width:421px) {
-		html {
-			font-size: 687.5%
-		}
-	}
-	
-	@media only screen and (max-width:540px) and (min-width:480px) {
-		html {
-			font-size: 750%
-		}
-	}
-	
-	@media only screen and (max-width:660px) and (min-width:541px) {
-		html {
-			font-size: 781.25%
-		}
-	}
-	
-	@media only screen and (max-width:720px) and (min-width:661px) {
-		html {
-			font-size: 812.5%
-		}
-	}
-	
-	@media only screen and (min-width:720px) {
-		html {
-			font-size: 875%
-		}
-	}
-	
-	body {
-		font-size: .14rem;
-		font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
-		background-color: #fff
-	}
-	
-	button,
-	input,
-	select,
-	textarea,
-	tt {
-		font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
-	}
-	
-	html,
-	body {
-		height: 100%
-	}
-	
-	a {
-		color: #9b9b9b
-	}
-	
-	.a_critical {
-		color: #4a4a4a
-	}
-	
-	.btns_bg {
-		padding-top: 24px
-	}
-	
-	.btnadpt {
-		width: 100%;
-		padding: .1rem 0;
-		display: block;
-		margin-bottom: 14px;
-		text-align: center;
-		font-size: .18rem;
-		color: #fff;
-		cursor: pointer;
-		-webkit-border-radius: 6px;
-		-moz-border-radius: 6px;
-		-o-border-radius: 6px;
-		border-radius: 6px;
-		overflow: hidden;
-		background-color: #ff6700
-	}
-	
-	.btnadpt.disabled {
-		opacity: .7;
-		filter: alpha(opacity=70)
-	}
-	
-	.btnadpt.plain {
-		border: 1px solid #ff6700;
-		background-color: #fff;
-		color: #ff6700
-	}
-	
-	.btn_gray {
-		background: #fff;
-		margin-top: 10px;
-		border: 1px solid #d3d3d3;
-		color: #000
-	}
-	
-	.btn_gray.disabled {
-		color: #9b9b9b
-	}
-	
-	.wrapper {
-		min-height: 100%;
-		height: auto
-	}
-	
-	.wrap {
-		padding-bottom: .9rem
-	}
-	
-	.layout {
-		width: 100%;
-		margin: 0 auto 30px;
-		padding: 0 28px;
-		position: relative;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box
-	}
-	
-	.header_tit {
-		padding: 30px 0 10px
-	}
-	
-	.milogo {
-		background-image: url(https://account.xiaomi.com/static/res/11eb7d1/account-static/respassport/acc-2014/img/2018/milogo.png);
-		width: 48px;
-		height: 48px;
-		margin: 0 auto 15px;
-		display: block;
-		background-image: -webkit-image-set(url(https://account.xiaomi.com/static/res/11eb7d1/account-static/respassport/acc-2014/img/2018/milogo.png) 1x, url(https://account.xiaomi.com/static/res/11eb7d1/account-static/respassport/acc-2014/img/2018/milogo@2x.png) 2x)
-	}
-	
-	.header_tit_txt {
-		font-size: .18rem;
-		color: #000;
-		font-weight: normal
-	}
-	
-	.login_area {
-		padding-bottom: 20px
-	}
-	
-	.labelbox {
-		display: block;
-		background-color: #fff
-	}
-	
-	.labelbox input {
-		width: 100%;
-		padding: .16rem 0;
-		line-height: normal;
-		display: block;
-		font-size: .18rem
-	}
-	
-	.loginbox .acq_tips {
-		margin-top: 30px
-	}
-	
-	.login_user {
-		margin-bottom: 1px;
-		display: box;
-		display: -webkit-box;
-		display: -moz-box;
-		-webkit-box-align: center;
-		box-align: center;
-		border-bottom: 1px solid #d3d3d3
-	}
-	
-	.item_account {
-		-webkit-box-flex: 1;
-		box-flex: 1
-	}
-	
-	.pwd_panel {
-		border-bottom: 1px solid #d3d3d3;
-		display: box;
-		display: -webkit-box;
-		display: -moz-box;
-		-webkit-box-align: center;
-		box-align: center
-	}
-	
-	.pwd_panel input {
-		-webkit-box-flex: 1;
-		box-flex: 1
-	}
-	
-	.eye {
-		width: 20px;
-		height: 16px;
-		display: block
-	}
-	
-	.eye.chk .eye_outer,
-	.eye.chk .eye_inner {
-		fill: #ff6700
-	}
-	
-	.eye_outer {
-		fill: #4d4d4d
-	}
-	
-	.eye_inner {
-		fill: #4d4d4d;
-		stroke: #fff;
-		stroke-width: 2;
-		stroke-opacity: .8
-	}
-	
-	.lgncode {
-		padding-top: 14px;
-		display: box;
-		display: -webkit-box;
-		display: -moz-box;
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-align: center;
-		box-align: center;
-		align-items: flex-end
-	}
-	
-	.code_label {
-		-webkit-box-flex: 1;
-		box-flex: 1;
-		border-bottom: 1px solid #d3d3d3
-	}
-	
-	.chkcode_img {
-		border-bottom: 1px solid #d3d3d3
-	}
-	
-	.sms_login .lgncode {
-		padding: 0;
-		background: #fff;
-		margin-bottom: 1px
-	}
-	
-	.sms_login .code_label {
-		-webkit-border-radius: 0;
-		-moz-border-radius: 0;
-		-o-border-radius: 0;
-		border-radius: 0
-	}
-	
-	.sms_login .chkcode_img {
-		margin-left: 0
-	}
-	
-	.btn_facebook {
-		background-color: #7a96d2
-	}
-	
-	.btn_qq {
-		background-color: #72c7db
-	}
-	
-	.btn_weibo {
-		background-color: #ed9090
-	}
-	
-	.btn_alipay {
-		background-color: #6bb6ea
-	}
-	
-	.btn_weixin {
-		background-color: #00be00
-	}
-	
-	.btn_sns_icontype {
-		background: url(https://account.xiaomi.com/static/res/166d6dc/account-static/respassport/acc-2014/img/icons_type.png) no-repeat;
-		display: block;
-		width: 18px;
-		height: 18px;
-		margin: 5px auto 0
-	}
-	
-	.sns-default-container .btn_sns_icontype {
-		display: inline-block;
-		vertical-align: middle;
-		margin: 0 5px 0 0
-	}
-	
-	.icon_default_qq {
-		background-position: -19px 0
-	}
-	
-	.icon_default_weibo {
-		background-position: -38px 0
-	}
-	
-	.icon_default_alipay {
-		background-position: -57px 0
-	}
-	
-	.icon_default_weixin {
-		background-position: -84px 0
-	}
-	
-	.icon_default_alipay {
-		width: 26px
-	}
-	
-	.icon_default_weixin {
-		width: 23px
-	}
-	
-	.icon_default_facebook {
-		background: 0;
-		display: inline !important
-	}
-	
-	.btn_facebook:before {
-		content: "";
-		width: 18px;
-		height: 18px;
-		margin-right: 6px;
-		background: url(https://account.xiaomi.com/static/res/28f08d0/account-static/respassport/acc-2014/img/fb.png);
-		display: inline-block;
-		vertical-align: middle
-	}
-	
-	.other_login_type {
-		padding-top: 40px
-	}
-	
-	.oth_type_tit {
-		border-top: 1px solid #f2f2f2;
-		padding-top: 10px
-	}
-	
-	.oth_type_txt {
-		font-size: .12rem;
-		color: #b0b0b0;
-		width: 80px
-	}
-	
-	.oth_type_links {
-		padding-top: 10px;
-		text-align: center;
-		display: box;
-		display: -webkit-box;
-		display: -moz-box;
-		-webkit-box-pack: center;
-		box-pack: center
-	}
-	
-	.oth_type_links .btn_weixin {
-		display: none
-	}
-	
-	.icon_type {
-		width: 30px;
-		height: 30px;
-		margin: 0 10px;
-		display: inline-block;
-		text-indent: -9999px;
-		-webkit-border-radius: 50%;
-		-moz-border-radius: 50%;
-		-o-border-radius: 50%;
-		border-radius: 50%
-	}
-	
-	.icon_type .icon_default_qq {
-		background-position: -19px 0
-	}
-	
-	.icon_type .icon_default_weibo {
-		background-position: -38px 0
-	}
-	
-	.icon_type .icon_default_alipay {
-		background-position: -57px 0
-	}
-	
-	.icon_type .icon_default_weixin {
-		background-position: -84px 0
-	}
-	
-	.hasSnsDefault #ChangeLoginType {
-		font-size: .14rem;
-		text-align: center;
-		display: block;
-		background: 0;
-		border: 0 none;
-		padding: 10px 0 20px 0;
-		margin: 0;
-		color: #424242
-	}
-	
-	.hasSnsDefault #ChangeLoginType:after {
-		content: '>'
-	}
-	
-	.reverse {
-		display: box;
-		display: -webkit-box;
-		display: -moz-box;
-		-webkit-box-orient: vertical;
-		box-orient: vertical;
-		-webkit-box-direction: reverse;
-		box-direction: reverse
-	}
-	
-	.reverse .n_links_area {
-		text-align: center;
-		color: #646464
-	}
-	
-	.reverse .n_links_area a {
-		padding: 0 9px;
-		font-size: .16rem;
-		color: #646464
-	}
-	
-	#qrcode-trigger {
-		display: none !important
-	}
-	
-	.ercode {
-		background: url(https://account.xiaomi.com/static/res/28f08d0/account-static/respassport/acc-2014/img/ercode_hover.png);
-		width: 68px;
-		height: 68px;
-		position: absolute;
-		right: 0;
-		top: 0
-	}
-	
-	.ercode_area {
-		display: none;
-		width: 100% !important
-	}
-	
-	.ercode_box {
-		padding-top: 40px
-	}
-	
-	.code_close {
-		background-color: #bdbdbd;
-		-webkit-border-radius: 50%;
-		-moz-border-radius: 50%;
-		-o-border-radius: 50%;
-		border-radius: 50%;
-		width: .3rem;
-		height: .3rem;
-		position: absolute;
-		right: 10px;
-		top: 10px
-	}
-	
-	.icon_code_close {
-		width: .2rem;
-		height: .2rem;
-		margin: 0 auto;
-		display: block;
-		position: relative
-	}
-	
-	.icon_code_close:before,
-	.icon_code_close:after {
-		content: "";
-		width: 100%;
-		height: .01rem;
-		background-color: rgba(0, 0, 0, 0.3);
-		display: block;
-		position: absolute;
-		left: 0;
-		top: 50%;
-		margin-top: .04rem
-	}
-	
-	.icon_code_close:before {
-		-webkit-transform: rotate(-45deg);
-		transform: rotate(-45deg)
-	}
-	
-	.icon_code_close:after {
-		-webkit-transform: rotate(45deg);
-		transform: rotate(45deg)
-	}
-	
-	.code_hd {
-		padding-bottom: 20px
-	}
-	
-	.zh_CN .code_hd,
-	.zh_TW .code_hd {
-		text-align: center
-	}
-	
-	.code_tit {
-		font-size: .2rem;
-		text-align: center;
-		color: #ff6700;
-		font-weight: normal;
-		padding-bottom: 10px
-	}
-	
-	.code_iframe {
-		text-align: center
-	}
-	
-	.turn_area {
-		display: none;
-		padding-right: 8px
-	}
-	
-	.btn_turn {
-		width: .11rem;
-		height: .11rem;
-		display: block;
-		position: relative
-	}
-	
-	.btn_turn:before,
-	.btn_turn:after {
-		content: "";
-		width: 100%;
-		height: .01rem;
-		background-color: rgba(0, 0, 0, 0.3);
-		display: block;
-		position: absolute;
-		left: 0;
-		top: 50%
-	}
-	
-	.btn_turn:before {
-		-webkit-transform: rotate(-45deg);
-		transform: rotate(-45deg)
-	}
-	
-	.btn_turn:after {
-		-webkit-transform: rotate(45deg);
-		transform: rotate(45deg)
-	}
-	
-	.turn_off {
-		display: none
-	}
-	
-	.add_regioncode .country_list {
-		padding: .1rem 10px .1rem 0;
-		margin-right: 8px;
-		color: #4a4a4a;
-		display: block;
-		overflow: hidden;
-	}
-	.add_regioncode .country_list .country_code tt{
-		margin-right: 2px;
-		color: #9b9b9b;
-		font-size: .18rem;
-		line-height: .2rem;
-	}
-	.n-footer{
-		line-height:1.5;
-		text-align: center;
-		font-size: .14rem;
-		margin-top: -0.9rem;
-		height: .9rem;
-	}
-	.nf-link-area{
-		color: #9b9b9b;
-	}
-	.nf-link-area li{
-		display: inline-block;
-	}
-	.nf-link-area li a.current{
-		color: #4a4a4a;
-	}
-	.nf-link-area li a{
-		padding: 0 10px;
-	}
-	.nav_tabs_panel, .bgiframe{
-		display: none;
-	}
-	.sms_login .btn_turn, .sms_login .eye_panel, .sms_login #manual_code{
-		display: none;
-	}
-	#getSMSCode, .getSMSCode{
-		cursor: pointer;
-		color: #2ea5e5;
-	}
-	.err_forbidden{
-		padding: 10px;
-		line-height: 1.5;
-		background: #fff;
-		color: #f66;
-		display: none;
-	}
-	.tabs_con{
-		display: none;
-	}
-	.tabs_con.now{
-		display: block;
-	}
-	.icon_arrow_down{
-		margin-left: .03rem;
-		display: block;
-		width: .07rem;
-		height:.07rem ;
-		border-width: .01rem;
-		border-style:solid;
-		border-color: transparent transparent #9b9b9b #9b9b9b ; 
-		transform: rotate(-135deg);
-	}
-	.add_regioncode .animation{
-		position: relative;
-		-webkit-animation:fade-in ease-in-out .5s;
-		-webkit-animation-name:fade-in;
-		animation-name:fade-in;
-		-webkit-animation-timing-function:ease-in-out;
-		-webkit-animation-duration:.5s;
-		animation-duration:.5s;
-	}
-	.add_regioncode .country_list .country_code{
-		display: box;
-		display: -webkit-box;
-		display: -moz-box;
-		box-align:center;
-		-webkit-box-align: center;
-		-moz-box-align: center;
-		display: flex;
-		align-items: center;
-	}
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+p,
+pre,
+dl,
+dd,
+ol,
+ul,
+li,
+a,
+span,
+caption,
+th,
+td,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+address {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: courier new, courier, monospace;
+}
+
+input,
+button,
+textarea,
+select {
+  font-size: 100%;
+}
+
+input,
+button,
+select,
+textarea {
+  outline: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  font-size: inherit;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+a,
+label,
+:focus {
+  outline: 0 none;
+}
+
+a,
+img,
+input {
+  border: 0 none;
+}
+
+s {
+  font-style: normal;
+  text-decoration: none;
+}
+
+body {
+  font-size: 14px;
+  font-family: arial, "Hiragino Sans GB", "Microsoft YaHei", "微軟正黑體",
+    "儷黑 Pro", sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: arial, "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #3b3b3b;
+  font-weight: normal;
+}
+
+::-webkit-input-placeholder {
+  color: #3b3b3b;
+  font-weight: normal;
+}
+
+input:-ms-input-placeholder {
+  color: #3b3b3b;
+  font-weight: normal;
+}
+
+::-ms-clear {
+  display: none;
+}
+
+::-ms-reveal {
+  display: none;
+}
+
+.clearfix:after {
+  display: block;
+  content: "\20";
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input::-ms-reveal {
+  display: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  a {
+    background-color: transparent;
+  }
+}
+
+input {
+  background: 0;
+  border: 0 none;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+a {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.nbg {
+  background: none !important;
+}
+
+.t_l {
+  text-align: left;
+}
+
+.t_c {
+  text-align: center;
+}
+
+.t_r {
+  text-align: right;
+}
+
+.c_b:before,
+.c_b:after {
+  content: "";
+  display: block;
+}
+
+.c_b:after {
+  clear: both;
+}
+
+.c_b {
+  zoom: 1;
+}
+
+.hidden,
+.hide {
+  display: none;
+}
+
+.hideimportant {
+  display: none !important;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+input[type="text"]::-ms-clear,
+input[type="password"]::-ms-reveal {
+  display: none;
+}
+
+input {
+  color: #333;
+}
+
+input:required,
+input:invalid {
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input {
+  color: #4a4a4a;
+}
+
+::-webkit-input-placeholder {
+  color: #9b9b9b;
+}
+
+input:-ms-input-placeholder {
+  color: #9b9b9b;
+}
+
+.blue {
+  color: #2ea5e5;
+}
+
+.orange {
+  color: #ff6700;
+}
+
+.fr {
+  float: right;
+}
+
+.tac {
+  text-align: center;
+}
+
+.ptb30 {
+  padding: 30px 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+@media only screen and (max-width: 420px) {
+  html {
+    font-size: 625%;
+  }
+}
+
+@media only screen and (max-width: 580px) and (min-width: 421px) {
+  html {
+    font-size: 687.5%;
+  }
+}
+
+@media only screen and (max-width: 540px) and (min-width: 480px) {
+  html {
+    font-size: 750%;
+  }
+}
+
+@media only screen and (max-width: 660px) and (min-width: 541px) {
+  html {
+    font-size: 781.25%;
+  }
+}
+
+@media only screen and (max-width: 720px) and (min-width: 661px) {
+  html {
+    font-size: 812.5%;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  html {
+    font-size: 875%;
+  }
+}
+
+body {
+  font-size: 0.14rem;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  background-color: #fff;
+}
+
+button,
+input,
+select,
+textarea,
+tt {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+a {
+  color: #9b9b9b;
+}
+
+.a_critical {
+  color: #4a4a4a;
+}
+
+.btns_bg {
+  padding-top: 24px;
+}
+
+.btnadpt {
+  width: 100%;
+  padding: 0.1rem 0;
+  display: block;
+  margin-bottom: 14px;
+  text-align: center;
+  font-size: 0.18rem;
+  color: #fff;
+  cursor: pointer;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #ff6700;
+}
+
+.btnadpt.disabled {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+
+.btnadpt.plain {
+  border: 1px solid #ff6700;
+  background-color: #fff;
+  color: #ff6700;
+}
+
+.btn_gray {
+  background: #fff;
+  margin-top: 10px;
+  border: 1px solid #d3d3d3;
+  color: #000;
+}
+
+.btn_gray.disabled {
+  color: #9b9b9b;
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto;
+}
+
+.wrap {
+  padding-bottom: 0.9rem;
+}
+
+.layout {
+  width: 100%;
+  margin: 0 auto 30px;
+  padding: 0 28px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.header_tit {
+  padding: 30px 0 10px;
+}
+
+.milogo {
+  background-image: url(https://account.xiaomi.com/static/res/11eb7d1/account-static/respassport/acc-2014/img/2018/milogo.png);
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 15px;
+  display: block;
+  background-image: -webkit-image-set(
+    url(https://account.xiaomi.com/static/res/11eb7d1/account-static/respassport/acc-2014/img/2018/milogo.png)
+      1x,
+    url(https://account.xiaomi.com/static/res/11eb7d1/account-static/respassport/acc-2014/img/2018/milogo@2x.png)
+      2x
+  );
+}
+
+.header_tit_txt {
+  font-size: 0.18rem;
+  color: #000;
+  font-weight: normal;
+}
+
+.login_area {
+  padding-bottom: 20px;
+}
+
+.labelbox {
+  display: block;
+  background-color: #fff;
+}
+
+.labelbox input {
+  width: 100%;
+  padding: 0.16rem 0;
+  line-height: normal;
+  display: block;
+  font-size: 0.18rem;
+}
+
+.loginbox .acq_tips {
+  margin-top: 30px;
+}
+
+.login_user {
+  margin-bottom: 1px;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  -webkit-box-align: center;
+  box-align: center;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.item_account {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+
+.pwd_panel {
+  border-bottom: 1px solid #d3d3d3;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  -webkit-box-align: center;
+  box-align: center;
+}
+
+.pwd_panel input {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+}
+
+.eye {
+  width: 20px;
+  height: 16px;
+  display: block;
+}
+
+.eye.chk .eye_outer,
+.eye.chk .eye_inner {
+  fill: #ff6700;
+}
+
+.eye_outer {
+  fill: #4d4d4d;
+}
+
+.eye_inner {
+  fill: #4d4d4d;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-opacity: 0.8;
+}
+
+.lgncode {
+  padding-top: 14px;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  box-align: center;
+  align-items: flex-end;
+}
+
+.code_label {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.chkcode_img {
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.sms_login .lgncode {
+  padding: 0;
+  background: #fff;
+  margin-bottom: 1px;
+}
+
+.sms_login .code_label {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+.sms_login .chkcode_img {
+  margin-left: 0;
+}
+
+.btn_facebook {
+  background-color: #7a96d2;
+}
+
+.btn_qq {
+  background-color: #72c7db;
+}
+
+.btn_weibo {
+  background-color: #ed9090;
+}
+
+.btn_alipay {
+  background-color: #6bb6ea;
+}
+
+.btn_weixin {
+  background-color: #00be00;
+}
+
+.btn_sns_icontype {
+  background: url(https://account.xiaomi.com/static/res/166d6dc/account-static/respassport/acc-2014/img/icons_type.png)
+    no-repeat;
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: 5px auto 0;
+}
+
+.sns-default-container .btn_sns_icontype {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px 0 0;
+}
+
+.icon_default_qq {
+  background-position: -19px 0;
+}
+
+.icon_default_weibo {
+  background-position: -38px 0;
+}
+
+.icon_default_alipay {
+  background-position: -57px 0;
+}
+
+.icon_default_weixin {
+  background-position: -84px 0;
+}
+
+.icon_default_alipay {
+  width: 26px;
+}
+
+.icon_default_weixin {
+  width: 23px;
+}
+
+.icon_default_facebook {
+  background: 0;
+  display: inline !important;
+}
+
+.btn_facebook:before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+  background: url(https://account.xiaomi.com/static/res/28f08d0/account-static/respassport/acc-2014/img/fb.png);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.other_login_type {
+  padding-top: 40px;
+}
+
+.oth_type_tit {
+  border-top: 1px solid #f2f2f2;
+  padding-top: 10px;
+}
+
+.oth_type_txt {
+  font-size: 0.12rem;
+  color: #b0b0b0;
+  width: 80px;
+}
+
+.oth_type_links {
+  padding-top: 10px;
+  text-align: center;
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  -webkit-box-pack: center;
+  box-pack: center;
+}
+
+.oth_type_links .btn_weixin {
+  display: none;
+}
+
+.icon_type {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  display: inline-block;
+  text-indent: -9999px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.icon_type .icon_default_qq {
+  background-position: -19px 0;
+}
+
+.icon_type .icon_default_weibo {
+  background-position: -38px 0;
+}
+
+.icon_type .icon_default_alipay {
+  background-position: -57px 0;
+}
+
+.icon_type .icon_default_weixin {
+  background-position: -84px 0;
+}
+
+.hasSnsDefault #ChangeLoginType {
+  font-size: 0.14rem;
+  text-align: center;
+  display: block;
+  background: 0;
+  border: 0 none;
+  padding: 10px 0 20px 0;
+  margin: 0;
+  color: #424242;
+}
+
+.hasSnsDefault #ChangeLoginType:after {
+  content: ">";
+}
+
+.reverse {
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: reverse;
+  box-direction: reverse;
+}
+
+.reverse .n_links_area {
+  text-align: center;
+  color: #646464;
+}
+
+.reverse .n_links_area a {
+  padding: 0 9px;
+  font-size: 0.16rem;
+  color: #646464;
+}
+
+#qrcode-trigger {
+  display: none !important;
+}
+
+.ercode {
+  background: url(https://account.xiaomi.com/static/res/28f08d0/account-static/respassport/acc-2014/img/ercode_hover.png);
+  width: 68px;
+  height: 68px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.ercode_area {
+  display: none;
+  width: 100% !important;
+}
+
+.ercode_box {
+  padding-top: 40px;
+}
+
+.code_close {
+  background-color: #bdbdbd;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  width: 0.3rem;
+  height: 0.3rem;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.icon_code_close {
+  width: 0.2rem;
+  height: 0.2rem;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
+
+.icon_code_close:before,
+.icon_code_close:after {
+  content: "";
+  width: 100%;
+  height: 0.01rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: 0.04rem;
+}
+
+.icon_code_close:before {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.icon_code_close:after {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.code_hd {
+  padding-bottom: 20px;
+}
+
+.zh_CN .code_hd,
+.zh_TW .code_hd {
+  text-align: center;
+}
+
+.code_tit {
+  font-size: 0.2rem;
+  text-align: center;
+  color: #ff6700;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+
+.code_iframe {
+  text-align: center;
+}
+
+.turn_area {
+  display: none;
+  padding-right: 8px;
+}
+
+.btn_turn {
+  width: 0.11rem;
+  height: 0.11rem;
+  display: block;
+  position: relative;
+}
+
+.btn_turn:before,
+.btn_turn:after {
+  content: "";
+  width: 100%;
+  height: 0.01rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+
+.btn_turn:before {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.btn_turn:after {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.turn_off {
+  display: none;
+}
+
+.add_regioncode .country_list {
+  padding: 0.1rem 10px 0.1rem 0;
+  margin-right: 8px;
+  color: #4a4a4a;
+  display: block;
+  overflow: hidden;
+}
+.add_regioncode .country_list .country_code tt {
+  margin-right: 2px;
+  color: #9b9b9b;
+  font-size: 0.18rem;
+  line-height: 0.2rem;
+}
+.n-footer {
+  line-height: 1.5;
+  text-align: center;
+  font-size: 0.14rem;
+  margin-top: -0.9rem;
+  height: 0.9rem;
+}
+.nf-link-area {
+  color: #9b9b9b;
+}
+.nf-link-area li {
+  display: inline-block;
+}
+.nf-link-area li a.current {
+  color: #4a4a4a;
+}
+.nf-link-area li a {
+  padding: 0 10px;
+}
+.nav_tabs_panel,
+.bgiframe {
+  display: none;
+}
+.sms_login .btn_turn,
+.sms_login .eye_panel,
+.sms_login #manual_code {
+  display: none;
+}
+#getSMSCode,
+.getSMSCode {
+  cursor: pointer;
+  color: #2ea5e5;
+}
+.err_forbidden {
+  padding: 10px;
+  line-height: 1.5;
+  background: #fff;
+  color: #f66;
+  display: none;
+}
+.tabs_con {
+  display: none;
+}
+.tabs_con.now {
+  display: block;
+}
+.icon_arrow_down {
+  margin-left: 0.03rem;
+  display: block;
+  width: 0.07rem;
+  height: 0.07rem;
+  border-width: 0.01rem;
+  border-style: solid;
+  border-color: transparent transparent #9b9b9b #9b9b9b;
+  transform: rotate(-135deg);
+}
+.add_regioncode .animation {
+  position: relative;
+  -webkit-animation: fade-in ease-in-out 0.5s;
+  -webkit-animation-name: fade-in;
+  animation-name: fade-in;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+.add_regioncode .country_list .country_code {
+  display: box;
+  display: -webkit-box;
+  display: -moz-box;
+  box-align: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  display: flex;
+  align-items: center;
+}
 </style>
 <style>
-	.country_list{
-		display: none;
-	}
+.country_list {
+  display: none;
+}
 </style>

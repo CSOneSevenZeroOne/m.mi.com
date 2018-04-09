@@ -128,7 +128,8 @@ const store = new Vuex.Store({
         bClose: true, //默认不显示选购窗口
 		homedata:[],//主页数据
 		navlist:[],
-        homeimg:[]
+        homeimg:[],
+        goodsinfo:{}
     },
     //获取值得方法
     getters: {}

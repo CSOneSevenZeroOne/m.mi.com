@@ -5,16 +5,57 @@
     </div>
 </template>
 
-<style lang="less" scoped>  
+<style lang="less" scoped>
+
 </style>
 
 <script>
-import comm_content from "./commodity/comm_content.vue"
-import comm_footer from "./commodity/comm_footer.vue"
+import comm_content from "./commodity/comm_content.vue";
+import comm_footer from "./commodity/comm_footer.vue";
+import $ from "jquery";
 export default {
-    components:{
-        "comm-content":comm_content,
-        "comm-footer":comm_footer
-    }
-}
+  components: {
+    "comm-content": comm_content,
+    "comm-footer": comm_footer
+  },
+  mounted() {
+    var str = window.location.href.split("?")[1].split("=")[1];
+    var self = this;
+    $.ajax({
+      url: "http://localhost:6789/goodsinfo",
+      type: "POST",
+      data: {
+        path: str
+      },
+      dataType:"JSON"
+    }).then(function(res) {
+        //console.log(res)
+        //.product_info
+      var obj = res[0];
+      if (obj.activies) {
+        obj.activies = JSON.parse(obj.activies);
+      }
+      if (obj.buy_option) {
+        obj.buy_option = JSON.parse(obj.buy_option);
+      }
+      if (obj.coupon_info) {
+        obj.coupon_info = JSON.parse(obj.coupon_info);
+      }
+      if (obj.goods_info) {
+        obj.goods_info = JSON.parse(obj.goods_info);
+      }
+      if (obj.product_info) {
+        obj.product_info = JSON.parse(obj.product_info);
+      }
+      if (obj.view_content) {
+        obj.view_content = JSON.parse(obj.view_content);
+      }
+      if (obj.seo) {
+        obj.seo = JSON.parse(obj.seo);
+      }
+      self.$store.state.goodsinfo = obj;
+      console.log(obj);
+    });
+  }
+};
 </script>

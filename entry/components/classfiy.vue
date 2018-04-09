@@ -28,7 +28,7 @@
                                     <div data-v-6b9822de=""class="category_group box-flex" index="2" v-else-if="b.view_type=='category_group'">
                                         <div data-v-6b9822de="" class="box">
                                             <div data-v-6b9822de="" class="product" v-for="c in JSON.parse(b.items)">
-                                                <a data-v-6b9822de="" :href="'#/commodity?'+c.path" class="exposure item">
+                                                <a data-v-6b9822de="" :href="'#/commodity?id='+c.action.path" class="exposure item">
                                                     <div data-v-6b9822de="" class="img"><img :src="c.img_url" class="big" style="width: .6rem; height: .6rem;">
                                                     </div>
                                                     <div data-v-6b9822de="" class="name" v-text="c.product_name"></div>
