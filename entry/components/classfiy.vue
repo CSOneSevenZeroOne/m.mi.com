@@ -15,8 +15,10 @@
                         </div>
                         <div data-v-06d70f2d="" class="list-wrap">
                             <div data-v-06d70f2d="" class="list-item category0" v-for="(b,b_index) in a" >
+                        
                                 <div data-v-06d70f2d="" class="component-list-main" >
-                                    <div class="cells_auto_fill" index="0" v-for="c in JSON.parse(b.items)" v-if="b.view_type=='cells_auto_fill'"   :id="'anchor-'+num" >
+                                	
+                                    <div class="cells_auto_fill" index="0" v-for="c in JSON.parse(b.items)" v-if="b.view_type=='cells_auto_fill'"    >
                                     
                                        <a href="javascript:void(0)" class="exposure items" style="height: 1rem; padding-right:0">
                                             <img :src="c.img_url" lazy="loaded" style="height: 1rem; width: 100%;">
@@ -102,6 +104,13 @@
                 win.addEventListener(resizeEvt, recalc, false);
                 doc.addEventListener('DOMContentLoaded', recalc, false)
             })(document, window);
+            
+            
+            (function () {
+//          	window.onload=function () {
+////          		console.log($$(".active"))	
+//          	}	
+            })()
         },
         methods:{
         	goAnchor(selector,index) {
