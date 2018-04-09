@@ -1,33 +1,33 @@
 <template>
 	<div style="width:100%; height:100%">
         <xheader></xheader>
-        <div data-v-bc186c1a="" id="app">
-            <div data-v-bc186c1a="" class="app-shell app-shell-bottom-navigation">
-                <div data-v-bc186c1a="" class="app-view-wrapper">
-                    <div data-v-06d70f2d="" data-v-bc186c1a="" class="container app-view app-view-with-header app-view-with-footer">
-                        <div data-v-06d70f2d="" class="list-navbar">
-                            <ul data-v-06d70f2d="">
-                                <li data-v-06d70f2d="" categoryid="653" class="active" v-for="(b,index) in classfiytype"  >
-                                    <a data-v-06d70f2d=""><span data-v-06d70f2d="">{{b.goods_type}}</span></a>
+        <div id="app">
+            <div class="app-shell app-shell-bottom-navigation">
+                <div class="app-view-wrapper">
+                    <div class="container app-view app-view-with-header app-view-with-footer">
+                        <div class="list-navbar">
+                            <ul>
+                                <li class="active" v-for="(b,index) in classfiytype"  >
+                                    <a @click="goAnchor('#anchor-'+index,index)"><span>{{b.goods_type}}</span></a>
                                 </li>
                             </ul>
                         </div>
-                        <div data-v-06d70f2d="" class="list-wrap">
-                            <div data-v-06d70f2d="" class="list-item category0" v-for="(b,b_index) in a" :id="'anchor-'+b_index">
-                                <div data-v-06d70f2d="" class="component-list-main" >
+                        <div class="list-wrap">
+                            <div class="list-item category0" v-for="(b,b_index) in a" :id="'anchor-'+b_index">
+                                <div class="component-list-main" >
                                     <div class="cells_auto_fill" index="0" v-for="c in JSON.parse(b.items)" v-if="b.view_type=='cells_auto_fill'">
                                         <a href="javascript:void(0)" class="exposure items" style="height: 1rem; padding-right:0">
                                             <img :src="c.img_url" lazy="loaded" style="height: 1rem; width: 100%;">
                                         </a>
                                     </div>
                                     <div name="m1" class="category_title" v-if="b.view_type=='category_title'"><span>{{b.category_name}}</span></div>
-                                    <div data-v-6b9822de="" class="category_group box-flex" index="2" v-else-if="b.view_type=='category_group'">
-                                        <div data-v-6b9822de="" class="box">
-                                            <div data-v-6b9822de="" class="product" v-for="c in JSON.parse(b.items)">
-                                                <a data-v-6b9822de="" data-log_code="31wapcategorycategory_group001017#rid=8c65c00166258adf46acb1bfe9221e32&amp;t=normal&amp;page=category&amp;act=product&amp;pid=10000085&amp;bid=3194830.1" class="exposure item">
-                                                    <div data-v-6b9822de="" class="img"><img :src="c.img_url" data-v-6b9822de="" class="big" style="width: .6rem; height: .6rem;">
+                                    <div class="category_group box-flex" index="2" v-else-if="b.view_type=='category_group'">
+                                        <div class="box">
+                                            <div class="product" v-for="c in JSON.parse(b.items)">
+                                                <a :href="'#/commodity?'+c.path" class="exposure item">
+                                                    <div class="img"><img :src="c.img_url" class="big" style="width: .6rem; height: .6rem;">
                                                     </div>
-                                                    <div data-v-6b9822de="" class="name" v-text="c.product_name"></div>
+                                                    <div class="name" v-text="c.product_name"></div>
                                                 </a>
                                             </div>
                                         </div>
@@ -67,11 +67,12 @@
                     type: "get"
                 }).then(function (res) {
                     sessionStorage.setItem("classfiy", res);
-                    self.a=JSON.parse(res);
+					self.a=JSON.parse(res);
                 });
             }else{
                 this.a=JSON.parse(sessionStorage.getItem("classfiy"))
-            }
+			}
+			//console.log(JSON.parse(this.a[0].items)[0].action.path)
             //获取分类
             if(!sessionStorage.getItem("classfiytype")){
                 var self=this;
@@ -85,7 +86,6 @@
             }else{
                 this.classfiytype=JSON.parse(sessionStorage.getItem("classfiytype"))
             }
-            console.log(this.a);
             (function(doc, win, undefined) {
                 var docEl = doc.documentElement,
                     resizeEvt = 'orientationchange' in win ? 'orientationchange' : 'resize',
@@ -100,14 +100,12 @@
             })(document, window);
         },
         methods:{
-//         	goAnchor(selector,index) {
-// 				$$(".active").children("a").css({"color":"black","font-size":".34rem"})
-// 				$$($$(".active")[index]).children("a").css({"color":"orange","font-size":".44rem"})
-// 				var anchor = this.$el.querySelector(selector)
-// //				console.log(anchor)
-// 				$$(".list-wrap").scrollTop(anchor.offsetTop)
-				
-// 			}
+        	goAnchor(selector,index) {
+				$$(".active").children("a").css({"color":"black","font-size":".17rem"})
+				$$($$(".active")[index]).children("a").css({"color":"orange","font-size":".20rem"})
+				var anchor = this.$el.querySelector(selector)
+				$$(".list-wrap").scrollTop(anchor.offsetTop)
+			}
         },
         components:{
             xheader

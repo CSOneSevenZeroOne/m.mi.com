@@ -1,0 +1,1430 @@
+{
+    "code": 0,
+    "result": "ok",
+    "description": "success",
+    "data": {
+        "activies": [{
+            "goods_id": 2181000005,
+            "canJoinActs": [{
+                "type": "gift",
+                "type_desc": "赠品",
+                "title": "小米MIX 2S 256GB版本 赠无线充电器",
+                "active_id": "10718",
+                "reduce": "0.000000"
+            }]
+        }, {
+            "goods_id": 2181000006,
+            "canJoinActs": [{
+                "type": "gift",
+                "type_desc": "赠品",
+                "title": "小米MIX 2S 256GB版本 赠无线充电器",
+                "active_id": "10718",
+                "reduce": "0.000000"
+            }]
+        }],
+        "buy_option": [{
+            "list": [{
+                "icon_color": "",
+                "icon_img": "",
+                "is_stock": false,
+                "name": "6GB+64GB",
+                "price": "3299元",
+                "prop_desc": "",
+                "prop_value_id": 601
+            }, {
+                "icon_color": "",
+                "icon_img": "",
+                "is_stock": false,
+                "name": "6GB+128GB",
+                "price": "3599元",
+                "prop_desc": "",
+                "prop_value_id": 602
+            }, {
+                "icon_color": "",
+                "icon_img": "",
+                "is_stock": false,
+                "name": "8GB+256GB 尊享版",
+                "price": "3999元",
+                "prop_desc": "",
+                "prop_value_id": 603
+            }],
+            "name": "版本",
+            "prop_cfg_id": 177
+        }, {
+            "list": [{
+                "icon_color": "",
+                "icon_img": "",
+                "is_stock": false,
+                "name": "黑色",
+                "price": "",
+                "prop_desc": "",
+                "prop_value_id": 604
+            }, {
+                "icon_color": "",
+                "icon_img": "",
+                "is_stock": false,
+                "name": "白色",
+                "price": "",
+                "prop_desc": "",
+                "prop_value_id": 605
+            }],
+            "name": "颜色",
+            "prop_cfg_id": 178
+        }],
+        "coupon_info": {
+            "act_name": "优惠券"
+        },
+        "default_goods_id": "2181000001",
+        "goods_info": [{
+            "action_button": {
+                "button_title": "立即预约",
+                "is_bigtap": false,
+                "occ_timeout": 5000,
+                "reserve": {
+                    "activity_code": "",
+                    "batch_key": "subscribe_batch_20180406095922",
+                    "display_threshold": 500000,
+                    "end_button_title": "等待开抢",
+                    "is_limit_some_sku": false,
+                    "sale_time": 1523325600,
+                    "subscribe_end_time": 1523323800
+                },
+                "sale_mode": "reserve",
+                "use_occ": false
+            },
+            "address_type": "common",
+            "buy_limit": "1",
+            "commodity_id": 1181000001,
+            "goods_id": 2181000001,
+            "image_share": "http://i8.mifile.cn/a1/pms_1522033929.93635904!144x1440.jpg",
+            "img_url": "//i8.mifile.cn/a1/pms_1522033929.93635904!720x7200.jpg",
+            "instalment": {
+                "default_instal": "mifinanceinstal_m",
+                "list": [{
+                    "bank": "mifinanceinstal_m",
+                    "desc": "小米分期",
+                    "detail": [{
+                        "interest": "73.24",
+                        "rate": "2.22",
+                        "stage": 3,
+                        "stage_cost": "1124.08",
+                        "stage_interest": "24.41",
+                        "total_cost": "3372.24"
+                    }, {
+                        "interest": "128.66",
+                        "rate": "3.90",
+                        "stage": 6,
+                        "stage_cost": "571.27",
+                        "stage_interest": "21.44",
+                        "total_cost": "3427.66"
+                    }, {
+                        "interest": "237.53",
+                        "rate": "7.20",
+                        "stage": 12,
+                        "stage_cost": "294.71",
+                        "stage_interest": "19.79",
+                        "total_cost": "3536.53"
+                    }],
+                    "title": "小米分期"
+                }, {
+                    "bank": "antinstal_m",
+                    "desc": "花呗分期",
+                    "detail": [{
+                        "interest": "75.88",
+                        "rate": "2.30",
+                        "stage": 3,
+                        "stage_cost": "1124.95",
+                        "stage_interest": "25.29",
+                        "total_cost": "3374.88"
+                    }, {
+                        "interest": "148.46",
+                        "rate": "4.50",
+                        "stage": 6,
+                        "stage_cost": "574.57",
+                        "stage_interest": "24.74",
+                        "total_cost": "3447.46"
+                    }, {
+                        "interest": "247.42",
+                        "rate": "7.50",
+                        "stage": 12,
+                        "stage_cost": "295.52",
+                        "stage_interest": "20.61",
+                        "total_cost": "3546.42"
+                    }],
+                    "title": "花呗分期"
+                }]
+            },
+            "insurance": {
+                "list": [{
+                    "goods_id": "2181000032",
+                    "image_url": "//i1.mifile.cn/a1/pms_1520499811.22539853.jpg",
+                    "market_price": "299",
+                    "name": "小米MIX 2S 意外保障服务",
+                    "price": "209",
+                    "short_name": "小米MIX 2S 意外保障服务",
+                    "sku": "18942",
+                    "type": "mi_mix"
+                }]
+            },
+            "is_sale": true,
+            "is_show_reduce_price": false,
+            "is_stock": false,
+            "market_price": "3299",
+            "name": "小米MIX 2S 6GB+64GB 黑色",
+            "price": "3299",
+            "prop_list": [{
+                "prop_cfg_id": 177,
+                "prop_value_id": 601
+            }, {
+                "prop_cfg_id": 178,
+                "prop_value_id": 604
+            }],
+            "reduce_price": "",
+            "service_bargins": [{
+                "can_multi": true,
+                "service_info": [{
+                    "act_diff": "",
+                    "act_id": "",
+                    "act_price": "",
+                    "goods_id": 2181000001,
+                    "goods_name": "小米MIX 2S 全网通版 6GB内存 陶瓷标准版 64GB 黑色 64GB",
+                    "item_id": "",
+                    "new_insurance_cat": true,
+                    "phone_accidentIns": [{
+                        "desc": "服务条款",
+                        "url": "https://order.mi.com/static/jrUrl?url=https%3A%2F%2Fapi.jr.mi.com%2Finsurance%2Fdocument%2Fphone_accidentIns.html%3Ffrom%3Dins_phonedetail_bxtk%26insuranceSku%3D18942%26couponFrom%3Drule"
+                    }, {
+                        "desc": "常见问题",
+                        "url": "https://order.mi.com/static/jrUrl?url=https%3A%2F%2Fapi.jr.mi.com%2Finsurance%2Fdocument%2Fphone_accidentIns.html%3Ffrom%3Dins_phonedetail_cjwt%26insuranceSku%3D18942%26couponFrom%3Dquestion"
+                    }],
+                    "phone_accidentIns_sku": "18942",
+                    "service_goods_id": "2181000032",
+                    "service_image_url": "//i1.mifile.cn/a1/pms_1520499811.22539853.jpg",
+                    "service_name": "小米MIX 2S 意外保障服务",
+                    "service_price": "209",
+                    "service_short_name": "意外保障服务",
+                    "service_url": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-data-mishop/23292dac1b41.html",
+                    "source": "common"
+                }],
+                "service_url": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-data-mishop/23292dac1b41.html",
+                "type_name": "保障服务"
+            }],
+            "service_refound_policy": {
+                "desc": "支持7天无理由退货",
+                "is_support": true
+            },
+            "show_price_type": [],
+            "stock_channel": "3"
+        }, {
+            "action_button": {
+                "button_title": "立即预约",
+                "is_bigtap": false,
+                "occ_timeout": 5000,
+                "reserve": {
+                    "activity_code": "",
+                    "batch_key": "subscribe_batch_20180406095922",
+                    "display_threshold": 500000,
+                    "end_button_title": "等待开抢",
+                    "is_limit_some_sku": false,
+                    "sale_time": 1523325600,
+                    "subscribe_end_time": 1523323800
+                },
+                "sale_mode": "reserve",
+                "use_occ": false
+            },
+            "address_type": "common",
+            "buy_limit": "1",
+            "commodity_id": 1181000003,
+            "goods_id": 2181000003,
+            "image_share": "http://i8.mifile.cn/a1/pms_1522034005.26178961!144x1440.jpg",
+            "img_url": "//i8.mifile.cn/a1/pms_1522034005.26178961!720x7200.jpg",
+            "instalment": {
+                "default_instal": "mifinanceinstal_m",
+                "list": [{
+                    "bank": "mifinanceinstal_m",
+                    "desc": "小米分期",
+                    "detail": [{
+                        "interest": "79.90",
+                        "rate": "2.22",
+                        "stage": 3,
+                        "stage_cost": "1226.30",
+                        "stage_interest": "26.63",
+                        "total_cost": "3678.90"
+                    }, {
+                        "interest": "140.36",
+                        "rate": "3.90",
+                        "stage": 6,
+                        "stage_cost": "623.22",
+                        "stage_interest": "23.39",
+                        "total_cost": "3739.36"
+                    }, {
+                        "interest": "259.13",
+                        "rate": "7.20",
+                        "stage": 12,
+                        "stage_cost": "321.51",
+                        "stage_interest": "21.59",
+                        "total_cost": "3858.13"
+                    }],
+                    "title": "小米分期"
+                }, {
+                    "bank": "antinstal_m",
+                    "desc": "花呗分期",
+                    "detail": [{
+                        "interest": "82.78",
+                        "rate": "2.30",
+                        "stage": 3,
+                        "stage_cost": "1227.25",
+                        "stage_interest": "27.59",
+                        "total_cost": "3681.78"
+                    }, {
+                        "interest": "161.96",
+                        "rate": "4.50",
+                        "stage": 6,
+                        "stage_cost": "626.82",
+                        "stage_interest": "26.99",
+                        "total_cost": "3760.96"
+                    }, {
+                        "interest": "269.92",
+                        "rate": "7.50",
+                        "stage": 12,
+                        "stage_cost": "322.40",
+                        "stage_interest": "22.49",
+                        "total_cost": "3868.92"
+                    }],
+                    "title": "花呗分期"
+                }]
+            },
+            "insurance": {
+                "list": [{
+                    "goods_id": "2181000032",
+                    "image_url": "//i1.mifile.cn/a1/pms_1520499811.22539853.jpg",
+                    "market_price": "299",
+                    "name": "小米MIX 2S 意外保障服务",
+                    "price": "209",
+                    "short_name": "小米MIX 2S 意外保障服务",
+                    "sku": "18942",
+                    "type": "mi_mix"
+                }]
+            },
+            "is_sale": true,
+            "is_show_reduce_price": false,
+            "is_stock": false,
+            "market_price": "3599",
+            "name": "小米MIX 2S 6GB+128GB 黑色",
+            "price": "3599",
+            "prop_list": [{
+                "prop_cfg_id": 177,
+                "prop_value_id": 602
+            }, {
+                "prop_cfg_id": 178,
+                "prop_value_id": 604
+            }],
+            "reduce_price": "",
+            "service_bargins": [{
+                "can_multi": true,
+                "service_info": [{
+                    "act_diff": "",
+                    "act_id": "",
+                    "act_price": "",
+                    "goods_id": 2181000003,
+                    "goods_name": "小米MIX 2S 全网通版 6GB内存 陶瓷标准版 128GB 黑色 128GB",
+                    "item_id": "",
+                    "new_insurance_cat": true,
+                    "phone_accidentIns": [{
+                        "desc": "服务条款",
+                        "url": "https://order.mi.com/static/jrUrl?url=https%3A%2F%2Fapi.jr.mi.com%2Finsurance%2Fdocument%2Fphone_accidentIns.html%3Ffrom%3Dins_phonedetail_bxtk%26insuranceSku%3D18942%26couponFrom%3Drule"
+                    }, {
+                        "desc": "常见问题",
+                        "url": "https://order.mi.com/static/jrUrl?url=https%3A%2F%2Fapi.jr.mi.com%2Finsurance%2Fdocument%2Fphone_accidentIns.html%3Ffrom%3Dins_phonedetail_cjwt%26insuranceSku%3D18942%26couponFrom%3Dquestion"
+                    }],
+                    "phone_accidentIns_sku": "18942",
+                    "service_goods_id": "2181000032",
+                    "service_image_url": "//i1.mifile.cn/a1/pms_1520499811.22539853.jpg",
+                    "service_name": "小米MIX 2S 意外保障服务",
+                    "service_price": "209",
+                    "service_short_name": "意外保障服务",
+                    "service_url": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-data-mishop/23292dac1b41.html",
+                    "source": "common"
+                }],
+                "service_url": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-data-mishop/23292dac1b41.html",
+                "type_name": "保障服务"
+            }],
+            "service_refound_policy": {
+                "desc": "支持7天无理由退货",
+                "is_support": true
+            },
+            "show_price_type": [],
+            "stock_channel": "3"
+        }, {
+            "action_button": {
+                "button_title": "立即预约",
+                "is_bigtap": false,
+                "occ_timeout": 5000,
+                "reserve": {
+                    "activity_code": "",
+                    "batch_key": "subscribe_batch_20180406095922",
+                    "display_threshold": 500000,
+                    "end_button_title": "等待开抢",
+                    "is_limit_some_sku": false,
+                    "sale_time": 1523325600,
+                    "subscribe_end_time": 1523323800
+                },
+                "sale_mode": "reserve",
+                "use_occ": false
+            },
+            "address_type": "common",
+            "buy_limit": "1",
+            "commodity_id": 1181000005,
+            "goods_id": 2181000005,
+            "image_share": "http://i8.mifile.cn/b2c-mimall-media/aa10d0bbed4e09aab636b09fb44c1254!144x1440.jpg",
+            "img_url": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/aa10d0bbed4e09aab636b09fb44c1254.jpg",
+            "instalment": {
+                "default_instal": "mifinanceinstal_m",
+                "list": [{
+                    "bank": "mifinanceinstal_m",
+                    "desc": "小米分期",
+                    "detail": [{
+                        "interest": "88.78",
+                        "rate": "2.22",
+                        "stage": 3,
+                        "stage_cost": "1362.59",
+                        "stage_interest": "29.59",
+                        "total_cost": "4087.78"
+                    }, {
+                        "interest": "155.96",
+                        "rate": "3.90",
+                        "stage": 6,
+                        "stage_cost": "692.49",
+                        "stage_interest": "25.99",
+                        "total_cost": "4154.96"
+                    }, {
+                        "interest": "287.93",
+                        "rate": "7.20",
+                        "stage": 12,
+                        "stage_cost": "357.24",
+                        "stage_interest": "23.99",
+                        "total_cost": "4286.93"
+                    }],
+                    "title": "小米分期"
+                }, {
+                    "bank": "antinstal_m",
+                    "desc": "花呗分期",
+                    "detail": [{
+                        "interest": "91.98",
+                        "rate": "2.30",
+                        "stage": 3,
+                        "stage_cost": "1363.66",
+                        "stage_interest": "30.66",
+                        "total_cost": "4090.98"
+                    }, {
+                        "interest": "179.96",
+                        "rate": "4.50",
+                        "stage": 6,
+                        "stage_cost": "696.49",
+                        "stage_interest": "29.99",
+                        "total_cost": "4178.96"
+                    }, {
+                        "interest": "299.92",
+                        "rate": "7.50",
+                        "stage": 12,
+                        "stage_cost": "358.24",
+                        "stage_interest": "24.99",
+                        "total_cost": "4298.92"
+                    }],
+                    "title": "花呗分期"
+                }]
+            },
+            "insurance": {
+                "list": [{
+                    "goods_id": "2181000032",
+                    "image_url": "//i1.mifile.cn/a1/pms_1520499811.22539853.jpg",
+                    "market_price": "299",
+                    "name": "小米MIX 2S 意外保障服务",
+                    "price": "209",
+                    "short_name": "小米MIX 2S 意外保障服务",
+                    "sku": "18942",
+                    "type": "mi_mix"
+                }]
+            },
+            "is_sale": true,
+            "is_show_reduce_price": false,
+            "is_stock": false,
+            "market_price": "3999",
+            "name": "小米MIX 2S 8GB+256GB 陶瓷尊享版 黑色",
+            "price": "3999",
+            "prop_list": [{
+                "prop_cfg_id": 177,
+                "prop_value_id": 603
+            }, {
+                "prop_cfg_id": 178,
+                "prop_value_id": 604
+            }],
+            "reduce_price": "",
+            "service_bargins": [{
+                "can_multi": true,
+                "service_info": [{
+                    "act_diff": "",
+                    "act_id": "",
+                    "act_price": "",
+                    "goods_id": 2181000005,
+                    "goods_name": "小米MIX 2S 全网通版 8GB内存 陶瓷尊享版 256GB 黑色 256G",
+                    "item_id": "",
+                    "new_insurance_cat": true,
+                    "phone_accidentIns": [{
+                        "desc": "服务条款",
+                        "url": "https://order.mi.com/static/jrUrl?url=https%3A%2F%2Fapi.jr.mi.com%2Finsurance%2Fdocument%2Fphone_accidentIns.html%3Ffrom%3Dins_phonedetail_bxtk%26insuranceSku%3D18942%26couponFrom%3Drule"
+                    }, {
+                        "desc": "常见问题",
+                        "url": "https://order.mi.com/static/jrUrl?url=https%3A%2F%2Fapi.jr.mi.com%2Finsurance%2Fdocument%2Fphone_accidentIns.html%3Ffrom%3Dins_phonedetail_cjwt%26insuranceSku%3D18942%26couponFrom%3Dquestion"
+                    }],
+                    "phone_accidentIns_sku": "18942",
+                    "service_goods_id": "2181000032",
+                    "service_image_url": "//i1.mifile.cn/a1/pms_1520499811.22539853.jpg",
+                    "service_name": "小米MIX 2S 意外保障服务",
+                    "service_price": "209",
+                    "service_short_name": "意外保障服务",
+                    "service_url": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-data-mishop/23292dac1b41.html",
+                    "source": "common"
+                }],
+                "service_url": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-data-mishop/23292dac1b41.html",
+                "type_name": "保障服务"
+            }],
+            "service_refound_policy": {
+                "desc": "支持7天无理由退货",
+                "is_support": true
+            },
+            "show_price_type": [],
+            "stock_channel": "3"
+        }, {
+            "action_button": {
+                "button_title": "立即预约",
+                "is_bigtap": false,
+                "occ_timeout": 5000,
+                "reserve": {
+                    "activity_code": "",
+                    "batch_key": "subscribe_batch_20180406095922",
+                    "display_threshold": 500000,
+                    "end_button_title": "等待开抢",
+                    "is_limit_some_sku": false,
+                    "sale_time": 1523325600,
+                    "subscribe_end_time": 1523323800
+                },
+                "sale_mode": "reserve",
+                "use_occ": false
+            },
+            "address_type": "common",
+            "buy_limit": "1",
+            "commodity_id": 1181000002,
+            "goods_id": 2181000002,
+            "image_share": "http://i8.mifile.cn/a1/pms_1522033932.08715351!144x1440.jpg",
+            "img_url": "//i8.mifile.cn/a1/pms_1522033932.08715351!720x7200.jpg",
+            "instalment": {
+                "default_instal": "mifinanceinstal_m",
+                "list": [{
+                    "bank": "mifinanceinstal_m",
+                    "desc": "小米分期",
+                    "detail": [{
+                        "interest": "73.24",
+                        "rate": "2.22",
+                        "stage": 3,
+                        "stage_cost": "1124.08",
+                        "stage_interest": "24.41",
+                        "total_cost": "3372.24"
+                    }, {
+                        "interest": "128.66",
+                        "rate": "3.90",
+                        "stage": 6,
+                        "stage_cost": "571.27",
+                        "stage_interest": "21.44",
+                        "total_cost": "3427.66"
+                    }, {
+                        "interest": "237.53",
+                        "rate": "7.20",
+                        "stage": 12,
+                        "stage_cost": "294.71",
+                        "stage_interest": "19.79",
+                        "total_cost": "3536.53"
+                    }],
+                    "title": "小米分期"
+                }, {
+                    "bank": "antinstal_m",
+                    "desc": "花呗分期",
+                    "detail": [{
+                        "interest": "75.88",
+                        "rate": "2.30",
+                        "stage": 3,
+                        "stage_cost": "1124.95",
+                        "stage_interest": "25.29",
+                        "total_cost": "3374.88"
+                    }, {
+                        "interest": "148.46",
+                        "rate": "4.50",
+                        "stage": 6,
+                        "stage_cost": "574.57",
+                        "stage_interest": "24.74",
+                        "total_cost": "3447.46"
+                    }, {
+                        "interest": "247.42",
+                        "rate": "7.50",
+                        "stage": 12,
+                        "stage_cost": "295.52",
+                        "stage_interest": "20.61",
+                        "total_cost": "3546.42"
+                    }],
+                    "title": "花呗分期"
+                }]
+            },
+            "insurance": {
+                "list": [{
+                    "goods_id": "2181000032",
+                    "image_url": "//i1.mifile.cn/a1/pms_1520499811.22539853.jpg",
+                    "market_price": "299",
+                    "name": "小米MIX 2S 意外保障服务",
+                    "price": "209",
+                    "short_name": "小米MIX 2S 意外保障服务",
+                    "sku": "18942",
+                    "type": "mi_mix"
+                }]
+            },
+            "is_sale": true,
+            "is_show_reduce_price": false,
+            "is_stock": false,
+            "market_price": "3299",
+            "name": "小米MIX 2S 6GB+64GB 白色",
+            "price": "3299",
+            "prop_list": [{
+                "prop_cfg_id": 177,
+                "prop_value_id": 601
+            }, {
+                "prop_cfg_id": 178,
+                "prop_value_id": 605
+            }],
+            "reduce_price": "",
+            "service_bargins": [{
+                "can_multi": true,
+                "service_info": [{
+                    "act_diff": "",
+                    "act_id": "",
+                    "act_price": "",
+                    "goods_id": 2181000002,
+                    "goods_name": "小米MIX 2S 全网通版 6GB内存 陶瓷标准版 64GB 白色 64GB",
+                    "item_id": "",
+                    "new_insurance_cat": true,
+                    "phone_accidentIns": [{
+                        "desc": "服务条款",
+                        "url": "https://order.mi.com/static/jrUrl?url=https%3A%2F%2Fapi.jr.mi.com%2Finsurance%2Fdocument%2Fphone_accidentIns.html%3Ffrom%3Dins_phonedetail_bxtk%26insuranceSku%3D18942%26couponFrom%3Drule"
+                    }, {
+                        "desc": "常见问题",
+                        "url": "https://order.mi.com/static/jrUrl?url=https%3A%2F%2Fapi.jr.mi.com%2Finsurance%2Fdocument%2Fphone_accidentIns.html%3Ffrom%3Dins_phonedetail_cjwt%26insuranceSku%3D18942%26couponFrom%3Dquestion"
+                    }],
+                    "phone_accidentIns_sku": "18942",
+                    "service_goods_id": "2181000032",
+                    "service_image_url": "//i1.mifile.cn/a1/pms_1520499811.22539853.jpg",
+                    "service_name": "小米MIX 2S 意外保障服务",
+                    "service_price": "209",
+                    "service_short_name": "意外保障服务",
+                    "service_url": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-data-mishop/23292dac1b41.html",
+                    "source": "common"
+                }],
+                "service_url": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-data-mishop/23292dac1b41.html",
+                "type_name": "保障服务"
+            }],
+            "service_refound_policy": {
+                "desc": "支持7天无理由退货",
+                "is_support": true
+            },
+            "show_price_type": [],
+            "stock_channel": "3"
+        }, {
+            "action_button": {
+                "button_title": "立即预约",
+                "is_bigtap": false,
+                "occ_timeout": 5000,
+                "reserve": {
+                    "activity_code": "",
+                    "batch_key": "subscribe_batch_20180406095922",
+                    "display_threshold": 500000,
+                    "end_button_title": "等待开抢",
+                    "is_limit_some_sku": false,
+                    "sale_time": 1523325600,
+                    "subscribe_end_time": 1523323800
+                },
+                "sale_mode": "reserve",
+                "use_occ": false
+            },
+            "address_type": "common",
+            "buy_limit": "1",
+            "commodity_id": 1181000004,
+            "goods_id": 2181000004,
+            "image_share": "http://i8.mifile.cn/a1/pms_1522034001.74522415!144x1440.jpg",
+            "img_url": "//i8.mifile.cn/a1/pms_1522034001.74522415!720x7200.jpg",
+            "instalment": {
+                "default_instal": "mifinanceinstal_m",
+                "list": [{
+                    "bank": "mifinanceinstal_m",
+                    "desc": "小米分期",
+                    "detail": [{
+                        "interest": "79.90",
+                        "rate": "2.22",
+                        "stage": 3,
+                        "stage_cost": "1226.30",
+                        "stage_interest": "26.63",
+                        "total_cost": "3678.90"
+                    }, {
+                        "interest": "140.36",
+                        "rate": "3.90",
+                        "stage": 6,
+                        "stage_cost": "623.22",
+                        "stage_interest": "23.39",
+                        "total_cost": "3739.36"
+                    }, {
+                        "interest": "259.13",
+                        "rate": "7.20",
+                        "stage": 12,
+                        "stage_cost": "321.51",
+                        "stage_interest": "21.59",
+                        "total_cost": "3858.13"
+                    }],
+                    "title": "小米分期"
+                }, {
+                    "bank": "antinstal_m",
+                    "desc": "花呗分期",
+                    "detail": [{
+                        "interest": "82.78",
+                        "rate": "2.30",
+                        "stage": 3,
+                        "stage_cost": "1227.25",
+                        "stage_interest": "27.59",
+                        "total_cost": "3681.78"
+                    }, {
+                        "interest": "161.96",
+                        "rate": "4.50",
+                        "stage": 6,
+                        "stage_cost": "626.82",
+                        "stage_interest": "26.99",
+                        "total_cost": "3760.96"
+                    }, {
+                        "interest": "269.92",
+                        "rate": "7.50",
+                        "stage": 12,
+                        "stage_cost": "322.40",
+                        "stage_interest": "22.49",
+                        "total_cost": "3868.92"
+                    }],
+                    "title": "花呗分期"
+                }]
+            },
+            "insurance": {
+                "list": [{
+                    "goods_id": "2181000032",
+                    "image_url": "//i1.mifile.cn/a1/pms_1520499811.22539853.jpg",
+                    "market_price": "299",
+                    "name": "小米MIX 2S 意外保障服务",
+                    "price": "209",
+                    "short_name": "小米MIX 2S 意外保障服务",
+                    "sku": "18942",
+                    "type": "mi_mix"
+                }]
+            },
+            "is_sale": true,
+            "is_show_reduce_price": false,
+            "is_stock": false,
+            "market_price": "3599",
+            "name": "小米MIX 2S 6GB+128GB 白色",
+            "price": "3599",
+            "prop_list": [{
+                "prop_cfg_id": 177,
+                "prop_value_id": 602
+            }, {
+                "prop_cfg_id": 178,
+                "prop_value_id": 605
+            }],
+            "reduce_price": "",
+            "service_bargins": [{
+                "can_multi": true,
+                "service_info": [{
+                    "act_diff": "",
+                    "act_id": "",
+                    "act_price": "",
+                    "goods_id": 2181000004,
+                    "goods_name": "小米MIX 2S 全网通版 6GB内存 陶瓷标准版 128GB 白色 128GB",
+                    "item_id": "",
+                    "new_insurance_cat": true,
+                    "phone_accidentIns": [{
+                        "desc": "服务条款",
+                        "url": "https://order.mi.com/static/jrUrl?url=https%3A%2F%2Fapi.jr.mi.com%2Finsurance%2Fdocument%2Fphone_accidentIns.html%3Ffrom%3Dins_phonedetail_bxtk%26insuranceSku%3D18942%26couponFrom%3Drule"
+                    }, {
+                        "desc": "常见问题",
+                        "url": "https://order.mi.com/static/jrUrl?url=https%3A%2F%2Fapi.jr.mi.com%2Finsurance%2Fdocument%2Fphone_accidentIns.html%3Ffrom%3Dins_phonedetail_cjwt%26insuranceSku%3D18942%26couponFrom%3Dquestion"
+                    }],
+                    "phone_accidentIns_sku": "18942",
+                    "service_goods_id": "2181000032",
+                    "service_image_url": "//i1.mifile.cn/a1/pms_1520499811.22539853.jpg",
+                    "service_name": "小米MIX 2S 意外保障服务",
+                    "service_price": "209",
+                    "service_short_name": "意外保障服务",
+                    "service_url": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-data-mishop/23292dac1b41.html",
+                    "source": "common"
+                }],
+                "service_url": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-data-mishop/23292dac1b41.html",
+                "type_name": "保障服务"
+            }],
+            "service_refound_policy": {
+                "desc": "支持7天无理由退货",
+                "is_support": true
+            },
+            "show_price_type": [],
+            "stock_channel": "3"
+        }, {
+            "action_button": {
+                "button_title": "立即预约",
+                "is_bigtap": false,
+                "occ_timeout": 5000,
+                "reserve": {
+                    "activity_code": "",
+                    "batch_key": "subscribe_batch_20180406095922",
+                    "display_threshold": 500000,
+                    "end_button_title": "等待开抢",
+                    "is_limit_some_sku": false,
+                    "sale_time": 1523325600,
+                    "subscribe_end_time": 1523323800
+                },
+                "sale_mode": "reserve",
+                "use_occ": false
+            },
+            "address_type": "common",
+            "buy_limit": "1",
+            "commodity_id": 1181000006,
+            "goods_id": 2181000006,
+            "image_share": "http://i8.mifile.cn/a1/pms_1522034061.12391230!144x1440.jpg",
+            "img_url": "//i8.mifile.cn/a1/pms_1522034061.12391230!720x7200.jpg",
+            "instalment": {
+                "default_instal": "mifinanceinstal_m",
+                "list": [{
+                    "bank": "mifinanceinstal_m",
+                    "desc": "小米分期",
+                    "detail": [{
+                        "interest": "88.78",
+                        "rate": "2.22",
+                        "stage": 3,
+                        "stage_cost": "1362.59",
+                        "stage_interest": "29.59",
+                        "total_cost": "4087.78"
+                    }, {
+                        "interest": "155.96",
+                        "rate": "3.90",
+                        "stage": 6,
+                        "stage_cost": "692.49",
+                        "stage_interest": "25.99",
+                        "total_cost": "4154.96"
+                    }, {
+                        "interest": "287.93",
+                        "rate": "7.20",
+                        "stage": 12,
+                        "stage_cost": "357.24",
+                        "stage_interest": "23.99",
+                        "total_cost": "4286.93"
+                    }],
+                    "title": "小米分期"
+                }, {
+                    "bank": "antinstal_m",
+                    "desc": "花呗分期",
+                    "detail": [{
+                        "interest": "91.98",
+                        "rate": "2.30",
+                        "stage": 3,
+                        "stage_cost": "1363.66",
+                        "stage_interest": "30.66",
+                        "total_cost": "4090.98"
+                    }, {
+                        "interest": "179.96",
+                        "rate": "4.50",
+                        "stage": 6,
+                        "stage_cost": "696.49",
+                        "stage_interest": "29.99",
+                        "total_cost": "4178.96"
+                    }, {
+                        "interest": "299.92",
+                        "rate": "7.50",
+                        "stage": 12,
+                        "stage_cost": "358.24",
+                        "stage_interest": "24.99",
+                        "total_cost": "4298.92"
+                    }],
+                    "title": "花呗分期"
+                }]
+            },
+            "insurance": {
+                "list": [{
+                    "goods_id": "2181000032",
+                    "image_url": "//i1.mifile.cn/a1/pms_1520499811.22539853.jpg",
+                    "market_price": "299",
+                    "name": "小米MIX 2S 意外保障服务",
+                    "price": "209",
+                    "short_name": "小米MIX 2S 意外保障服务",
+                    "sku": "18942",
+                    "type": "mi_mix"
+                }]
+            },
+            "is_sale": true,
+            "is_show_reduce_price": false,
+            "is_stock": false,
+            "market_price": "3999",
+            "name": "小米MIX 2S 8GB+256GB 陶瓷尊享版 白色",
+            "price": "3999",
+            "prop_list": [{
+                "prop_cfg_id": 177,
+                "prop_value_id": 603
+            }, {
+                "prop_cfg_id": 178,
+                "prop_value_id": 605
+            }],
+            "reduce_price": "",
+            "service_bargins": [{
+                "can_multi": true,
+                "service_info": [{
+                    "act_diff": "",
+                    "act_id": "",
+                    "act_price": "",
+                    "goods_id": 2181000006,
+                    "goods_name": "小米MIX 2S 全网通版 8GB内存 陶瓷尊享版 256GB 白色 256G",
+                    "item_id": "",
+                    "new_insurance_cat": true,
+                    "phone_accidentIns": [{
+                        "desc": "服务条款",
+                        "url": "https://order.mi.com/static/jrUrl?url=https%3A%2F%2Fapi.jr.mi.com%2Finsurance%2Fdocument%2Fphone_accidentIns.html%3Ffrom%3Dins_phonedetail_bxtk%26insuranceSku%3D18942%26couponFrom%3Drule"
+                    }, {
+                        "desc": "常见问题",
+                        "url": "https://order.mi.com/static/jrUrl?url=https%3A%2F%2Fapi.jr.mi.com%2Finsurance%2Fdocument%2Fphone_accidentIns.html%3Ffrom%3Dins_phonedetail_cjwt%26insuranceSku%3D18942%26couponFrom%3Dquestion"
+                    }],
+                    "phone_accidentIns_sku": "18942",
+                    "service_goods_id": "2181000032",
+                    "service_image_url": "//i1.mifile.cn/a1/pms_1520499811.22539853.jpg",
+                    "service_name": "小米MIX 2S 意外保障服务",
+                    "service_price": "209",
+                    "service_short_name": "意外保障服务",
+                    "service_url": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-data-mishop/23292dac1b41.html",
+                    "source": "common"
+                }],
+                "service_url": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-data-mishop/23292dac1b41.html",
+                "type_name": "保障服务"
+            }],
+            "service_refound_policy": {
+                "desc": "支持7天无理由退货",
+                "is_support": true
+            },
+            "show_price_type": [],
+            "stock_channel": "3"
+        }],
+        "product_info": {
+            "activity_tips": {
+                "action": {
+                    "log_code": "31wapproduct_pageholidaylabel000000#t=product\u0026page=product_page\u0026act=other\u0026bid=3198805.6\u0026pid=10000085",
+                    "path": "https://s1.mi.com/pages/0a3b6f64f0523984e51323fe53b8c504/index.html",
+                    "type": "activity"
+                },
+                "img_url": "https://i8.mifile.cn/b2c-mimall-media/a37c46b43272921033724ab226859e13.jpg"
+            },
+            "is_batched": false,
+            "is_enable": true,
+            "name": "小米MIX 2S",
+            "price_tips": {
+                "img_url": "https://i8.mifile.cn/b2c-mimall-media/fa0265bf6fd2f34cfb50e18e7c115d65.png"
+            },
+            "product_desc": "\u003cfont color='#ff4a00'\u003e「4月10日 早10点 开售」\u003c/font\u003e搭载高通骁龙845 年度旗舰处理器 / AI超感光双摄，DxO百分相机 / 艺术品般陶瓷机身",
+            "product_gallery_icon": {},
+            "product_id": 10000085,
+            "share_content": ""
+        },
+        "seo": {
+            "description": "\u003cfont color='#ff4a00'\u003e「4月10日 早10点 开售」\u003c/font\u003e搭载高通骁龙845 年度旗舰处理器 / AI超感光双摄，DxO百分相机 / 艺术品般陶瓷机身",
+            "keywords": "小米MIX,6GB+64GB,黑色,6GB+128GB,8GB+256GB,陶瓷尊享版,白色",
+            "title": "小米MIX 2S"
+        },
+        "server_time": 1523184515,
+        "view_content": {
+            "commentView": {
+                "commentView": {
+                    "detail": {
+                        "comment_labels": null,
+                        "comments_bad": 0,
+                        "comments_general": 13,
+                        "comments_good": 1749,
+                        "comments_total": 1762,
+                        "five_star": 1711,
+                        "four_star": 38,
+                        "one_star": 0,
+                        "satisfy_per": "99.3",
+                        "three_star": 11,
+                        "two_star": 2
+                    },
+                    "list": [{
+                        "add_time": "2018-04-04",
+                        "average_grade": 5,
+                        "comment_content": "可以",
+                        "comment_full_images": ["//i1.mifile.cn/a2/1522808367_6482587_s1008_754wh.jpg"],
+                        "comment_grade": 1,
+                        "comment_id": "155410433",
+                        "comment_images": ["//cdn.cnbj0.fds.api.mi-img.com/b2c-data-mishop/cca6f6c49d093893848a96a5e0b67953.webp"],
+                        "comment_title": "",
+                        "down": false,
+                        "down_num": 0,
+                        "has_up_customer": false,
+                        "is_top": "1",
+                        "reply_content": "此评论虽然才2个字，但语法严谨，用词工整，结构巧妙，琅琅上口，可谓言简意赅，足见评论人扎实的文字功底，以及信手拈来的写作技巧和巧夺天工的创造能力，令人佩服佩服~~(✿◡‿◡)感谢一路有您，米粉节快乐哦~",
+                        "reply_time": "2018-04-04",
+                        "site_id": "101",
+                        "site_name": "小米移动商城",
+                        "up": false,
+                        "up_customer_num": 1740,
+                        "up_num": 800,
+                        "up_rate": 100,
+                        "user_avatar": "//cdn.cnbj0.fds.api.mi-img.com/b2c-data-mishop/c52c11c915d43e0ac3286161eec4fcaf.jpg",
+                        "user_id": "118***9100",
+                        "user_name": " 李俊喆",
+                        "user_reply_num": 20,
+                        "user_replys": [{
+                            "admin_id": "263",
+                            "assigner_id": "263",
+                            "check_time": "1523169258",
+                            "comment_id": "155410433",
+                            "is_delete": "0",
+                            "parent_id": "0",
+                            "reply_content": "٩(๑^o^๑)۶",
+                            "reply_id": "1798858",
+                            "reply_time": "1523113142",
+                            "status": "1",
+                            "user_avatar": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-data-mishop/c2967dfef7e98df036c463d50041edf7.png",
+                            "user_id": "144***1549",
+                            "user_name": "僵尸至尊"
+                        }, {
+                            "admin_id": "258",
+                            "assigner_id": "258",
+                            "check_time": "1523160662",
+                            "comment_id": "155410433",
+                            "is_delete": "0",
+                            "parent_id": "0",
+                            "reply_content": "可以",
+                            "reply_id": "1798707",
+                            "reply_time": "1523110619",
+                            "status": "1",
+                            "user_avatar": "https://s1.mi-img.com/mfsv2/avatar/fdsc3/p01ulcYxLjSU/mheMZPL3u1L7Zt.jpg",
+                            "user_id": "122***4296",
+                            "user_name": "小米"
+                        }, {
+                            "admin_id": "233",
+                            "assigner_id": "233",
+                            "check_time": "1523153755",
+                            "comment_id": "155410433",
+                            "is_delete": "0",
+                            "parent_id": "0",
+                            "reply_content": "客服妹子有才",
+                            "reply_id": "1798109",
+                            "reply_time": "1523100318",
+                            "status": "1",
+                            "user_avatar": "https://cdn.cnbj0.fds.api.mi-img.com/b2c-data-mishop/f790b51a76afd7b41522048fa779d69d.jpg",
+                            "user_id": "129***6382",
+                            "user_name": "以诚相待"
+                        }]
+                    }],
+                    "total": 1763
+                },
+                "viewType": "commentView"
+            },
+            "descTabsView": {
+                "descTabsView": [{
+                    "name": "概述",
+                    "tabContent": [{
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/012ed82dfddfacabd040b9de4bfb3f69.jpg?w=1080\u0026h=655",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/bd4b0467c0ca4d492707a8e9ee63cc2e.jpg?w=1080\u0026h=2025",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/4df2a2494d4585205db5672d40d68633.jpg?w=1080\u0026h=670",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/fd52ddef6ca9f17552947c63804115a2.jpg?w=1080\u0026h=1530",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/6d6e98cb49687c46edb1a80e6b9e6ec1.jpg?w=1080\u0026h=1122",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/a6d53812d6e250c6293a41e99c44a99d.jpg?w=1080\u0026h=1130",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/1decb5a69ce881e435e2f4c0a02bdc98.jpg?w=1080\u0026h=1793",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/196767a717cd8326448ce5742fed59cd.jpg?w=1080\u0026h=1406",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/35232e0d7be267f4b3765ebedcc14f21.jpg?w=1080\u0026h=1406",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/1d4c8ab493a4540f43613185bcf111a9.jpg?w=1080\u0026h=1406",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/5f370adf334d6f3552f5c8fe6b84f707.jpg?w=1080\u0026h=1406",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/c18a9f3bbfa339fc239a09b24fb327ef.jpg?w=1080\u0026h=1406",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/1537167cd244eabeda976d40663431ac.jpg?w=1080\u0026h=660",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/482027f9bb4ce1ecbd6ea51c947d38d0.jpg?w=1080\u0026h=1640",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/0b77178f1ca698d3619c86189a2050b0.jpg?w=1080\u0026h=1640",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/67c79adeaed5c74e316c56c102fde6d6.jpg?w=1080\u0026h=1640",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/1a74460c670d2e1a3c7ccc3fc07c9f15.jpg?w=1080\u0026h=1640",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/adfd7cc95d3b847f6858bae627ac0bd7.jpg?w=1080\u0026h=810",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/511b0e28d3fbf668a5abaedaa27bbdc1.jpg?w=1080\u0026h=1267",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/e20e0ddc69446546c75a48aa2620148a.jpg?w=1080\u0026h=627",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/98fe26c5765985084d5a96c359fadc2e.jpg?w=1080\u0026h=800",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/55d8c4fc2ad2d78dbcb9d76ed4604365.jpg?w=1080\u0026h=1426",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/ec9b68cc163fc363f68142be418300ed.jpg?w=1080\u0026h=880",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/eed8d6ab8063388666ceca39e820f482.jpg?w=1080\u0026h=1694",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/15f7852d2a0c00e2495a3d6ad7789fea.jpg?w=1080\u0026h=535",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/20c76d42a2814acad24a8cbe9ad20007.jpg?w=1080\u0026h=1080",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/944fa8418a3954bdc9b3e494acc36a12.jpg?w=1080\u0026h=1080",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/0b6f6d2a96f8e23b275cc6c001184d8d.jpg?w=1080\u0026h=1080",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/38f192c08967a11fe2c96c615b80a2c4.jpg?w=1080\u0026h=1080",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/57fa928d5462655c8bf17717c3bdcdc0.jpg?w=1080\u0026h=1080",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/41f6b31df69abaad61771c2f9c5a5772.jpg?w=1080\u0026h=1490",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/85f70e9fd5258fd828b4b3a66608c717.jpg?w=1080\u0026h=1080",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/407b68bd9a9e648d55208c0f5f633e27.jpg?w=1080\u0026h=460",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/f936890015e71300ee82a0649c044ddc.jpg?w=1080\u0026h=720",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }]
+                }, {
+                    "name": "参数",
+                    "tabContent": [{
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/24504c220759f8031440c5f00f50ff70.jpg?w=1080\u0026h=1130",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/60fb1997288d42a729a10f20c224ded7.jpg?w=1080\u0026h=1036",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/3635c16e444205aabc35403ded39106b.jpg?w=1080\u0026h=2940",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/96771d4844a3db9cbddf8d37c176a72d.jpg?w=1080\u0026h=1677",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/d8b53633c1d436a0e0304700be6b4e70.jpg?w=1080\u0026h=3253",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/4898ff892f389627d058a27e6b835874.jpg?w=1080\u0026h=2621",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/67fedcd4a97579a3347cb348db051575.jpg?w=1080\u0026h=2429",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/787adc73f456f4ae0daba4307e102016.jpg?w=1080\u0026h=2649",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/bc95a8ecd429394d3aaf08602376d02e.jpg?w=1080\u0026h=1378",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }, {
+                        "plainView": {
+                            "content": "",
+                            "img": "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/2e52769b10fc001dfdd658438557cd54.jpg?w=1080\u0026h=777",
+                            "is_not_compress": "0",
+                            "title": ""
+                        },
+                        "viewType": "plainView"
+                    }]
+                }],
+                "viewType": "descTabsView"
+            },
+            "galleryView": {
+                "galleryView": ["//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/a9204d177d4f4ef2e7436edc05d7bcce.jpg?bg=FFFFFF", "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/f72aec65d7203e347a3b96c9bb8cf3fb.jpg?bg=FFFFFF", "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/27755e05b09bbe8c870cdd5398e24507.jpg?bg=FFFFFF", "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/a7652bd2b60f5e277d1ae3ead99ef836.jpg?bg=FFFFFF", "//cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/a4d37f0dbea7915c53d4fffd93896a44.jpg?bg=FFFFFF"],
+                "viewType": "galleryView"
+            },
+            "relatePackageView": {
+                "relatePackageView": {
+                    "packages": [],
+                    "title": "精选套餐"
+                },
+                "viewType": "relatePackageView"
+            },
+            "relatePartsView": {
+                "relatePartsView": {
+                    "desc": "",
+                    "parts": [],
+                    "title": "配件"
+                },
+                "viewType": "relatePartsView"
+            },
+            "titleView": {
+                "titleView": {
+                    "adapt": [],
+                    "brief": "",
+                    "canJoinActs": [],
+                    "market_price": "3299",
+                    "name": "小米MIX 2S",
+                    "price": "3299",
+                    "product_desc": "\u003cfont color='#ff4a00'\u003e「4月10日 早10点 开售」\u003c/font\u003e搭载高通骁龙845 年度旗舰处理器 / AI超感光双摄，DxO百分相机 / 艺术品般陶瓷机身",
+                    "share_content": ""
+                },
+                "viewType": "titleView"
+            }
+        }
+    }
+}
