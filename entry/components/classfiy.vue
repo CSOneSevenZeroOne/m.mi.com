@@ -8,13 +8,13 @@
                         <div data-v-06d70f2d="" class="list-navbar">
                             <ul data-v-06d70f2d="">
                                 <li data-v-06d70f2d="" class="active" v-for="(b,index) in classfiytype"  >
-                                    <a data-v-06d70f2d="" @click="goAnchor('#anchor-'+index,index)"><span>{{b.goods_type}}</span></a>
+                                    <a data-v-06d70f2d="" @click="goAnchor('#anchor-'+(index+4),index)"><span>{{b.goods_type}}</span></a>
                                     
                                 </li>
                             </ul>
-                        </div>
+                        </div>zaq
                         <div data-v-06d70f2d="" class="list-wrap">
-                            <div data-v-06d70f2d="" class="list-item category0" v-for="(b,b_index) in a" >
+                            <div data-v-06d70f2d="" class="list-item category0" v-for="(b,b_index) in a" :anchoranchorid="'anchor-'+b_index" >
                         
                                 <div data-v-06d70f2d="" class="component-list-main" >
                                 	
@@ -106,11 +106,7 @@
             })(document, window);
             
             
-            (function () {
-//          	window.onload=function () {
-////          		console.log($$(".active"))	
-//          	}	
-            })()
+
         },
         methods:{
         	goAnchor(selector,index) {
