@@ -16,10 +16,10 @@
                         <div data-v-06d70f2d="" class="list-wrap">
                             <div data-v-06d70f2d="" class="list-item category0" v-for="(b,b_index) in a" >
                                 <div data-v-06d70f2d="" class="component-list-main" >
-                                    <div class="cells_auto_fill" index="0" v-for="c in JSON.parse(b.items)" v-if="b.view_type=='cells_auto_fill'"   :id="'anchor-'+num" >
+                                    <div class="cells_auto_fill" index="0" v-for="c in JSON.parse(b.items)" v-if="b.view_type=='cells_auto_fill'"   :id="'anchor-'+num">
                                     
                                        <a href="javascript:void(0)" class="exposure items" style="height: 1rem; padding-right:0">
-                                            <img :src="c.img_url" lazy="loaded" style="height: 1rem; width: 100%;">
+                                            <img :src="c.img_url" lazy="loaded" style="height: auto; width: 100%;">
                                         </a>
                                     </div>
                                     <div name="m1" class="category_title" v-if="b.view_type=='category_title'"><span>{{b.category_name}}</span></div>

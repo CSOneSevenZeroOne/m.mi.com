@@ -46,7 +46,7 @@
             }).then(function(res){
                 sessionStorage.setItem("indexinfo", res);
                 self.$store.state.homedata = JSON.parse(res);
-                console.log(JSON.parse(res))
+                //console.log(JSON.parse(res))
                 var arr1 = JSON.parse(res).filter(function(ele, index, self){
                     if(ele.ad_position_id){
                         return ele;

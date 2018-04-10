@@ -10,7 +10,7 @@
             </a>
         </div>
         <div class="comm-autoplay">
-            <slider :pages="pages" :sliderinit="sliderinit">
+            <slider :pages="page" :sliderinit="sliderinit">
                 <!-- slot  -->
             </slider>
         </div>
@@ -19,17 +19,16 @@
         </div>
         <div class="title">
             <div class="title_top">
-                <img src="https://i8.mifile.cn/b2c-mimall-media/fa0265bf6fd2f34cfb50e18e7c115d65.png">红米5A 轻巧长续航
-                </div>
-                <div class="title_con">
+                <img src="https://i8.mifile.cn/b2c-mimall-media/fa0265bf6fd2f34cfb50e18e7c115d65.png"><span v-html="this.$store.state.goodsinfo.product_info.name"></span></div>
+                <div class="title_con" v-html="this.$store.state.goodsinfo.product_info.product_desc">
                     <font color="#ff4a00">「米粉节，一起狂欢8！领券减30元」</font>8天超长待机 / 137g轻巧机身 / 高通骁龙处理器
                 </div>
         </div>
         <div class="price">
-            ¥<span>699</span>
+            ¥<span v-html="this.$store.state.goodsinfo.goods_info[0].price">699</span>
         </div>
         <div class="juan">
-            <div class="lingjuan">
+            <div class="lingjuan" @click="lingjuan">
                 领卷<div><span>红米5A 30元优惠券</span></div>
             </div>
         </div>
@@ -69,8 +68,72 @@
                 </div>
             </div>
         </div>
+
+        <div class="weui-mask" id="lingjuanm" style="display: none"></div>
+        <div class="weui-actionsheet" id="iosActionsheet">
+            <div class="weui-actionsheet__title">
+                <div class="describe">
+                  <!-- <img src="" alt=""> -->
+                </div>
+            </div>
+            <div class="select_type">
+                
+            </div>
+            <div class="weui-actionsheet__action">
+                <div class="weui-actionsheet__cell" id="lingjuanCancel">取消</div>
+            </div>
+        </div>
+    </div>
     </div>
 </template>
+<script>
+import slider from "vue-concise-slider"; // 引入slider组件
+import weui from "weui";
+import $ from "jquery";
+export default {
+  data() {
+    return {
+      //图片列表[arr]
+      //滑动配置[obj]
+      sliderinit: {
+        currentPage: 0, //当前页码
+        thresholdDistance: 200, //滑动判定距离
+        // thresholdTime: 100, //滑动判定时间
+        // autoplay: 1000, //自动滚动[ms]
+        // loop: true, //循环滚动
+        // direction: 'vertical', //方向设置，垂直滚动，默认水平
+        infinite: 1, //无限滚动前后遍历数
+        slidesToScroll: 1 //每次滑动项数
+      }
+    };
+  },
+  props:["page"],
+  methods:{
+    lingjuan(){
+      var $lingjuan = $("#lingjuanm");
+      var $lingjuanm = $("#iosActionsheet");
+      function hideActionSheet() {
+        $lingjuanm.removeClass("weui-actionsheet_toggle");
+        $lingjuan.fadeOut(200);
+      }
+      $lingjuanm.on("click", hideActionSheet);
+      $("#lingjuanCancel").on("click", hideActionSheet);
+      $(".juan").on("click", function() {
+        //console.log(222);
+        $lingjuanm.addClass("weui-actionsheet_toggle");
+        $lingjuan.fadeIn(200);
+      });
+      // console.log(this.page);
+    }
+  },
+  mounted(){
+    
+  },
+  components: {
+    slider
+  }
+};
+</script>
 
 <style lang="less" scoped>
 .comment {
@@ -78,16 +141,16 @@
   background: #fff;
   .comment_header {
     a {
-        display: flex;
-        justify-content: space-between;
+      display: flex;
+      justify-content: space-between;
       padding: 0.16rem 0;
       margin: 0 0.16rem;
       font-size: 0.12rem;
-      span{
-          color: rgba(0,0,0,.54);
-          em{
-              color:#ff6700;
-          }
+      span {
+        color: rgba(0, 0, 0, 0.54);
+        em {
+          color: #ff6700;
+        }
       }
     }
   }
@@ -271,57 +334,3 @@ em {
 }
 </style>
 
-<script>
-import slider from "vue-concise-slider"; // 引入slider组件
-export default {
-  data() {
-    return {
-      //图片列表[arr]
-      pages: [
-        {
-          // title: 'slide1',
-          style: {
-            background:
-              "url(" + require("../../images/commodity/mix2.webp") + ")"
-          }
-        },
-        {
-          // title: 'slide2',
-          style: {
-            background:
-              "url(" + require("../../images/commodity/mix22.jpg") + ")"
-          }
-        },
-        {
-          // title: 'slide3',
-          style: {
-            background:
-              "url(" + require("../../images/commodity/mix23.webp") + ")"
-          }
-        },
-        {
-          // title: 'slide4',
-          style: {
-            background:
-              "url(" + require("../../images/commodity/mix23.webp") + ")"
-          }
-        }
-      ],
-      //滑动配置[obj]
-      sliderinit: {
-        currentPage: 0, //当前页码
-        thresholdDistance: 200, //滑动判定距离
-        // thresholdTime: 100, //滑动判定时间
-        // autoplay: 1000, //自动滚动[ms]
-        // loop: true, //循环滚动
-        // direction: 'vertical', //方向设置，垂直滚动，默认水平
-        infinite: 1, //无限滚动前后遍历数
-        slidesToScroll: 1 //每次滑动项数
-      }
-    };
-  },
-  components: {
-    slider
-  }
-};
-</script>

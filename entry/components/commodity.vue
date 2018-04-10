@@ -1,6 +1,6 @@
 <template>
     <div id="commodity">
-        <comm-content/>
+        <comm-content :page="page"></comm-content>
         <comm-footer/>
     </div>
 </template>
@@ -14,6 +14,11 @@ import comm_content from "./commodity/comm_content.vue";
 import comm_footer from "./commodity/comm_footer.vue";
 import $ from "jquery";
 export default {
+  data() {
+    return {
+      page: []
+    }
+  },
   components: {
     "comm-content": comm_content,
     "comm-footer": comm_footer
@@ -26,12 +31,10 @@ export default {
       type: "POST",
       data: {
         path: str
-      },
-      dataType:"JSON"
+      }
     }).then(function(res) {
-        //console.log(res)
-        //.product_info
-      var obj = res[0];
+      //.product_info.name
+      var obj = JSON.parse(res)[0];
       if (obj.activies) {
         obj.activies = JSON.parse(obj.activies);
       }
@@ -55,6 +58,19 @@ export default {
       }
       self.$store.state.goodsinfo = obj;
       console.log(obj);
+      var arr = obj.view_content.galleryView.galleryView;
+      var newArr = [];
+      for (var i = 0; i < arr.length; i++) {
+        newArr.push({
+          style: {
+            background:
+              "url(" + arr[i] + ")"
+          }
+        });
+      }
+      self.page=newArr;
+      console.log(111)
+      console.log(self.page)
     });
   }
 };
