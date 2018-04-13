@@ -8,17 +8,17 @@
                         <div data-v-06d70f2d="" class="list-navbar">
                             <ul data-v-06d70f2d="">
                                 <li data-v-06d70f2d="" class="active" v-for="(b,index) in classfiytype"  >
-                                    <a data-v-06d70f2d="" @click="goAnchor('#anchor-'+(index+4),index)"><span>{{b.goods_type}}</span></a>
+                                    <a data-v-06d70f2d="" @click="goAnchor('#anchor-'+(index),index)"><span>{{b.goods_type}}</span></a>
                                     
                                 </li>
                             </ul>
                         </div>zaq
                         <div data-v-06d70f2d="" class="list-wrap">
-                            <div data-v-06d70f2d="" class="list-item category0" v-for="(b,b_index) in a" :anchoranchorid="'anchor-'+b_index" >
+                            <div data-v-06d70f2d="" class="list-item category0" v-for="(b,b_index) in a" :id="'anchor-'+b_index" >
                         
                                 <div data-v-06d70f2d="" class="component-list-main" >
                                 	
-                                    <div class="cells_auto_fill" index="0" v-for="c in JSON.parse(b.items)" v-if="b.view_type=='cells_auto_fill'"    >
+                                    <div class="cells_aauto_fill" index="0" v-for="c in JSON.parse(b.items)" v-if="b.view_type=='cells_auto_fill'"    >
                                     
                                        <a href="javascript:void(0)" class="exposure items" style="height: 1rem; padding-right:0">
                                             <img :src="c.img_url" lazy="loaded" style="height: 1rem; width: 100%;">
