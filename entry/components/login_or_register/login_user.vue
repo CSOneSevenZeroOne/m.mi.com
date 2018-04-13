@@ -94,7 +94,7 @@
                           </span>
 												<div class="reverse">
 													<div class="n_links_area" id="custom_display_64" style="">
-														<a class="outer-link" href="#/register">立即注册</a><span>|</span>
+														<a class="outer-link" href="#/loginphone">立即注册</a><span>|</span>
 														<a class="outer-link" href="https://account.xiaomi.com/pass/forgetPassword">忘记密码？</a>
 													</div>
 												</div>
@@ -252,7 +252,6 @@ export default {
         dataType: "JSON"
       }).then(function(res) {
         if (res.status == 1) {
-          window.location.href = "#/";
           self.$store.state.foottab = {
             home_src: require("../../images/foottab/home_curr.jpg"),
             home_curr: true,
@@ -263,11 +262,17 @@ export default {
             user_src: require("../../images/foottab/user.jpg"),
             user_curr: false
           };
+          sessionStorage.setItem("userinfo",self.username)
+          this.$store.state.index=true;
+          window.location.href = "#/";
         } else {
           self.msg = "用户名或密码错误";
         }
       });
     }
+  },
+  mounted(){
+    this.$store.state.index=false;
   }
 };
 </script>

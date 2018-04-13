@@ -129,7 +129,8 @@ const store = new Vuex.Store({
 		homedata:[],//主页数据
 		navlist:[],
         homeimg:[],
-        goodsinfo:{}
+        goodsinfo:{},
+        pages:[]
     },
     //获取值得方法
     getters: {}

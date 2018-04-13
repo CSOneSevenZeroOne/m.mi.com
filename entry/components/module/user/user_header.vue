@@ -5,8 +5,8 @@
             <div class="head_img">
                 <img src="../../../images/user/default.png" alt="">
             </div>
-            <div class="userinfo" v-if="username.length>2">
-                <p class="username">刘处长</p>
+            <div class="userinfo" v-if="username">
+                <p class="username" v-text="username">刘处长</p>
                 <p class="userid">1301723</p>
             </div>
             <div class="userinfo" v-else>
@@ -22,6 +22,9 @@ export default {
     return {
       username: ""
     };
+  },
+  mounted(){
+    this.username=sessionStorage.getItem("userinfo");
   }
 };
 </script>

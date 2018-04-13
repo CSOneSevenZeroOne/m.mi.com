@@ -17,11 +17,19 @@
                             <div data-v-06d70f2d="" class="list-item category0" v-for="(b,b_index) in a" :id="'anchor-'+b_index" >
                         
                                 <div data-v-06d70f2d="" class="component-list-main" >
+<<<<<<< HEAD
+                                    <div class="cells_auto_fill" index="0" v-for="c in JSON.parse(b.items)" v-if="b.view_type=='cells_auto_fill'"   :id="'anchor-'+num">
+=======
                                 	
+<<<<<<< HEAD
                                     <div class="cells_aauto_fill" index="0" v-for="c in JSON.parse(b.items)" v-if="b.view_type=='cells_auto_fill'"    >
+=======
+                                    <div class="cells_auto_fill" index="0" v-for="c in JSON.parse(b.items)" v-if="b.view_type=='cells_auto_fill'"    >
+>>>>>>> 0c94256e40981237200d2604b706ff554f61cace
+>>>>>>> b3b249b8862ab0e59c499c6e4896dee54171c451
                                     
                                        <a href="javascript:void(0)" class="exposure items" style="height: 1rem; padding-right:0">
-                                            <img :src="c.img_url" lazy="loaded" style="height: 1rem; width: 100%;">
+                                            <img :src="c.img_url" lazy="loaded" style="height: auto; width: 100%;">
                                         </a>
                                     </div>
                                     <div name="m1" class="category_title" v-if="b.view_type=='category_title'"><span>{{b.category_name}}</span></div>
