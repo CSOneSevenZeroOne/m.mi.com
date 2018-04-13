@@ -34,11 +34,9 @@ export default {
       }
     }).then(function(res) {
       //.product_info.name
+      console.log(JSON.parse(res)[0])
       var obj = JSON.parse(res)[0];
-      if (obj.activies) {
-        obj.activies = JSON.parse(obj.activies);
-      }
-      if (obj.buy_option) {
+      if (obj.buy_option!="[]") {
         obj.buy_option = JSON.parse(obj.buy_option);
       }
       if (obj.coupon_info) {

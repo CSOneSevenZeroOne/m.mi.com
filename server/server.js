@@ -14,8 +14,9 @@ app.use(bodyParser.json())
 // app.use('/insertclassfiy', insertclassfiy);//插入信息
 // var insertproduct = require('./insert/insertproduct.js');
 // app.use('/insertproduct', insertproduct);//插入产品类别
-// var insertgoodsinfo = require('./insert/insertgoodsinfo.js');
-// app.use('/insertgoodsinfo', insertgoodsinfo);//插入产品类别
+var insertgoodsinfo = require('./insert/insertgoodsinfo.js');
+app.use('/insertgoodsinfo', insertgoodsinfo);//插入产品类别
+
 // var fotges = require('./insert/fotges.js');
 // app.use('/fotges', fotges);
 

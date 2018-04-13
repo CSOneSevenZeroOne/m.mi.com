@@ -17,12 +17,7 @@
                             <div data-v-06d70f2d="" class="list-item category0" v-for="(b,b_index) in a" :anchoranchorid="'anchor-'+b_index" >
                         
                                 <div data-v-06d70f2d="" class="component-list-main" >
-<<<<<<< HEAD
                                     <div class="cells_auto_fill" index="0" v-for="c in JSON.parse(b.items)" v-if="b.view_type=='cells_auto_fill'"   :id="'anchor-'+num">
-=======
-                                	
-                                    <div class="cells_auto_fill" index="0" v-for="c in JSON.parse(b.items)" v-if="b.view_type=='cells_auto_fill'"    >
->>>>>>> 0c94256e40981237200d2604b706ff554f61cace
                                     
                                        <a href="javascript:void(0)" class="exposure items" style="height: 1rem; padding-right:0">
                                             <img :src="c.img_url" lazy="loaded" style="height: auto; width: 100%;">
@@ -41,7 +36,6 @@
                                         </div>
                                     </div>
                                     <!---->
-
                                 </div>
                             </div>
 
