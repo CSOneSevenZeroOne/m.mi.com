@@ -14,7 +14,6 @@ require("./css/base.css");
 
 import cart from "./components/cart.vue"; //导入购物车
 import commodity from "./components/commodity.vue";//导入详情页
-
 import xindex from "./components/index-all.vue"; //导入主页
 
 
@@ -80,7 +79,7 @@ const router = new VueRouter({
             component: search
         }, {
             path: "/commodity", //详情页
-            component: commodity
+            component:commodity,
         }
         , {
             path: "/loginphone", //手机登录
@@ -131,7 +130,10 @@ const store = new Vuex.Store({
         homeimg:[],
         goodsinfo:{},
         pages:[],
-        successbool:false,//加入购物车成功
+        successbool:false,//加入购物车成功,
+        searchlist:[],//所有搜索
+        searchres:[],//搜索结果
+        searchstatus:true,//搜索状态
     },
     //获取值得方法
     getters: {}

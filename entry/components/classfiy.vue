@@ -73,7 +73,7 @@
 					self.a=JSON.parse(res);
                 });
             }else{
-                this.a=JSON.parse(sessionStorage.getItem("classfiy"))
+				this.a=JSON.parse(sessionStorage.getItem("classfiy"))
 			}
 			//console.log(JSON.parse(this.a[0].items)[0].action.path)
             //获取分类

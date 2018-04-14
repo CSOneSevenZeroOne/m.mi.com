@@ -1,6 +1,6 @@
 <template>
    <div class="searchcon">
-       <div class="hotsearch">
+       <div class="hotsearch" v-if="this.$store.state.searchstatus">
            <div class="hotsearch_title">热门搜索</div>
            <div class="hotsearch_banner">
                <a href="javascript:void(0)">
@@ -8,33 +8,81 @@
                </a>
            </div>
        </div>
-       <div class="search_key">
-           <a href="javascript:void(0)">红米 Note5</a>
-           <a href="javascript:void(0)">净水器厨下</a>
-           <a href="javascript:void(0)">小米MIX 2</a>
+       <div class="search_key" v-if="this.$store.state.searchstatus">
+           <a href="javascript:void(0)" v-for="item in hotcon" v-text="item.info" @click="searchitem(item.info)"></a>
+       </div>
+       <div class="search_con">
+         <a :href="'#/commodity?id='+item.action.path" v-for="(item,index) in this.$store.state.searchres" :key="index">
+          <img :src="item.img_url" alt="">
+          <p v-text="item.product_name"></p>
+         </a>
+       </div>
+       <div class="empty" v-if="this.$store.state.searchres.length==0&&this.$store.state.searchstatus==false">
+         没有相关内容!
        </div>
    </div>
 </template>
 <script>
+import $ from "jquery";
 export default {
   data() {
     return {
-      searchcon: ""
+      hotcon: []
     };
   },
   methods: {
-    search() {
-      console.log(this.searchcon);
+    searchitem(info) {
+      var arr = [];
+      var all = this.$store.state.searchlist;
+      for (var i = 0; i < all.length; i++) {
+        if (
+          all[i].category_name.indexOf(this.searchcon) > -1 ||
+          all[i].product_name.indexOf(this.searchcon) > -1
+        ) {
+          arr.push(all[i]);
+        }
+      }
+      this.$store.state.searchres = arr;
+      this.$store.state.searchstatus = false;
     }
+  },
+  mounted() {
+    var self = this;
+    $.ajax({
+      url: "http://localhost:6789/search/limit",
+      type: "post",
+      dataType: "JSON"
+    }).then(function(res) {
+      self.hotcon = res;
+      console.log(res);
+    });
   }
 };
 </script>
 <style lang="less" scoped>
+.empty{
+  display: flex;
+  line-height: .5rem;
+  text-align: center;
+}
+.search_con {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  a {
+    width: 49.8%;
+    text-align: center;
+    img {
+      width: 80%;
+      height: auto;
+    }
+  }
+}
 .searchcon {
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-  margin-top: .55rem;
+  margin-top: 0.55rem;
   .hotsearch {
     .hotsearch_title {
       line-height: 0.4rem;

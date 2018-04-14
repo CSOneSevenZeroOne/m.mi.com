@@ -12,7 +12,7 @@
             <a href="javascript:void(0)">地址管理</a>
         </li>
     </ul>
-    <a href="javascript:void(0)" class="exitaccount">退出账号</a>
+    <a href="javascript:void(0)" class="exitaccount" @click="exitaccount">退出账号</a>
     </div>
 </template>
 <script>
@@ -27,6 +27,10 @@ export default {
       this.$store.state.index = true;
       this.$store.state.discounts_active = true;
     }
+  },
+  exitaccount(){
+  sessionStorage.removeItem("userinfo")
+  window.location.href="#/user";
   },
   mounted() {
     var str = window.location.href;
