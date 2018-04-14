@@ -1,10 +1,9 @@
 <template>
-    <div id="commodity">
+    <div id="commodity" v-if="loadstatus">
         <comm-content :page="page"></comm-content>
         <comm-footer/>
     </div>
 </template>
-
 <style lang="less" scoped>
 
 </style>
@@ -16,7 +15,8 @@ import $ from "jquery";
 export default {
   data() {
     return {
-      page: []
+      page: [],
+      loadstatus:false
     }
   },
   components: {
@@ -34,7 +34,7 @@ export default {
       }
     }).then(function(res) {
       //.product_info.name
-      console.log(JSON.parse(res)[0])
+      //console.log(JSON.parse(res)[0])
       var obj = JSON.parse(res)[0];
       if (obj.buy_option!="[]") {
         obj.buy_option = JSON.parse(obj.buy_option);
@@ -67,8 +67,9 @@ export default {
         });
       }
       self.page=newArr;
-      console.log(111)
-      console.log(self.page)
+      // console.log(111)
+      // console.log(self.page)
+      self.loadstatus=true
     });
   }
 };
