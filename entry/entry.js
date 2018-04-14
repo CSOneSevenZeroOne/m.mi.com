@@ -130,7 +130,8 @@ const store = new Vuex.Store({
 		navlist:[],
         homeimg:[],
         goodsinfo:{},
-        pages:[]
+        pages:[],
+        successbool:false,//加入购物车成功
     },
     //获取值得方法
     getters: {}

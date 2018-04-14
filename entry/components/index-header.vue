@@ -4,8 +4,11 @@
       <div class="header_logo">
         <a href="#/"><img :src="imgSrc" alt=""></a>
       </div>
-      <div class="header_search">
-        <span class="iconfont">&#xe62e;</span>搜索商品名称</div>
+      <a href="#/search">
+        <div class="header_search">
+        <span class="iconfont">&#xe62e;</span>搜索商品名称
+        </div>
+      </a>
       <div><a href="#/user" class="iconfont" id="people_pic" @click="gouser">&#xe619;</a></div>
     </div>
     <ul class="header_nav_h_list">

@@ -263,7 +263,7 @@ export default {
             user_curr: false
           };
           sessionStorage.setItem("userinfo",self.username)
-          this.$store.state.index=true;
+          self.$store.state.index=true;
           window.location.href = "#/";
         } else {
           self.msg = "用户名或密码错误";

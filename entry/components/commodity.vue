@@ -2,6 +2,7 @@
     <div id="commodity" v-if="loadstatus">
         <comm-content :page="page"></comm-content>
         <comm-footer/>
+        <success-addcart />
     </div>
 </template>
 <style lang="less" scoped>
@@ -11,6 +12,7 @@
 <script>
 import comm_content from "./commodity/comm_content.vue";
 import comm_footer from "./commodity/comm_footer.vue";
+import success from './commodity/success.vue';
 import $ from "jquery";
 export default {
   data() {
@@ -21,7 +23,8 @@ export default {
   },
   components: {
     "comm-content": comm_content,
-    "comm-footer": comm_footer
+    "comm-footer": comm_footer,
+    "success-addcart":success
   },
   mounted() {
     var str = window.location.href.split("?")[1].split("=")[1];

@@ -1,7 +1,7 @@
 <template>
     <div class="comm-content">
         <div class="comm-header">
-            <a href="#/cart" class="btn-header">
+            <a href="#/classfiy" class="btn-header">
                 <i></i>
             </a>
             <div class="placeholder"></div>
@@ -112,7 +112,7 @@
                             </div>  
                       </div>
                       <div class="addcart" style="width:100%">
-                        <a href="javascript:void(0)">加入购物车</a>
+                        <a href="javascript:void(0)" @click="addTocart">加入购物车</a>
                       </div>
                 </div>
               </div>
@@ -151,7 +151,8 @@ export default {
       selcolor: 0,
       select: {},
       selnum: 1,
-      selbool: [false, true]
+      selbool: [false, true],
+      successbool: true
     };
   },
   props: ["page"],
@@ -199,7 +200,42 @@ export default {
           this.selbool = [true, false];
         }
       }
-      this.select.num=this.selnum;
+      this.select.num = this.selnum;
+    },
+    addTocart() {
+      this.$store.state.successbool = true;
+      if (sessionStorage.getItem("userinfo")) {
+        var obj = {
+          cart_name: this.select.cart_name,
+          user_name: sessionStorage.getItem("userinfo"),
+          num: this.select.num,
+          price: this.select.price,
+          type: JSON.stringify(this.select.type),
+          imgsrc: this.select.imgsrc
+        };
+        var arr=JSON.parse(sessionStorage.getItem("cart")||"[]");
+        arr.push(sessionStorage.setItem("cart"));
+        sessionStorage.setItem("cart", JSON.stringify(arr));
+      } else {
+        $.ajax({
+          url: "http://localhost:6789/cart/addcart",
+          type: "POST",
+          dataType: "JSON",
+          data: {
+            cart_name: this.select.cart_name,
+            user_name: sessionStorage.getItem("userinfo"),
+            num: this.select.num,
+            price: this.select.price,
+            type: JSON.stringify(this.select.type),
+            imgsrc: this.select.imgsrc
+          }
+        }).then(function(res) {
+          console.log(res);
+        });
+      }
+      setTimeout(() => {
+        this.$store.state.successbool = false;
+      }, 1000);
     }
   },
   mounted() {
@@ -210,7 +246,8 @@ export default {
         product: this.$store.state.goodsinfo.buy_option[0].list[0].name,
         color: this.$store.state.goodsinfo.buy_option[1].list[0].name
       },
-      price: parseInt(this.$store.state.goodsinfo.buy_option[0].list[0].price)
+      price: parseInt(this.$store.state.goodsinfo.buy_option[0].list[0].price),
+      imgsrc: this.$store.state.goodsinfo.goods_info[0].img_url
     };
   },
   components: {

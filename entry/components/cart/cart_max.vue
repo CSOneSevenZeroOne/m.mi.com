@@ -1,6 +1,4 @@
 <template>
-
-
     <div class="overlayer" @touchmove.prevent>
         <div class="warning-box">
             <div class="warning">!</div>
