@@ -26,12 +26,13 @@ export default {
     vipcenterback() {
       this.$store.state.index = true;
       this.$store.state.discounts_active = true;
+    },
+    exitaccount() {
+      sessionStorage.removeItem("userinfo");
+      window.location.href = "#/user";
     }
   },
-  exitaccount(){
-  sessionStorage.removeItem("userinfo")
-  window.location.href="#/user";
-  },
+
   mounted() {
     var str = window.location.href;
     if (str.split("#")[1] == "/setting") {
