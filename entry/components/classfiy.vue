@@ -161,7 +161,7 @@ export default {
             top: $$("#anchor-" + i).offset().top,
           });
         }
-      }, 1000);
+      }, 1300);
       this.offset = resarr;
     });
     //    $$(this.$refs.list).on("scroll", function() {

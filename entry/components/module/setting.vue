@@ -30,9 +30,8 @@ export default {
     exitaccount() {
       sessionStorage.removeItem("userinfo");
       window.location.href = "#/user";
-    }
+    },
   },
-
   mounted() {
     var str = window.location.href;
     if (str.split("#")[1] == "/setting") {

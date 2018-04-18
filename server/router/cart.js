@@ -6,7 +6,7 @@ var createConnection = require("../createConnection.js")
 router.post('/addcart', function (req, res, next) {
     res.setHeader("Access-Control-Allow-Origin", "*");//允许跨域
     res.setHeader("Content-Type", "text/plain;charset=UTF-8");//字符编码
-    createConnection(`insert into cart set cart_name='${req.body.cart_name}',user_name='${req.body.user_name}',num='${req.body.num}',price='${req.body.price}',type='${req.body.type}',imgsrc=${req.body.imgsrc}`, function (results) {
+    createConnection(`insert into cart set cart_name='${req.body.cart_name}',user_name='${req.body.user_name}',num='${req.body.num}',price='${req.body.price}',type='${req.body.type}',imgsrc='${req.body.imgsrc}'`, function (results) {
         res.send("添加成功");
     });
 });
